@@ -7,7 +7,7 @@ import org.apache.http.client.methods.HttpGet;
 import android.os.AsyncTask;
 
 /**
- * Web Service task that loads a given web address in the background. Caller is notified of results
+ * Web Service task that GETs a given web address in the background. Caller is notified of results
  * through the {@link BaseWebService.OnBaseWebServiceResponseListener} interface callbacks.
  */
 public class BaseWebService extends AsyncTask<String, Void, String>
@@ -24,14 +24,14 @@ public class BaseWebService extends AsyncTask<String, Void, String>
 		 * 
 		 * @return the response
 		 */
-		public void onResult(String result);
+		public void onBaseWebServiceResult(String result);
 
 		/**
 		 * Called when there was an error loading the response.
 		 * 
 		 * @return error string
 		 */
-		public void onError(String error);
+		public void onBaseWebServiceError(String error);
 	}
 
 	OnBaseWebServiceResponseListener listener;
@@ -42,7 +42,13 @@ public class BaseWebService extends AsyncTask<String, Void, String>
 		this.listener = listener;
 	}
 
-
+	/**
+	 * Make a GET request to a URL.
+	 * 
+	 * @param params
+	 *            URL must be passed as the first string parameter
+	 * @return response body from the given URL
+	 */
 	@Override
 	protected String doInBackground(String... params)
 	{
@@ -65,7 +71,7 @@ public class BaseWebService extends AsyncTask<String, Void, String>
 
 		if (listener != null)
 		{
-			listener.onResult(result);
+			listener.onBaseWebServiceResult(result);
 		}
 	}
 
