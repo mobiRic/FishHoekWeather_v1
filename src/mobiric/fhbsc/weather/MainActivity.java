@@ -2,6 +2,8 @@ package mobiric.fhbsc.weather;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -36,6 +38,7 @@ public class MainActivity extends Activity
 			public void onPageFinished(WebView view, String url)
 			{
 				// hide title on home page
+				// this is a HACK that causes a flicker
 				if (HOME_PAGE.equals(url))
 				{
 					String jsHideTitle =
@@ -54,6 +57,7 @@ public class MainActivity extends Activity
 		webView.loadUrl(HOME_PAGE);
 	}
 
+
 	/**
 	 * Allow back button to handle navigation.
 	 */
@@ -68,5 +72,38 @@ public class MainActivity extends Activity
 		{
 			super.onBackPressed();
 		}
+	}
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		switch (item.getItemId())
+		{
+		// manual refresh
+			case R.id.action_refresh:
+			{
+				doRefresh();
+
+				return true;
+			}
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * Refreshes the site.
+	 */
+	void doRefresh()
+	{
+		webView.reload();
 	}
 }
