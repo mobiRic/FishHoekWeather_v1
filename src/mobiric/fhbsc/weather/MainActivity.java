@@ -1,5 +1,7 @@
 package mobiric.fhbsc.weather;
 
+import mobiric.fhbsc.weather.tasks.BaseWebService;
+import mobiric.fhbsc.weather.tasks.BaseWebService.OnBaseWebServiceResponseListener;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,7 +9,7 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class MainActivity extends Activity
+public class MainActivity extends Activity implements OnBaseWebServiceResponseListener
 {
 	private static final String BASE_URL = "http://www.fhbsc.co.za/fhbsc/weather/smartphone/";
 	private static final String HOME_PAGE = BASE_URL + "index.html";
@@ -34,27 +36,9 @@ public class MainActivity extends Activity
 				return true;
 			}
 
-			@Override
-			public void onPageFinished(WebView view, String url)
-			{
-				// hide title on home page
-				// this is a HACK that causes a flicker
-				if (HOME_PAGE.equals(url))
-				{
-					String jsHideTitle =
-							"  var allElements = document.getElementsByTagName('*');"
-									+ "  for (var i = 0; i < allElements.length; i++)"
-									+ "  {"
-									+ "    if (allElements[i].getAttribute('data-role')==\"header\")"
-									+ "    {" + "      allElements[i].style.display='none';"
-									+ "      break;" + "    }" + "  }";
-					view.loadUrl("javascript:" + jsHideTitle);
-				}
-
-				super.onPageFinished(view, url);
-			}
 		});
-		webView.loadUrl(HOME_PAGE);
+
+		doRefresh();
 	}
 
 
@@ -104,6 +88,26 @@ public class MainActivity extends Activity
 	 */
 	void doRefresh()
 	{
-		webView.reload();
+		// webView.reload();
+		new BaseWebService(this).execute(HOME_PAGE);
+	}
+
+
+	@Override
+	public void onResult(String result)
+	{
+		// remove title bar from html
+		String resultWithoutTitle =
+				result.replace(
+						"<div data-role=\"header\">      <h1>Fish Hoek Beach Sailing Club, Cape Town</h1>    </div>",
+						"");
+		webView.loadDataWithBaseURL(HOME_PAGE, resultWithoutTitle, "text/html", "utf-8", HOME_PAGE);
+	}
+
+
+	@Override
+	public void onError(String error)
+	{
+		onResult(error);
 	}
 }
