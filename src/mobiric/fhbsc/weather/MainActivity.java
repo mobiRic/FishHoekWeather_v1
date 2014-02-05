@@ -1,24 +1,42 @@
 package mobiric.fhbsc.weather;
 
 import lib.debug.Dbug;
+import mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter;
+import mobiric.fhbsc.weather.intents.IntentConstants.Actions;
+import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
 import mobiric.fhbsc.weather.model.WeatherReading;
 import mobiric.fhbsc.weather.tasks.BaseWebService;
 import mobiric.fhbsc.weather.tasks.BaseWebService.OnBaseWebServiceResponseListener;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser.OnWeatherReadingParsedListener;
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
-public class MainActivity extends Activity implements OnBaseWebServiceResponseListener,
+public class MainActivity extends FragmentActivity implements OnBaseWebServiceResponseListener,
 		OnWeatherReadingParsedListener
 {
-	private static final String BASE_URL = "http://www.fhbsc.co.za/fhbsc/weather/smartphone/";
-	private static final String HOME_PAGE = BASE_URL + "index.html";
-	WebView webView;
+
+	/**
+	 * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
+	 * sections. We use a {@link android.support.v4.app.FragmentPagerAdapter} derivative, which will
+	 * keep every loaded fragment in memory. If this becomes too memory intensive, it may be best to
+	 * switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
+	 */
+	ScreenSwipeAdapter mSectionsPagerAdapter;
+
+	/**
+	 * The {@link ViewPager} that will host the section contents.
+	 */
+	ViewPager mViewPager;
+
+
+	public static final String BASE_URL = "http://www.fhbsc.co.za/fhbsc/weather/smartphone/";
+	public static final String HOME_PAGE = BASE_URL + "index.html";
 
 	/**
 	 * Handle to {@link WeatherApp} instance for caching data.
@@ -40,22 +58,14 @@ public class MainActivity extends Activity implements OnBaseWebServiceResponseLi
 		reading = myApp.getCachedWeatherReading();
 
 		setContentView(R.layout.activity_main);
-		webView = (WebView) findViewById(R.id.webView1);
 
-		// this site uses javascript to format the page
-		webView.getSettings().setJavaScriptEnabled(true);
+		// Create the adapter that will return a fragment for each of the three
+		// primary sections of the app.
+		mSectionsPagerAdapter = new ScreenSwipeAdapter(this, getSupportFragmentManager());
 
-		webView.setWebViewClient(new WebViewClient()
-		{
-			@Override
-			public boolean shouldOverrideUrlLoading(WebView view, String url)
-			{
-				// load inside the webview
-				view.loadUrl(url);
-				return true;
-			}
-
-		});
+		// Set up the ViewPager with the sections adapter.
+		mViewPager = (ViewPager) findViewById(R.id.pager);
+		mViewPager.setAdapter(mSectionsPagerAdapter);
 
 		doRefresh();
 	}
@@ -67,11 +77,11 @@ public class MainActivity extends Activity implements OnBaseWebServiceResponseLi
 	@Override
 	public void onBackPressed()
 	{
-		if (webView.canGoBack())
-		{
-			webView.goBack();
-		}
-		else
+		// if (webView.canGoBack())
+		// {
+		// webView.goBack();
+		// }
+		// else
 		{
 			super.onBackPressed();
 		}
@@ -121,8 +131,11 @@ public class MainActivity extends Activity implements OnBaseWebServiceResponseLi
 						"<div data-role=\"header\">      <h1>Fish Hoek Beach Sailing Club, Cape Town</h1>    </div>",
 						"");
 
-		// display in webview
-		webView.loadDataWithBaseURL(HOME_PAGE, resultWithoutTitle, "text/html", "utf-8", HOME_PAGE);
+		// update webview
+		Intent refresh = new Intent(Actions.REFRESH_WEB_WEATHER);
+		refresh.putExtra(Extras.BASE_URL, BASE_URL);
+		refresh.putExtra(Extras.HTML_DATA, resultWithoutTitle);
+		LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(refresh);
 
 		// parse data
 		new WeatherReadingParser(this).execute(result);
