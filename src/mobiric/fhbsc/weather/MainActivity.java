@@ -7,6 +7,8 @@ import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
 import mobiric.fhbsc.weather.model.WeatherReading;
 import mobiric.fhbsc.weather.tasks.BaseWebService;
 import mobiric.fhbsc.weather.tasks.BaseWebService.OnBaseWebServiceResponseListener;
+import mobiric.fhbsc.weather.tasks.ImageDownloader.OnImageDownloadedListener;
+import mobiric.fhbsc.weather.tasks.ImageDownloader;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser.OnWeatherReadingParsedListener;
 import android.content.Intent;
@@ -18,7 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends FragmentActivity implements OnBaseWebServiceResponseListener,
-		OnWeatherReadingParsedListener
+		OnWeatherReadingParsedListener, OnImageDownloadedListener
 {
 
 	/**
@@ -27,12 +29,12 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	 * keep every loaded fragment in memory. If this becomes too memory intensive, it may be best to
 	 * switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
-	ScreenSwipeAdapter mSectionsPagerAdapter;
+	ScreenSwipeAdapter screenSwipeAdapter;
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
-	ViewPager mViewPager;
+	ViewPager viewPager;
 
 
 	public static final String BASE_URL = "http://www.fhbsc.co.za/fhbsc/weather/smartphone/";
@@ -58,14 +60,11 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 		reading = myApp.getCachedWeatherReading();
 
 		setContentView(R.layout.activity_main);
-
-		// Create the adapter that will return a fragment for each of the three
-		// primary sections of the app.
-		mSectionsPagerAdapter = new ScreenSwipeAdapter(this, getSupportFragmentManager());
+		screenSwipeAdapter = new ScreenSwipeAdapter(this, getSupportFragmentManager());
 
 		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
+		viewPager = (ViewPager) findViewById(R.id.pager);
+		viewPager.setAdapter(screenSwipeAdapter);
 
 		doRefresh();
 	}
@@ -117,8 +116,11 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	 */
 	void doRefresh()
 	{
-		// webView.reload();
 		new BaseWebService(this).execute(HOME_PAGE);
+		new ImageDownloader(this, this).execute("http://www.fhbsc.co.za/fhbsc/weather/daywind.png",
+				"daywind.png");
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/daywinddir.png", "daywinddir.png");
 	}
 
 
@@ -179,5 +181,26 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	public void onWeatherReadingParseError(String error)
 	{
 		// ignore errors
+		Dbug.log("Error downloading weather page [", error, "]");
+	}
+
+
+	@Override
+	public void onImageDownloadSuccess(String filename)
+	{
+		Dbug.log("Image downloaded [", filename, "]");
+
+		// update image
+		Intent refresh = new Intent(Actions.REFRESH_IMAGE);
+		refresh.putExtra(Extras.IMG_NAME, filename);
+		LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(refresh);
+	}
+
+
+	@Override
+	public void onImageDownloadError(String error)
+	{
+		// ignore errors
+		Dbug.log("Error downloading image [", error, "]");
 	}
 }

@@ -5,6 +5,7 @@ import mobiric.fhbsc.weather.intents.IntentConstants.Actions;
 import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,7 +54,7 @@ public class WebWeatherFragment extends ARefreshableFragment
 
 		return rootView;
 	}
-	
+
 	void updateWebView()
 	{
 		// get data from the extras
@@ -63,9 +64,9 @@ public class WebWeatherFragment extends ARefreshableFragment
 	}
 
 	@Override
-	String getRefreshIntentAction()
+	IntentFilter getRefreshIntentFilter()
 	{
-		return Actions.REFRESH_WEB_WEATHER;
+		return new IntentFilter(Actions.REFRESH_WEB_WEATHER);
 	}
 
 	@Override

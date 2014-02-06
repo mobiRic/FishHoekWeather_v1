@@ -87,12 +87,12 @@ public abstract class ARefreshableFragment extends Fragment
 	}
 
 	/**
-	 * Override this method to return the Action string used when sending refreshed data to the
+	 * Override this method to return the Intent Filter to match refreshed data sent to the
 	 * implementing class.
 	 * 
-	 * @return Action that this {@link ARefreshableFragment} is registered to receive.
+	 * @return {@link IntentFilter} that this {@link ARefreshableFragment} is registered to receive.
 	 */
-	abstract String getRefreshIntentAction();
+	abstract IntentFilter getRefreshIntentFilter();
 
 	/**
 	 * Override this method to receive notification of a data refresh. Any data received will
@@ -105,8 +105,8 @@ public abstract class ARefreshableFragment extends Fragment
 
 	private void register()
 	{
-		IntentFilter filter = new IntentFilter(getRefreshIntentAction());
-		LocalBroadcastManager.getInstance(appContext).registerReceiver(refreshReceiver, filter);
+		LocalBroadcastManager.getInstance(appContext).registerReceiver(refreshReceiver,
+				getRefreshIntentFilter());
 	}
 
 	private void unregister()

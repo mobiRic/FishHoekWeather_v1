@@ -1,10 +1,17 @@
 package lib.web;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import lib.io.IOUtils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -15,11 +22,18 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+
 /**
  * Web Service helper methods.
  */
 public class WebUtils
 {
+
+	private static final int BUFFER_IO_SIZE = 8000;
 
 	/**
 	 * Generic web service call.
@@ -67,5 +81,49 @@ public class WebUtils
 		{
 		}
 		return sb.toString();
+	}
+
+	/**
+	 * Fetches an image from a URL.
+	 * 
+	 * @param url
+	 *            URL for your image
+	 * @return {@link Drawable} image
+	 * 
+	 * @throws MalformedURLException
+	 *             if the URL is badly formed
+	 * @throws IOException
+	 *             if the URL does not return a valid response
+	 */
+	public static Bitmap getBitmap(final String url) throws IOException, MalformedURLException
+	{
+		// Code from:
+		// http://stackoverflow.com/a/4752490/383414
+		// Addresses bug in SDK :
+		// http://groups.google.com/group/android-developers/browse_thread/thread/4ed17d7e48899b26/
+		BufferedInputStream bis = getStream(url);
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		BufferedOutputStream bos = new BufferedOutputStream(baos, BUFFER_IO_SIZE);
+		IOUtils.copyStream(bis, bos);
+		bos.flush();
+		return (BitmapFactory.decodeByteArray(baos.toByteArray(), 0, baos.size()));
+	}
+
+	/**
+	 * Opens a {@link BufferedInputStream} from a URL. If the stream is used to create a
+	 * {@link Drawable} consider using {@link #getDrawable(String)} method instead as it works
+	 * around an issue which can result in a <code>null</code> drawable.
+	 * 
+	 * @param url
+	 *            URL to fetch
+	 * @return {@link BufferedInputStream} providing the contents of the URL
+	 * 
+	 * @throws IOException
+	 *             if the URL does not return a valid response
+	 */
+	public static BufferedInputStream getStream(final String url)
+			throws IOException, MalformedURLException
+	{
+		return new BufferedInputStream(new URL(url).openStream(), BUFFER_IO_SIZE);
 	}
 }

@@ -80,20 +80,18 @@
         android:text="135°"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <lib.widget.LoaderImageView
+    <ImageView
         android:id="@+id/ivDayWind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvWindGustSpeed"
-        image="http://www.fhbsc.co.za/fhbsc/weather/daywind.png" />
+        android:layout_below="@+id/tvWindGustSpeed" />
 
-    <lib.widget.LoaderImageView
+    <ImageView
         android:id="@+id/ivDayWindDir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ivDayWind"
-        image="http://www.fhbsc.co.za/fhbsc/weather/daywinddir.png" />
+        android:layout_below="@+id/ivDayWind" />
 
 </RelativeLayout>

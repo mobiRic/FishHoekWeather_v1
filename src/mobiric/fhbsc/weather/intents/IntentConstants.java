@@ -10,6 +10,7 @@ public class IntentConstants
 	{
 		public static final String REFRESH_WEB_WEATHER = "REFRESH_WEB_WEATHER";
 		public static final String REFRESH_WEATHER = "REFRESH_WEATHER";
+		public static final String REFRESH_IMAGE = "REFRESH_IMAGE";
 	}
 
 	/** Declares constants used when passing arguments in Bundles. */
@@ -19,6 +20,7 @@ public class IntentConstants
 		public static final String BASE_URL = "BASE_URL";
 		/** Fragment argument for the HTML data to load. */
 		public static final String HTML_DATA = "HTML_DATA";
+
 		/** Fragment argument for the wind speed. */
 		public static final String WIND_SPEED = "WIND_SPEED";
 		/** Fragment argument for the wind direction. */
@@ -27,5 +29,8 @@ public class IntentConstants
 		public static final String WIND_GUST = "WIND_GUST";
 		/** Fragment argument for the wind gust direction. */
 		public static final String WIND_GUST_DIR = "WIND_GUST_DIR";
+
+		/** Fragment argument for the name of the updated image. */
+		public static final String IMG_NAME = "IMG_NAME";
 	}
 }
