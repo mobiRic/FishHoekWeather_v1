@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.WindFragment" >
+
+    <TextView
+        android:id="@+id/tvWindTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Wind"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvWindTitle"
+        android:text="5 knots"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvWindFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvWindSpeed"
+        android:layout_alignBottom="@+id/tvWindSpeed"
+        android:layout_toRightOf="@+id/tvWindSpeed"
+        android:text=" from "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvWindDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvWindFrom"
+        android:layout_alignBottom="@+id/tvWindFrom"
+        android:layout_toRightOf="@+id/tvWindFrom"
+        android:text="135°"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvWindGustTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvWindSpeed"
+        android:text="Gusts"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvWindGustSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvWindGustTitle"
+        android:text="25 knots"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvWindGustFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvWindGustSpeed"
+        android:layout_alignBottom="@+id/tvWindGustSpeed"
+        android:layout_toRightOf="@+id/tvWindGustSpeed"
+        android:text=" from "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvWindGustDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvWindGustFrom"
+        android:layout_alignBottom="@+id/tvWindGustFrom"
+        android:layout_toRightOf="@+id/tvWindGustFrom"
+        android:text="135°"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <lib.widget.LoaderImageView
+        android:id="@+id/ivDayWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvWindGustSpeed"
+        image="http://www.fhbsc.co.za/fhbsc/weather/daywind.png" />
+
+    <lib.widget.LoaderImageView
+        android:id="@+id/ivDayWindDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivDayWind"
+        image="http://www.fhbsc.co.za/fhbsc/weather/daywinddir.png" />
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package mobiric.fhbsc.weather.adapters;
 
 import mobiric.fhbsc.weather.fragments.WebWeatherFragment;
+import mobiric.fhbsc.weather.fragments.WindFragment;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,9 +27,13 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 		switch (position)
 		{
 			case 0:
-			default:
 			{
 				return new WebWeatherFragment();
+			}
+			case 1:
+			default:
+			{
+				return new WindFragment();
 			}
 			// case 1:
 			// case 2:
@@ -48,25 +53,25 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 	@Override
 	public int getCount()
 	{
-		// Show 3 total pages.
-		return 1;
+		return 2;
 	}
 
 	@Override
 	public CharSequence getPageTitle(int position)
 	{
 		// Locale l = Locale.getDefault();
-		// switch (position)
-		// {
-		// case 0:
-		// return context.getString(R.string.title_section1).toUpperCase(l);
-		// case 1:
-		// return context.getString(R.string.title_section2).toUpperCase(l);
-		// case 2:
-		// return context.getString(R.string.title_section3).toUpperCase(l);
-		// }
-		// return null;
-		return "Live Feed";
+		switch (position)
+		{
+			case 0:
+				// return context.getString(R.string.title_section1).toUpperCase(l);
+				return "Live Feed";
+			case 1:
+				// return context.getString(R.string.title_section2).toUpperCase(l);
+				return "Wind";
+			case 2:
+				// return context.getString(R.string.title_section3).toUpperCase(l);
+		}
+		return null;
 	}
 
 }

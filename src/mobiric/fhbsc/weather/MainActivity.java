@@ -152,8 +152,23 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	@Override
 	public void onWeatherReadingParseResult(WeatherReading result)
 	{
+		if (result == null)
+		{
+			Intent refresh = new Intent(Actions.REFRESH_WEATHER);
+			LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(refresh);
+			return;
+		}
+
 		Dbug.log(result.toString());
 		reading = result;
+
+		// update ui
+		Intent refresh = new Intent(Actions.REFRESH_WEATHER);
+		refresh.putExtra(Extras.WIND_SPEED, result.windSpeed);
+		refresh.putExtra(Extras.WIND_DIR, result.windDir);
+		refresh.putExtra(Extras.WIND_GUST, result.windGust);
+		refresh.putExtra(Extras.WIND_GUST_DIR, result.windGustDir);
+		LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(refresh);
 
 		// cache reading
 		myApp.setCachedWeatherReading(reading);
