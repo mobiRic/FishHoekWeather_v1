@@ -1,5 +1,7 @@
 package mobiric.fhbsc.weather.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import lib.gson.MyGson;
 
 /**
@@ -13,9 +15,8 @@ public class WeatherReading
 	 * "outTempMin":"19.0&#176;C", "outTempMax":"21.5&#176;C"}
 	 */
 
-	// currently this needs to be populated from elsewhere on the page
+	@SerializedName("Time")
 	public String time;
-
 	public String windSpeed;
 	public String windDir;
 	public String windGust;

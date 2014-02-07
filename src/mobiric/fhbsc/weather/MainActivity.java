@@ -11,7 +11,9 @@ import mobiric.fhbsc.weather.tasks.ImageDownloader.OnImageDownloadedListener;
 import mobiric.fhbsc.weather.tasks.ImageDownloader;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser.OnWeatherReadingParsedListener;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.LocalBroadcastManager;
@@ -151,6 +153,7 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	}
 
 
+	@SuppressLint("NewApi")
 	@Override
 	public void onWeatherReadingParseResult(WeatherReading result)
 	{
@@ -163,6 +166,15 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 
 		Dbug.log(result.toString());
 		reading = result;
+
+		if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+		{
+			setTitle(getResources().getString(R.string.app_name) + " - " + reading.time);
+		}
+		else
+		{
+			getActionBar().setSubtitle("updated: " + reading.time);
+		}
 
 		// update ui
 		Intent refresh = new Intent(Actions.REFRESH_WEATHER);

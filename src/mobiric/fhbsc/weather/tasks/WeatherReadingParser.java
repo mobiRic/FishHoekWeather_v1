@@ -98,26 +98,7 @@ public class WeatherReadingParser extends AsyncTask<String, Void, WeatherReading
 		// extract JSON string
 		WeatherReading reading = parseWeather(data);
 
-		// time is not part of the JSON string
-		reading.time = parseTime(data);
-
 		return reading;
-	}
-
-	/**
-	 * Helper method to parse the time out of the HTML since it is not included in the JSON string.
-	 */
-	String parseTime(String data)
-	{
-		// start pos
-		final String strBefore = "<li data-role=\"list-divider\">As at: ";
-		int i = data.indexOf(strBefore) + strBefore.length();
-		// end pos
-		final String strAfter = "</li>";
-		int j = data.indexOf(strAfter, i);
-
-		String time = data.substring(i, j);
-		return time;
 	}
 
 	/**
@@ -126,13 +107,17 @@ public class WeatherReadingParser extends AsyncTask<String, Void, WeatherReading
 	WeatherReading parseWeather(String data)
 	{
 		// start pos
-		final String strBefore = "<-- FHBSC-JSON ";
+		final String strBefore = "<!-- FHBSC-JSON ";
 		int i = data.indexOf(strBefore) + strBefore.length();
 		// end pos
 		final String strAfter = " -->";
 		int j = data.indexOf(strAfter, i);
 
 		String json = data.substring(i, j);
+		
+		// substitute the degrees symbol into the xml string
+		json = json.replace("&#176;", "\\u00B0");
+		
 		WeatherReading reading = MyGson.PARSER.fromJson(json, WeatherReading.class);
 		return reading;
 	}
