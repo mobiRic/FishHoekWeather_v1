@@ -25,7 +25,7 @@ public class WeatherReading
 	public String outTemp;
 	public String outTempMin;
 	public String outTempMax;
-
+	
 	@Override
 	public String toString()
 	{

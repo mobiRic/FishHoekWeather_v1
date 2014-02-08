@@ -4,61 +4,62 @@
     android:layout_height="match_parent"
     tools:context=".fragments.WindFragment" >
 
-    <TextView
-        android:id="@+id/tvWindTitle"
+    <RelativeLayout
+        android:id="@+id/layoutWindText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Wind"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_centerHorizontal="true" >
 
-    <TextView
-        android:id="@+id/tvWindSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvWindTitle"
-        android:text="5 knots"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/tvWindTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Wind is "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/tvWindFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvWindSpeed"
-        android:layout_alignBottom="@+id/tvWindSpeed"
-        android:layout_toRightOf="@+id/tvWindSpeed"
-        android:text=" from "
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/tvWindSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvWindTitle"
+            android:layout_alignBottom="@+id/tvWindTitle"
+            android:layout_toRightOf="@+id/tvWindTitle"
+            android:text="5 knots"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/tvWindDir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvWindFrom"
-        android:layout_alignBottom="@+id/tvWindFrom"
-        android:layout_toRightOf="@+id/tvWindFrom"
-        android:text="135°"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/tvWindFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvWindSpeed"
+            android:layout_alignBottom="@+id/tvWindSpeed"
+            android:layout_toRightOf="@+id/tvWindSpeed"
+            android:text=" from "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tvWindDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvWindFrom"
+            android:layout_alignBottom="@+id/tvWindFrom"
+            android:layout_toRightOf="@+id/tvWindFrom"
+            android:text="135°"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tvWindGustTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvWindSpeed"
-        android:text="Gusts"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/tvWindGustSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvWindGustTitle"
-        android:text="25 knots"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_below="@+id/layoutWindText"
+        android:text="Gusts: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tvWindGustFrom"
@@ -68,7 +69,8 @@
         android:layout_alignBottom="@+id/tvWindGustSpeed"
         android:layout_toRightOf="@+id/tvWindGustSpeed"
         android:text=" from "
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tvWindGustDir"
@@ -78,20 +80,50 @@
         android:layout_alignBottom="@+id/tvWindGustFrom"
         android:layout_toRightOf="@+id/tvWindGustFrom"
         android:text="135°"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/ivDayWind"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvWindGustSpeed" />
+        android:layout_below="@+id/layoutArrowWindDir"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
 
     <ImageView
         android:id="@+id/ivDayWindDir"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ivDayWind" />
+        android:layout_below="@+id/ivDayWind"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tvWindGustSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvWindGustTitle"
+        android:layout_toRightOf="@+id/tvWindGustTitle"
+        android:text="25 knots"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/layoutArrowWindDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutWindText"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/windrose" >
+
+        <ImageView
+            android:id="@+id/ivArrowWindDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_wind_direction" />
+    </FrameLayout>
 
 </RelativeLayout>

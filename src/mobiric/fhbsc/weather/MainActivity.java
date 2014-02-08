@@ -67,6 +67,7 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 		// Set up the ViewPager with the sections adapter.
 		viewPager = (ViewPager) findViewById(R.id.pager);
 		viewPager.setAdapter(screenSwipeAdapter);
+		viewPager.setCurrentItem(1);
 
 		doRefresh();
 	}
