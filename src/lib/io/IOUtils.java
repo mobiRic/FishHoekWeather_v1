@@ -1,5 +1,8 @@
 package lib.io;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,11 +10,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.MalformedURLException;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 
 public class IOUtils
 {
+
+	private static final int BUFFER_IO_SIZE = 8000;
+
 	/**
 	 * Copies one stream to another.
 	 * 
@@ -114,4 +124,31 @@ public class IOUtils
 	{
 		return context.getApplicationContext().openFileInput(name);
 	}
+
+	/**
+	 * Fetches an image from a file in the application's internal storage directory.
+	 * 
+	 * @param context
+	 *            Application context to search for the file
+	 * @param filename
+	 *            file name
+	 * @return {@link Bitmap} image
+	 * 
+	 * @throws IOException
+	 *             if the file cannot be read
+	 */
+	public static Bitmap getBitmap(Context context, final String filename) throws IOException
+	{
+		// Code from:
+		// http://stackoverflow.com/a/4752490/383414
+		// Addresses bug in SDK :
+		// http://groups.google.com/group/android-developers/browse_thread/thread/4ed17d7e48899b26/
+		BufferedInputStream bis = new BufferedInputStream(diskToStream(context, filename));
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		BufferedOutputStream bos = new BufferedOutputStream(baos, BUFFER_IO_SIZE);
+		IOUtils.copyStream(bis, bos);
+		bos.flush();
+		return (BitmapFactory.decodeByteArray(baos.toByteArray(), 0, baos.size()));
+	}
+
 }

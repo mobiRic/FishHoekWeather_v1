@@ -88,7 +88,7 @@ public class WebUtils
 	 * 
 	 * @param url
 	 *            URL for your image
-	 * @return {@link Drawable} image
+	 * @return {@link Bitmap} image
 	 * 
 	 * @throws MalformedURLException
 	 *             if the URL is badly formed

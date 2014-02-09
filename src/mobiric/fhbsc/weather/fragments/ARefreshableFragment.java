@@ -1,14 +1,24 @@
 package mobiric.fhbsc.weather.fragments;
 
 
+import java.io.IOException;
+
+import lib.debug.Dbug;
+import lib.io.IOUtils;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 
 /**
  * Base fragment class that registers for intent updates to receive refreshed information. Only
@@ -112,5 +122,46 @@ public abstract class ARefreshableFragment extends Fragment
 	private void unregister()
 	{
 		LocalBroadcastManager.getInstance(appContext).unregisterReceiver(refreshReceiver);
+	}
+
+	/**
+	 * Updates the given view with an image file. Also resizes the view to fit the width of the
+	 * screen.
+	 * 
+	 * @param view
+	 *            {@link ImageView} to update
+	 * @param imagePath
+	 *            path to the image
+	 */
+	public void updateImage(final ImageView view, String imagePath)
+	{
+		Drawable drawable = null;
+		try
+		{
+			Bitmap bitmap = IOUtils.getBitmap(appContext, imagePath);
+			drawable = new BitmapDrawable(getResources(), bitmap);
+		}
+		catch (IOException e)
+		{
+			Dbug.log("Image not updated [", imagePath, "] ", e.getLocalizedMessage());
+		}
+
+		view.setImageDrawable(drawable);
+
+		// size view correctly
+		view.post(new Runnable()
+		{
+			public void run()
+			{
+
+				int width = view.getWidth();
+
+				// get new height based on image size plus 1 pixel for rounding error
+				int height = (width * 180 / 300) / 4 * 3 + 1;
+				RelativeLayout.LayoutParams params = (LayoutParams) view.getLayoutParams();
+				params.height = height;
+				view.setLayoutParams(params);
+			}
+		});
 	}
 }

@@ -1,22 +1,17 @@
 package mobiric.fhbsc.weather.fragments;
 
-import java.util.Random;
-
 import lib.debug.Dbug;
 import mobiric.fhbsc.weather.R;
 import mobiric.fhbsc.weather.intents.IntentConstants.Actions;
 import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 
@@ -86,9 +81,8 @@ public class WindFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		String filesDir = appContext.getFilesDir().getAbsolutePath();
-		updateImage(ivDayWind, filesDir + "/daywind.png");
-		updateImage(ivDayWindDir, filesDir + "/daywinddir.png");
+		updateImage(ivDayWind, "daywind.png");
+		updateImage(ivDayWindDir, "daywinddir.png");
 	}
 
 	void rotateArrow()
@@ -147,39 +141,18 @@ public class WindFragment extends ARefreshableFragment
 		}
 		else if (Actions.REFRESH_IMAGE.equals(intent.getAction()))
 		{
-			String filesDir = appContext.getFilesDir().getAbsolutePath();
 			String imageName = bundle.getString(Extras.IMG_NAME);
 			if ("daywind.png".equals(imageName))
 			{
-				updateImage(ivDayWind, filesDir + "/daywind.png");
+				updateImage(ivDayWind, "daywind.png");
 			}
 			else if ("daywinddir.png".equals(imageName))
 			{
-				updateImage(ivDayWindDir, filesDir + "/daywinddir.png");
+				updateImage(ivDayWindDir, "daywinddir.png");
 			}
 
 			Dbug.log("Updating image [", imageName, "]");
 		}
-	}
-
-	/**
-	 * Updates the given view with an image file. Also resizes the view to fit the width of the
-	 * screen.
-	 * 
-	 * @param view
-	 *            {@link ImageView} to update
-	 * @param imagePath
-	 *            path to the image
-	 */
-	public void updateImage(ImageView view, String imagePath)
-	{
-		view.setImageDrawable(Drawable.createFromPath(imagePath));
-		int width = view.getWidth();
-
-		// get new height based on image size plus 1 pixel for rounding error
-		int height = (width * 180 / 300) / 4 * 3 + 1;
-		RelativeLayout.LayoutParams params = (LayoutParams) view.getLayoutParams();
-		params.height = height;
 	}
 
 }
