@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="fenn_green">#7cb72f</color>
+    <color name="thermometer_red">#fb0000</color>
+    <color name="holo_blue_dark">#0099cc</color>
+
+</resources>

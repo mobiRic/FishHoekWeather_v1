@@ -1,5 +1,6 @@
 package mobiric.fhbsc.weather.adapters;
 
+import mobiric.fhbsc.weather.fragments.TemperatureFragment;
 import mobiric.fhbsc.weather.fragments.WebWeatherFragment;
 import mobiric.fhbsc.weather.fragments.WindFragment;
 import android.content.Context;
@@ -31,9 +32,14 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 				return new WebWeatherFragment();
 			}
 			case 1:
-			default:
 			{
 				return new WindFragment();
+			}
+			// case 1:
+			case 2:
+			default:
+			{
+				return new TemperatureFragment();
 			}
 			// case 1:
 			// case 2:
@@ -53,7 +59,7 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 	@Override
 	public int getCount()
 	{
-		return 2;
+		return 3;
 	}
 
 	@Override
@@ -69,6 +75,7 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 				// return context.getString(R.string.title_section2).toUpperCase(l);
 				return "Wind";
 			case 2:
+				return "Temperature";
 				// return context.getString(R.string.title_section3).toUpperCase(l);
 		}
 		return null;

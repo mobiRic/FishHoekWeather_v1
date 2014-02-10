@@ -30,6 +30,13 @@ public class IntentConstants
 		/** Fragment argument for the wind gust direction. */
 		public static final String WIND_GUST_DIR = "WIND_GUST_DIR";
 
+		/** Fragment argument for the outside temperature. */
+		public static final String OUT_TEMP = "OUT_TEMP";
+		/** Fragment argument for the minimum outside temperature for the day. */
+		public static final String OUT_TEMP_MIN = "OUT_TEMP_MIN";
+		/** Fragment argument for the maximum outside temperature for the day. */
+		public static final String OUT_TEMP_MAX = "OUT_TEMP_MAX";
+
 		/** Fragment argument for the name of the updated image. */
 		public static final String IMG_NAME = "IMG_NAME";
 	}

@@ -67,7 +67,7 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 		// Set up the ViewPager with the sections adapter.
 		viewPager = (ViewPager) findViewById(R.id.pager);
 		viewPager.setAdapter(screenSwipeAdapter);
-		viewPager.setCurrentItem(1);
+		viewPager.setCurrentItem(2);
 
 		doRefresh();
 	}
@@ -120,10 +120,18 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	void doRefresh()
 	{
 		new BaseWebService(this).execute(HOME_PAGE);
+
+		// wind graphs
 		new ImageDownloader(this, this).execute("http://www.fhbsc.co.za/fhbsc/weather/daywind.png",
 				"daywind.png");
 		new ImageDownloader(this, this).execute(
 				"http://www.fhbsc.co.za/fhbsc/weather/daywinddir.png", "daywinddir.png");
+
+		// temperature graphs
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/daytempdew.png", "daytempdew.png");
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/weektempdew.png", "weektempdew.png");
 	}
 
 
@@ -183,6 +191,9 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 		refresh.putExtra(Extras.WIND_DIR, result.windDir);
 		refresh.putExtra(Extras.WIND_GUST, result.windGust);
 		refresh.putExtra(Extras.WIND_GUST_DIR, result.windGustDir);
+		refresh.putExtra(Extras.OUT_TEMP, result.outTemp);
+		refresh.putExtra(Extras.OUT_TEMP_MIN, result.outTempMin);
+		refresh.putExtra(Extras.OUT_TEMP_MAX, result.outTempMax);
 		LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(refresh);
 
 		// cache reading
