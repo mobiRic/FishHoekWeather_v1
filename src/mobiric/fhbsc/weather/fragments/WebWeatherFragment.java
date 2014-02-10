@@ -75,4 +75,10 @@ public class WebWeatherFragment extends ARefreshableFragment
 		updateWebView();
 	}
 
+	@Override
+	void refreshOnResume()
+	{
+		// updates are broken anyway, so don't bother
+	}
+
 }

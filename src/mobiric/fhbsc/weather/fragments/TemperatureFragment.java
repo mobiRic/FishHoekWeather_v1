@@ -4,15 +4,16 @@ import java.util.Random;
 
 import lib.debug.Dbug;
 import mobiric.fhbsc.weather.R;
+import mobiric.fhbsc.weather.WeatherApp;
 import mobiric.fhbsc.weather.intents.IntentConstants.Actions;
 import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
+import mobiric.fhbsc.weather.model.WeatherReading;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.DecelerateInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -58,25 +59,37 @@ public class TemperatureFragment extends ARefreshableFragment
 		return rootView;
 	}
 
-	@Override
-	public void onResume()
+	/**
+	 * Updates the data displayed by this fragment. Called when data is refreshed, or when fragment
+	 * is created or resumed. </p>
+	 * 
+	 * Data is fetched from the {@link WeatherApp} instance. Updating via {@link Intent} extras does
+	 * not allow fragments to receive the update when paused.
+	 * 
+	 * @param animate
+	 *            <code>true</code> to animate the changes (on a refresh); <code>false</code>
+	 *            otherwise (on resume)
+	 */
+	void updateData(final boolean animate)
 	{
-		super.onResume();
+		// get data from the application cache
+		WeatherReading reading = myApp.getCachedWeatherReading();
 
-		updateData();
-		initImages();
-	}
-
-	void updateData()
-	{
-		// get data from the extras
-		String outTemp = bundle.getString(Extras.OUT_TEMP);
+		String outTemp = reading.outTemp;
 		tvOutTemp.setText(outTemp);
 
 		if (outTemp != null)
 		{
 			setTempDegrees(outTemp);
-			setThermometerHeight();
+
+			// post to UI thread since it requires the height of ivThermometer
+			ivThermometer.post(new Runnable()
+			{
+				public void run()
+				{
+					setThermometerHeight(animate);
+				}
+			});
 		}
 	}
 
@@ -86,12 +99,20 @@ public class TemperatureFragment extends ARefreshableFragment
 		updateImage(ivWeekTempDew, "weektempdew.png");
 	}
 
-	void setThermometerHeight()
+	void setThermometerHeight(boolean animate)
 	{
-		int oldTopMargin = calcOffsetForDegrees(oldTempDegrees);
-		int topMargin = calcOffsetForDegrees(tempDegrees);
+		int to = calcOffsetForDegrees(tempDegrees);
+		int from;
+		if (animate)
+		{
+			from = calcOffsetForDegrees(oldTempDegrees);
+		}
+		else
+		{
+			from = to;
+		}
 
-		TranslateAnimation translate = new TranslateAnimation(0, 0, oldTopMargin, topMargin);
+		TranslateAnimation translate = new TranslateAnimation(0, 0, from, to);
 		translate.setFillAfter(true);
 		translate.setDuration(700);
 		vThermometerRed.startAnimation(translate);
@@ -126,6 +147,12 @@ public class TemperatureFragment extends ARefreshableFragment
 			degrees = 20;
 		}
 
+		// random data fluctuations for UI debugging
+		if (Dbug.RANDOM_DATA)
+		{
+			degrees += new Random().nextInt(20) - 10;
+		}
+
 		// range check
 		if (degrees >= MAX_TEMP_RANGE)
 		{
@@ -154,7 +181,7 @@ public class TemperatureFragment extends ARefreshableFragment
 	{
 		if (Actions.REFRESH_WEATHER.equals(intent.getAction()))
 		{
-			updateData();
+			updateData(true);
 		}
 		else if (Actions.REFRESH_IMAGE.equals(intent.getAction()))
 		{
@@ -170,6 +197,13 @@ public class TemperatureFragment extends ARefreshableFragment
 
 			Dbug.log("Updating image [", imageName, "]");
 		}
+	}
+
+	@Override
+	void refreshOnResume()
+	{
+		updateData(false);
+		initImages();
 	}
 
 }

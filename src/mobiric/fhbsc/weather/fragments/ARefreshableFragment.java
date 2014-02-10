@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import lib.debug.Dbug;
 import lib.io.IOUtils;
+import mobiric.fhbsc.weather.WeatherApp;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,6 +29,11 @@ public abstract class ARefreshableFragment extends Fragment
 {
 	/** Application context for this fragment. */
 	Context appContext;
+
+	/**
+	 * Handle to {@link WeatherApp} instance for caching data.
+	 */
+	WeatherApp myApp;
 
 	/**
 	 * Bundle containing data for this fragment. Initialised with the arguments returned by
@@ -63,6 +69,7 @@ public abstract class ARefreshableFragment extends Fragment
 	{
 		super.onAttach(activity);
 		appContext = activity.getApplicationContext();
+		myApp = (WeatherApp) activity.getApplication();
 	}
 
 	/**
@@ -87,6 +94,7 @@ public abstract class ARefreshableFragment extends Fragment
 	{
 		super.onResume();
 		register();
+		refreshOnResume();
 	}
 
 	@Override
@@ -112,6 +120,18 @@ public abstract class ARefreshableFragment extends Fragment
 	 *            {@link Intent} received
 	 */
 	abstract void onRefreshIntentReceived(Intent intent);
+
+	/**
+	 * Override this method to do any data refresh that may be required when this
+	 * {@link ARefreshableFragment} is created, or resumes from a paused state. This allows the
+	 * fragment to display updated data that may have been refreshed while the
+	 * {@link #refreshReceiver} was not registered.</p>
+	 * 
+	 * Strictly speaking this can be accomplished by overriding the {@link #onResume()} method.
+	 * Creating this {@link #refreshOnResume()} abstract method means that this update stage cannot
+	 * be forgotten.
+	 */
+	abstract void refreshOnResume();
 
 	private void register()
 	{
