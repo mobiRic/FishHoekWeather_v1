@@ -67,7 +67,7 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 		// Set up the ViewPager with the sections adapter.
 		viewPager = (ViewPager) findViewById(R.id.pager);
 		viewPager.setAdapter(screenSwipeAdapter);
-		viewPager.setCurrentItem(2);
+		viewPager.setCurrentItem(3);
 
 		doRefresh();
 	}
@@ -132,6 +132,12 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 				"http://www.fhbsc.co.za/fhbsc/weather/daytempdew.png", "daytempdew.png");
 		new ImageDownloader(this, this).execute(
 				"http://www.fhbsc.co.za/fhbsc/weather/weektempdew.png", "weektempdew.png");
+
+		// barometer graphs
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/daybarometer.png", "daybarometer.png");
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/weekbarometer.png", "weekbarometer.png");
 	}
 
 
@@ -187,13 +193,21 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 
 		// update ui
 		Intent refresh = new Intent(Actions.REFRESH_WEATHER);
+
+		// wind
 		refresh.putExtra(Extras.WIND_SPEED, result.windSpeed);
 		refresh.putExtra(Extras.WIND_DIR, result.windDir);
 		refresh.putExtra(Extras.WIND_GUST, result.windGust);
 		refresh.putExtra(Extras.WIND_GUST_DIR, result.windGustDir);
+
+		// temperature
 		refresh.putExtra(Extras.OUT_TEMP, result.outTemp);
 		refresh.putExtra(Extras.OUT_TEMP_MIN, result.outTempMin);
 		refresh.putExtra(Extras.OUT_TEMP_MAX, result.outTempMax);
+
+		// barometer
+		refresh.putExtra(Extras.BAROMETER, result.barometer);
+
 		LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(refresh);
 
 		// cache reading

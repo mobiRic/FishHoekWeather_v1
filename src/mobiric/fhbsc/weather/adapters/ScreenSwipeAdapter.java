@@ -1,5 +1,6 @@
 package mobiric.fhbsc.weather.adapters;
 
+import mobiric.fhbsc.weather.fragments.BarometerFragment;
 import mobiric.fhbsc.weather.fragments.TemperatureFragment;
 import mobiric.fhbsc.weather.fragments.WebWeatherFragment;
 import mobiric.fhbsc.weather.fragments.WindFragment;
@@ -35,11 +36,14 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 			{
 				return new WindFragment();
 			}
-			// case 1:
 			case 2:
-			default:
 			{
 				return new TemperatureFragment();
+			}
+			case 3:
+			default:
+			{
+				return new BarometerFragment();
 			}
 			// case 1:
 			// case 2:
@@ -59,7 +63,7 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 	@Override
 	public int getCount()
 	{
-		return 3;
+		return 4;
 	}
 
 	@Override
@@ -72,11 +76,11 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 				// return context.getString(R.string.title_section1).toUpperCase(l);
 				return "Live Feed";
 			case 1:
-				// return context.getString(R.string.title_section2).toUpperCase(l);
 				return "Wind";
 			case 2:
 				return "Temperature";
-				// return context.getString(R.string.title_section3).toUpperCase(l);
+			case 3:
+				return "Barometer";
 		}
 		return null;
 	}

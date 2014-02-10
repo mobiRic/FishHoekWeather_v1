@@ -2,76 +2,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.TemperatureFragment" >
+    tools:context=".fragments.BarometerFragment" >
 
     <RelativeLayout
-        android:id="@+id/layoutTemperatureText"
+        android:id="@+id/layoutBarometerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" >
 
         <TextView
-            android:id="@+id/tvTempTitle"
+            android:id="@+id/tvBarometerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="Temperature is "
+            android:text="Pressure is "
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
-            android:id="@+id/tvOutTemp"
+            android:id="@+id/tvBarometerPressure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tvTempTitle"
-            android:layout_alignBottom="@+id/tvTempTitle"
-            android:layout_toRightOf="@+id/tvTempTitle"
-            android:text="35°"
+            android:layout_alignBaseline="@+id/tvBarometerTitle"
+            android:layout_alignBottom="@+id/tvBarometerTitle"
+            android:layout_toRightOf="@+id/tvBarometerTitle"
+            android:text="1010.5 mbar"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/ivDayTempDew"
+        android:id="@+id/ivDayBarometer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/layoutThermometer"
+        android:layout_below="@+id/layoutArrowBarometer"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter" />
 
     <ImageView
-        android:id="@+id/ivWeekTempDew"
+        android:id="@+id/ivWeekBarometer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ivDayTempDew"
+        android:layout_below="@+id/ivDayBarometer"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter" />
 
-    <RelativeLayout
-        android:id="@+id/layoutThermometer"
+    <FrameLayout
+        android:id="@+id/layoutArrowBarometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layoutTemperatureText"
-        android:layout_centerHorizontal="true" >
-
-        <View
-            android:id="@+id/vThermometerRed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/ivThermometer"
-            android:layout_alignLeft="@+id/ivThermometer"
-            android:layout_alignRight="@+id/ivThermometer"
-            android:layout_alignTop="@+id/ivThermometer"
-            android:background="@color/thermometer_red" />
+        android:layout_below="@+id/layoutBarometerText"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/barometer" >
 
         <ImageView
-            android:id="@+id/ivThermometer"
+            android:id="@+id/ivArrowBarometer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/thermometer" />
-    </RelativeLayout>
+            android:src="@drawable/arrow_barometer" />
+    </FrameLayout>
 
 </RelativeLayout>

@@ -37,6 +37,9 @@ public class IntentConstants
 		/** Fragment argument for the maximum outside temperature for the day. */
 		public static final String OUT_TEMP_MAX = "OUT_TEMP_MAX";
 
+		/** Fragment argument for the current barometer reading. */
+		public static final String BAROMETER = "BAROMETER";
+
 		/** Fragment argument for the name of the updated image. */
 		public static final String IMG_NAME = "IMG_NAME";
 	}
