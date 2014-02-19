@@ -81,4 +81,15 @@ public class WebWeatherFragment extends ARefreshableFragment
 		// updates are broken anyway, so don't bother
 	}
 
+	@Override
+	public boolean onBackPressed()
+	{
+		// if (webView.canGoBack())
+		// {
+		// webView.goBack();
+		// return true;
+		// }
+
+		return super.onBackPressed();
+	}
 }

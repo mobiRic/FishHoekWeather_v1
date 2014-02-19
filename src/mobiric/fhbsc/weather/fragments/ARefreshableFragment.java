@@ -18,8 +18,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
+import android.widget.LinearLayout;
 
 /**
  * Base fragment class that registers for intent updates to receive refreshed information. Only
@@ -175,13 +174,24 @@ public abstract class ARefreshableFragment extends Fragment
 			{
 
 				int width = view.getWidth();
-
 				// get new height based on image size plus 1 pixel for rounding error
 				int height = (width * 180 / 300) / 4 * 3 + 1;
-				RelativeLayout.LayoutParams params = (LayoutParams) view.getLayoutParams();
+				LinearLayout.LayoutParams params =
+						(LinearLayout.LayoutParams) view.getLayoutParams();
 				params.height = height;
 				view.setLayoutParams(params);
 			}
 		});
+	}
+
+	/**
+	 * Override this to allow BACK button processing.
+	 * 
+	 * @return <code>true</code> if the BACK button has been processed; <code>false</code> to pass
+	 *         the event on
+	 */
+	public boolean onBackPressed()
+	{
+		return false;
 	}
 }

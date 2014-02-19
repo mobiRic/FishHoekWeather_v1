@@ -1,17 +1,21 @@
 package mobiric.fhbsc.weather;
 
 import lib.debug.Dbug;
+import lib.view.ViewPagerParallax;
 import mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter;
+import mobiric.fhbsc.weather.fragments.ARefreshableFragment;
 import mobiric.fhbsc.weather.intents.IntentConstants.Actions;
 import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
 import mobiric.fhbsc.weather.model.WeatherReading;
 import mobiric.fhbsc.weather.tasks.BaseWebService;
 import mobiric.fhbsc.weather.tasks.BaseWebService.OnBaseWebServiceResponseListener;
-import mobiric.fhbsc.weather.tasks.ImageDownloader.OnImageDownloadedListener;
 import mobiric.fhbsc.weather.tasks.ImageDownloader;
+import mobiric.fhbsc.weather.tasks.ImageDownloader.OnImageDownloadedListener;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser.OnWeatherReadingParsedListener;
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -36,7 +40,7 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
-	ViewPager viewPager;
+	ViewPagerParallax viewPager;
 
 
 	public static final String BASE_URL = "http://www.fhbsc.co.za/fhbsc/weather/smartphone/";
@@ -61,15 +65,40 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 		myApp = (WeatherApp) getApplication();
 		reading = myApp.getCachedWeatherReading();
 
-		setContentView(R.layout.activity_main);
+		setUpdateTime();
+
 		screenSwipeAdapter = new ScreenSwipeAdapter(this, getSupportFragmentManager());
 
-		// Set up the ViewPager with the sections adapter.
-		viewPager = (ViewPager) findViewById(R.id.pager);
+		setContentView(R.layout.activity_main);
+
+		viewPager = (ViewPagerParallax) findViewById(R.id.pager);
+		viewPager.set_max_pages(4);
+		viewPager.setBackgroundAsset(R.raw.false_bay);
 		viewPager.setAdapter(screenSwipeAdapter);
 		viewPager.setCurrentItem(3);
 
 		doRefresh();
+	}
+
+
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+	private void setUpdateTime()
+	{
+		if (reading != null)
+		{
+			if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+			{
+				setTitle(getResources().getString(R.string.app_name) + " - " + reading.time);
+			}
+			else
+			{
+				ActionBar actionBar = getActionBar();
+				if (actionBar != null)
+				{
+					actionBar.setSubtitle("updated: " + reading.time);
+				}
+			}
+		}
 	}
 
 
@@ -79,11 +108,9 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 	@Override
 	public void onBackPressed()
 	{
-		// if (webView.canGoBack())
-		// {
-		// webView.goBack();
-		// }
-		// else
+		ARefreshableFragment fragment =
+				(ARefreshableFragment) screenSwipeAdapter.getItem(viewPager.getCurrentItem());
+		if (!fragment.onBackPressed())
 		{
 			super.onBackPressed();
 		}
@@ -126,6 +153,12 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 				"daywind.png");
 		new ImageDownloader(this, this).execute(
 				"http://www.fhbsc.co.za/fhbsc/weather/daywinddir.png", "daywinddir.png");
+
+
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/weekwind.png", "weekwind.png");
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/weekwinddir.png", "weekwinddir.png");
 
 		// temperature graphs
 		new ImageDownloader(this, this).execute(
@@ -182,14 +215,7 @@ public class MainActivity extends FragmentActivity implements OnBaseWebServiceRe
 		Dbug.log(result.toString());
 		reading = result;
 
-		if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
-		{
-			setTitle(getResources().getString(R.string.app_name) + " - " + reading.time);
-		}
-		else
-		{
-			getActionBar().setSubtitle("updated: " + reading.time);
-		}
+		setUpdateTime();
 
 		// update ui
 		Intent refresh = new Intent(Actions.REFRESH_WEATHER);

@@ -26,6 +26,7 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 	@Override
 	public Fragment getItem(int position)
 	{
+		// TODO don't create a new fragment each time this is called
 		switch (position)
 		{
 			case 0:

@@ -24,12 +24,18 @@ import android.widget.TextView;
  */
 public class WindFragment extends ARefreshableFragment
 {
+	public static final String[] DIRECTIONS =
+		{ "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW",
+				"NW", "NNW", "N", };
+
 	TextView tvWindSpeed;
 	TextView tvWindDir;
-	TextView tvWindGustSpeed;
-	TextView tvWindGustDir;
+	// TextView tvWindGustSpeed;
+	// TextView tvWindGustDir;
 	ImageView ivDayWind;
 	ImageView ivDayWindDir;
+	ImageView ivWeekWind;
+	ImageView ivWeekWindDir;
 	ImageView ivArrowWindDir;
 
 	int windDirDegrees = 180;
@@ -48,10 +54,12 @@ public class WindFragment extends ARefreshableFragment
 		View rootView = inflater.inflate(R.layout.fragment_wind, container, false);
 		tvWindSpeed = (TextView) rootView.findViewById(R.id.tvWindSpeed);
 		tvWindDir = (TextView) rootView.findViewById(R.id.tvWindDir);
-		tvWindGustSpeed = (TextView) rootView.findViewById(R.id.tvWindGustSpeed);
-		tvWindGustDir = (TextView) rootView.findViewById(R.id.tvWindGustDir);
+		// tvWindGustSpeed = (TextView) rootView.findViewById(R.id.tvWindGustSpeed);
+		// tvWindGustDir = (TextView) rootView.findViewById(R.id.tvWindGustDir);
 		ivDayWind = (ImageView) rootView.findViewById(R.id.ivDayWind);
 		ivDayWindDir = (ImageView) rootView.findViewById(R.id.ivDayWindDir);
+		ivWeekWind = (ImageView) rootView.findViewById(R.id.ivWeekWind);
+		ivWeekWindDir = (ImageView) rootView.findViewById(R.id.ivWeekWindDir);
 
 		ivArrowWindDir = (ImageView) rootView.findViewById(R.id.ivArrowWindDir);
 
@@ -77,26 +85,38 @@ public class WindFragment extends ARefreshableFragment
 		String windSpeed = reading.windSpeed;
 		tvWindSpeed.setText(windSpeed);
 
-		String windDir = reading.windDir;
-		tvWindDir.setText(windDir);
+		// String windGustSpeed = reading.windGust;
+		// tvWindGustSpeed.setText(windGustSpeed);
+		//
+		// String windGustDir = reading.windGustDir;
+		// tvWindGustDir.setText(windGustDir);
 
-		String windGustSpeed = reading.windGust;
-		tvWindGustSpeed.setText(windGustSpeed);
-
-		String windGustDir = reading.windGustDir;
-		tvWindGustDir.setText(windGustDir);
-
-		if (windDir != null)
+		if (reading.windDir != null)
 		{
-			setWindDirDegrees(windDir);
+			setWindDirDegrees(reading.windDir);
 			rotateArrow(animate);
 		}
+
+		String windDir = reading.windDir + " (" + getCardinal(windDirDegrees) + ")";
+		tvWindDir.setText(windDir);
+	}
+
+	String getCardinal(double degrees)
+	{
+		return DIRECTIONS[(int) Math.round((((double) degrees % 360) / 22.5))];
+	}
+
+	boolean numberInRange(int number, float min, float max)
+	{
+		return ((min <= number) && (number <= max));
 	}
 
 	void initImages()
 	{
 		updateImage(ivDayWind, "daywind.png");
 		updateImage(ivDayWindDir, "daywinddir.png");
+		updateImage(ivWeekWind, "weekwind.png");
+		updateImage(ivWeekWindDir, "weekwinddir.png");
 	}
 
 	void rotateArrow(boolean animate)
@@ -179,6 +199,14 @@ public class WindFragment extends ARefreshableFragment
 			else if ("daywinddir.png".equals(imageName))
 			{
 				updateImage(ivDayWindDir, "daywinddir.png");
+			}
+			else if ("weekwind.png".equals(imageName))
+			{
+				updateImage(ivWeekWind, "weekwind.png");
+			}
+			else if ("weekwinddir.png".equals(imageName))
+			{
+				updateImage(ivWeekWindDir, "weekwinddir.png");
 			}
 
 			Dbug.log("Updating image [", imageName, "]");
