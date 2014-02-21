@@ -16,6 +16,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class ScreenSwipeAdapter extends FragmentPagerAdapter
 {
 	Context context;
+	WebWeatherFragment webWeatherFragment;
 
 	public ScreenSwipeAdapter(Context context, FragmentManager fm)
 	{
@@ -31,7 +32,7 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 		{
 			case 0:
 			{
-				return new WebWeatherFragment();
+				return getWebWeatherFragment();
 			}
 			case 1:
 			{
@@ -59,6 +60,18 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 			// return fragment;
 			// }
 		}
+	}
+
+	/**
+	 * Lazy initialiser for the Web view.
+	 */
+	private WebWeatherFragment getWebWeatherFragment()
+	{
+		if (webWeatherFragment == null)
+		{
+			webWeatherFragment = new WebWeatherFragment();
+		}
+		return webWeatherFragment;
 	}
 
 	@Override
