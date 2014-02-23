@@ -8,6 +8,7 @@ public class IntentConstants
 	/** Declares intent actions. */
 	public static class Actions
 	{
+		public static final String REFRESH_UPDATE_TIME = "REFRESH_UPDATE_TIME";
 		public static final String REFRESH_WEB_WEATHER = "REFRESH_WEB_WEATHER";
 		public static final String REFRESH_WEATHER = "REFRESH_WEATHER";
 		public static final String REFRESH_IMAGE = "REFRESH_IMAGE";
@@ -20,6 +21,9 @@ public class IntentConstants
 		public static final String BASE_URL = "BASE_URL";
 		/** Fragment argument for the HTML data to load. */
 		public static final String HTML_DATA = "HTML_DATA";
+
+		/** Fragment argument for the time of the last data update. */
+		public static final String TIME = "TIME";
 
 		/** Fragment argument for the wind speed. */
 		public static final String WIND_SPEED = "WIND_SPEED";
