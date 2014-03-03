@@ -1,8 +1,8 @@
 package mobiric.fhbsc.weather.model;
 
-import com.google.gson.annotations.SerializedName;
-
 import lib.gson.MyGson;
+
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Represents a single weather reading data point as received from the server.
