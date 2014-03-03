@@ -1,12 +1,13 @@
 package mobiric.fhbsc.weather;
 
 
-import java.text.SimpleDateFormat;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import lib.debug.Dbug;
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Build;
@@ -88,30 +89,6 @@ public class AutoRefreshActivity extends FragmentActivity
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		getMenuInflater().inflate(R.menu.main, menu);
-
-		// auto refresh spinner
-		final Spinner s = (Spinner) menu.findItem(R.id.menu_spinner).getActionView();
-		SpinnerAdapter mSpinnerAdapter =
-				ArrayAdapter.createFromResource(this, R.array.auto_refresh_entries,
-						android.R.layout.simple_spinner_dropdown_item);
-		s.setAdapter(mSpinnerAdapter);
-		s.setSelection(loadAutoRefreshSetting());
-		s.setOnItemSelectedListener(new OnItemSelectedListener()
-		{
-
-			@Override
-			public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-			{
-				// set the auto refresh period
-				setAutoRefreshPeriod(position);
-			}
-
-			@Override
-			public void onNothingSelected(AdapterView<?> parent)
-			{
-				// nothing selected
-			}
-		});
 
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -198,6 +175,12 @@ public class AutoRefreshActivity extends FragmentActivity
 
 				break;
 			}
+			case R.id.menu_spinner:
+			{
+				showAutoRefreshOptions();
+
+				break;
+			}
 			default:
 			{
 				return super.onOptionsItemSelected(item);
@@ -206,6 +189,24 @@ public class AutoRefreshActivity extends FragmentActivity
 
 		// handled by us
 		return true;
+	}
+
+	/**
+	 * Shows a dialog with the auto-refresh options in it.
+	 */
+	private void showAutoRefreshOptions()
+	{
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle(R.string.refresh_options);
+		builder.setItems(R.array.auto_refresh_entries, new DialogInterface.OnClickListener()
+		{
+			@Override
+			public void onClick(DialogInterface dialog, int position)
+			{
+				setAutoRefreshPeriod(position);
+			}
+		});
+		builder.show();
 	}
 
 	/**

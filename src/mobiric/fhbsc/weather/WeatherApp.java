@@ -6,10 +6,10 @@ import mobiric.fhbsc.weather.intents.IntentConstants.Actions;
 import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
 import mobiric.fhbsc.weather.model.WeatherReading;
 import mobiric.fhbsc.weather.tasks.BaseWebService;
-import mobiric.fhbsc.weather.tasks.ImageDownloader;
-import mobiric.fhbsc.weather.tasks.WeatherReadingParser;
 import mobiric.fhbsc.weather.tasks.BaseWebService.OnBaseWebServiceResponseListener;
+import mobiric.fhbsc.weather.tasks.ImageDownloader;
 import mobiric.fhbsc.weather.tasks.ImageDownloader.OnImageDownloadedListener;
+import mobiric.fhbsc.weather.tasks.WeatherReadingParser;
 import mobiric.fhbsc.weather.tasks.WeatherReadingParser.OnWeatherReadingParsedListener;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -138,18 +138,6 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 	@Override
 	public void onBaseWebServiceResult(String result)
 	{
-		// remove title bar from html
-		String resultWithoutTitle =
-				result.replace(
-						"<div data-role=\"header\">      <h1>Fish Hoek Beach Sailing Club, Cape Town</h1>    </div>",
-						"");
-
-		// update webview
-		Intent refresh = new Intent(Actions.REFRESH_WEB_WEATHER);
-		refresh.putExtra(Extras.BASE_URL, BASE_URL);
-		refresh.putExtra(Extras.HTML_DATA, resultWithoutTitle);
-		LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(refresh);
-
 		// parse data
 		new WeatherReadingParser(this).execute(result);
 	}
@@ -175,7 +163,7 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 
 		Dbug.log(result.toString());
 		reading = result;
-		
+
 		// update time
 		Intent refreshUpdateTime = new Intent(Actions.REFRESH_UPDATE_TIME);
 		refreshUpdateTime.putExtra(Extras.TIME, result.time);
@@ -183,7 +171,7 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 
 		// update weather
 		Intent refreshWeather = new Intent(Actions.REFRESH_WEATHER);
-		
+
 		// wind
 		refreshWeather.putExtra(Extras.WIND_SPEED, result.windSpeed);
 		refreshWeather.putExtra(Extras.WIND_DIR, result.windDir);

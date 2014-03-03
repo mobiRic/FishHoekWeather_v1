@@ -12,11 +12,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
-import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AutoRefreshActivity
@@ -63,10 +66,10 @@ public class MainActivity extends AutoRefreshActivity
 		setContentView(R.layout.activity_main);
 
 		viewPager = (ViewPagerParallax) findViewById(R.id.pager);
-		viewPager.set_max_pages(4);
+		viewPager.set_max_pages(3);
 		viewPager.setBackgroundAsset(R.raw.false_bay);
 		viewPager.setAdapter(screenSwipeAdapter);
-		viewPager.setCurrentItem(3);
+		viewPager.setCurrentItem(loadLastViewedPageSetting());
 	}
 
 	@Override
@@ -82,6 +85,8 @@ public class MainActivity extends AutoRefreshActivity
 	{
 		super.onPause();
 		unregister();
+
+		saveLastViewedPageSetting(viewPager.getCurrentItem());
 	}
 
 	private void register()
@@ -135,6 +140,52 @@ public class MainActivity extends AutoRefreshActivity
 		{
 			super.onBackPressed();
 		}
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		switch (item.getItemId())
+		{
+			case R.id.action_view_on_web:
+			{
+				// launch browser
+				Intent browserIntent =
+						new Intent(Intent.ACTION_VIEW, Uri.parse(WeatherApp.HOME_PAGE));
+				startActivity(browserIntent);
+
+				break;
+			}
+			default:
+			{
+				return super.onOptionsItemSelected(item);
+			}
+		}
+
+		// handled by us
+		return true;
+	}
+
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
+	private void saveLastViewedPageSetting(int position)
+	{
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		Editor e = prefs.edit();
+		e.putInt("LAST_VIEWED_PAGE", position);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD)
+		{
+			e.apply();
+		}
+		else
+		{
+			e.commit();
+		}
+	}
+
+	private int loadLastViewedPageSetting()
+	{
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		return prefs.getInt("LAST_VIEWED_PAGE", 0);
 	}
 
 }
