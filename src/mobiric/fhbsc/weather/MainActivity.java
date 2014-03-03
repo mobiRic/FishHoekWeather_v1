@@ -1,5 +1,6 @@
 package mobiric.fhbsc.weather;
 
+
 import lib.view.ViewPagerParallax;
 import mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter;
 import mobiric.fhbsc.weather.fragments.ARefreshableFragment;
@@ -13,13 +14,12 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends FragmentActivity
+public class MainActivity extends AutoRefreshActivity
 {
 
 	/**
@@ -35,10 +35,6 @@ public class MainActivity extends FragmentActivity
 	 */
 	ViewPagerParallax viewPager;
 
-	/**
-	 * Handle to {@link WeatherApp} instance for caching data.
-	 */
-	WeatherApp myApp;
 
 	/** Receiver for refresh intents. Passes the intent to the implementing subclass. */
 	private BroadcastReceiver refreshReceiver = new BroadcastReceiver()
@@ -56,13 +52,11 @@ public class MainActivity extends FragmentActivity
 		}
 	};
 
+
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-
-		// get cached weather reading
-		myApp = (WeatherApp) getApplication();
 
 		screenSwipeAdapter = new ScreenSwipeAdapter(this, getSupportFragmentManager());
 
@@ -73,8 +67,6 @@ public class MainActivity extends FragmentActivity
 		viewPager.setBackgroundAsset(R.raw.false_bay);
 		viewPager.setAdapter(screenSwipeAdapter);
 		viewPager.setCurrentItem(3);
-
-		myApp.doRefresh();
 	}
 
 	@Override
@@ -143,31 +135,6 @@ public class MainActivity extends FragmentActivity
 		{
 			super.onBackPressed();
 		}
-	}
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-		switch (item.getItemId())
-		{
-		// manual refresh
-			case R.id.action_refresh:
-			{
-				myApp.doRefresh();
-
-				return true;
-			}
-		}
-		return super.onOptionsItemSelected(item);
 	}
 
 }

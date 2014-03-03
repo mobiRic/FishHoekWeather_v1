@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- text to display for each option -->
+    <string-array name="auto_refresh_entries">
+        <item>@string/auto_refresh_off</item>
+        <item>@string/auto_refresh_5min</item>
+        <item>@string/auto_refresh_15min</item>
+        <item>@string/auto_refresh_30min</item>
+        <item>@string/auto_refresh_1hour</item>
+    </string-array>
+
+    <!-- framework requires this to be a string array if used in adapter with auto_refresh_entries -->
+    <integer-array name="auto_refresh_values">
+        <item>-1</item>
+        <item>300000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+    </integer-array>
+
+</resources>
