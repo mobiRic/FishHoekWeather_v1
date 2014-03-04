@@ -42,7 +42,7 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 
 	/** Default weather data to return if no reading has been cached or received from the server. */
 	private static final String DEFAULT_WEATHER_JSON =
-			"{\"Time\":\"-\", \"windSpeed\":\"0 knots\", \"windDir\":\"0&#176;\", \"windGust\":\"0 knots\", \"windGustDir\":\"0&#176;\", \"barometer\":\"1010.0 mbar\", \"outTemp\":\"19.7&#176;C\", \"outTempMin\":\"-15&#176;C\", \"outTempMax\":\"-15&#176;C\"}";
+			"{\"Time\":\"not updated\", \"windSpeed\":\"0 knots\", \"windDir\":\"0°\", \"windGust\":\"0 knots\", \"windGustDir\":\"0°\", \"barometer\":\"1013.0 mbar\", \"outTemp\":\"0°C\", \"outTempMin\":\"-15°C\", \"outTempMax\":\"-15°C\"}";
 
 	/**
 	 * Cached {@link WeatherReading} for quick loading.
