@@ -1,6 +1,7 @@
 package mobiric.fhbsc.weather;
 
 
+import com.crashlytics.android.Crashlytics;
 import lib.view.ViewPagerParallax;
 import mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter;
 import mobiric.fhbsc.weather.fragments.ARefreshableFragment;
@@ -61,6 +62,7 @@ public class MainActivity extends AutoRefreshActivity
 	{
 		super.onCreate(savedInstanceState);
 
+		Crashlytics.start(this);
 		screenSwipeAdapter = new ScreenSwipeAdapter(this, getSupportFragmentManager());
 
 		setContentView(R.layout.activity_main);

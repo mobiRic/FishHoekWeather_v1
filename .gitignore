@@ -210,3 +210,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+libs/crashlytics.jar
+res/values/com_crashlytics_export_strings.xml
