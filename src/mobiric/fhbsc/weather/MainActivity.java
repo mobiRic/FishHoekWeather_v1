@@ -62,7 +62,6 @@ public class MainActivity extends AutoRefreshActivity
 	{
 		super.onCreate(savedInstanceState);
 
-		Crashlytics.start(this);
 		screenSwipeAdapter = new ScreenSwipeAdapter(this, getSupportFragmentManager());
 
 		setContentView(R.layout.activity_main);

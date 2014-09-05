@@ -21,6 +21,8 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 
+import com.crashlytics.android.Crashlytics;
+
 
 /**
  * Singleton class containing various global variables for quick access. </p>
@@ -51,6 +53,17 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 
 	public void onCreate()
 	{
+		super.onCreate();
+
+		/* CRASHLYTICS */
+		if (Dbug.CRASHLYTICS_ON)
+		{
+			Crashlytics.start(this);
+		}
+
+		/* FLURRY */
+		// Flurry.init(this);
+
 		// log version
 		Dbug.log("Android version identified: SDK=", Build.VERSION.SDK, " SDK_INT=",
 				Build.VERSION.SDK_INT, " RELEASE=", Build.VERSION.RELEASE, " CODENAME=",

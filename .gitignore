@@ -212,3 +212,4 @@ pip-log.txt
 .mr.developer.cfg
 libs/crashlytics.jar
 res/values/com_crashlytics_export_strings.xml
+assets/crashlytics-build.properties

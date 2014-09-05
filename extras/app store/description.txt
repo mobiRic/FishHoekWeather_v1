@@ -1,0 +1,62 @@
+TITLE:
+------
+
+Fish Hoek Weather
+
+
+SHORT DESCRIPTION:
+------------------
+
+LIVE weather updates from Fish Hoek beach
+
+
+LONG DESCRIPTION:
+-----------------
+
+Get LIVE weather updates direct from Fish Hoek beach.
+
+Swipe left & right to view Wind, Temperature & Barometer readings.
+
+Set app to refresh automatically in the settings menu. This way you will always have up to date readings when you open the app.
+
+
+This is a *beta* version with a limited set of features currently implemented. 
+
+Coming soon:
+&#8226;&#8195;help screen for first time users
+&#8226;&#8195;widget to display Live Weather on your Home screen
+&#8226;&#8195;Rain updates, just in time for winter
+
+
+LONG DESCRIPTION:
+-----------------
+
+Get LIVE weather updates direct from Fish Hoek beach.
+
+Swipe left & right to view Wind, Temperature & Barometer readings.
+
+Set app to refresh automatically in the settings menu. This way you will always have up to date readings when you open the app.
+
+
+This is a *beta* version with a limited set of features currently implemented. 
+
+Coming soon:
+  - help screen for first time users
+  - widget to display Live Weather on your Home screen
+  - Rain updates, just in time for winter
+
+
+PRIVACY POLICY:
+---------------
+
+https://googledrive.com/host/0B2Rk89VFRrWuWVRlT2x5VmF0QlU
+
+
+WHAT'S NEW:
+-----------
+
+Have fun matching cute pictures on the cards! Test your memory while playing over 3 different levels!
+
+Try Memory Match today!
+v 0.1.0
+  - first demo release
