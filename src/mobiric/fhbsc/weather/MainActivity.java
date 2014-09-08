@@ -1,7 +1,6 @@
 package mobiric.fhbsc.weather;
 
 
-import com.crashlytics.android.Crashlytics;
 import lib.view.ViewPagerParallax;
 import mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter;
 import mobiric.fhbsc.weather.fragments.ARefreshableFragment;
@@ -67,7 +66,7 @@ public class MainActivity extends AutoRefreshActivity
 		setContentView(R.layout.activity_main);
 
 		viewPager = (ViewPagerParallax) findViewById(R.id.pager);
-		viewPager.set_max_pages(3);
+		viewPager.set_max_pages(screenSwipeAdapter.getCount());
 		viewPager.setBackgroundAsset(R.raw.false_bay);
 		viewPager.setAdapter(screenSwipeAdapter);
 		viewPager.setCurrentItem(loadLastViewedPageSetting());

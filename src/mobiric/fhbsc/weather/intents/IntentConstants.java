@@ -41,6 +41,13 @@ public class IntentConstants
 		/** Fragment argument for the maximum outside temperature for the day. */
 		public static final String OUT_TEMP_MAX = "OUT_TEMP_MAX";
 
+		/** Fragment argument for the rain rate. */
+		public static final String RAIN_RATE = "RAIN_RATE";
+		/** Fragment argument for the minimum rain rate for the day. */
+		public static final String RAIN_RATE_MIN = "RAIN_RATE_MIN";
+		/** Fragment argument for the maximum rain rate for the day. */
+		public static final String RAIN_RATE_MAX = "RAIN_RATE_MAX";
+
 		/** Fragment argument for the current barometer reading. */
 		public static final String BAROMETER = "BAROMETER";
 

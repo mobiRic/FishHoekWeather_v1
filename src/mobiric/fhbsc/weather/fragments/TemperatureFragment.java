@@ -49,12 +49,12 @@ public class TemperatureFragment extends ARefreshableFragment
 		super.onCreateView(inflater, container, savedInstanceState);
 
 		View rootView = inflater.inflate(R.layout.fragment_temperature, container, false);
-		tvOutTemp = (TextView) rootView.findViewById(R.id.tvOutTemp);
-		ivDayTempDew = (ImageView) rootView.findViewById(R.id.ivDayTempDew);
-		ivWeekTempDew = (ImageView) rootView.findViewById(R.id.ivWeekTempDew);
+		tvOutTemp = (TextView) rootView.findViewById(R.id.tvRainRate);
+		ivDayTempDew = (ImageView) rootView.findViewById(R.id.ivDayRain);
+		ivWeekTempDew = (ImageView) rootView.findViewById(R.id.ivMonthRain);
 
-		ivThermometer = (ImageView) rootView.findViewById(R.id.ivThermometer);
-		vThermometerRed = rootView.findViewById(R.id.vThermometerRed);
+		ivThermometer = (ImageView) rootView.findViewById(R.id.ivRainMeter);
+		vThermometerRed = rootView.findViewById(R.id.vRainBlue);
 
 		return rootView;
 	}

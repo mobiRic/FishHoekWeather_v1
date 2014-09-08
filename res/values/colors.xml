@@ -3,7 +3,8 @@
 
     <color name="fenn_green">#7cb72f</color>
     <color name="thermometer_red">#fb0000</color>
-    <color name="thermometer_grey">#ccc</color>
+    <color name="rain_blue">#1ab6d7</color>
+    <color name="meter_background_grey">#ccc</color>
     <color name="holo_blue_dark">#0099cc</color>
 
 </resources>

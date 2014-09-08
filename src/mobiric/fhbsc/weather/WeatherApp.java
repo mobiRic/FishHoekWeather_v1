@@ -145,6 +145,12 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 				"http://www.fhbsc.co.za/fhbsc/weather/daybarometer.png", "daybarometer.png");
 		new ImageDownloader(this, this).execute(
 				"http://www.fhbsc.co.za/fhbsc/weather/weekbarometer.png", "weekbarometer.png");
+
+		// rain graphs
+		new ImageDownloader(this, this).execute("http://www.fhbsc.co.za/fhbsc/weather/dayrain.png",
+				"dayrain.png");
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/monthrain.png", "monthrain.png");
 	}
 
 
@@ -195,6 +201,11 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 		refreshWeather.putExtra(Extras.OUT_TEMP, result.outTemp);
 		refreshWeather.putExtra(Extras.OUT_TEMP_MIN, result.outTempMin);
 		refreshWeather.putExtra(Extras.OUT_TEMP_MAX, result.outTempMax);
+
+		// rain
+		refreshWeather.putExtra(Extras.RAIN_RATE, result.rainRateNow);
+		refreshWeather.putExtra(Extras.RAIN_RATE_MIN, result.rainMinRate);
+		refreshWeather.putExtra(Extras.RAIN_RATE_MAX, result.rainMaxRate);
 
 		// barometer
 		refreshWeather.putExtra(Extras.BAROMETER, result.barometer);
