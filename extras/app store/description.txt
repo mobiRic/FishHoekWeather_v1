@@ -55,8 +55,7 @@ https://googledrive.com/host/0B2Rk89VFRrWuWVRlT2x5VmF0QlU
 WHAT'S NEW:
 -----------
 
-Have fun matching cute pictures on the cards! Test your memory while playing over 3 different levels!
+LIVE weather updates from Fish Hoek beach.
 
-Try Memory Match today!
 v 0.1.0
   - first demo release
