@@ -24,6 +24,9 @@ import android.widget.TextView;
  */
 public class TemperatureFragment extends ARefreshableFragment
 {
+	public static final String GRAPH_DAY_TEMP = "daytempdew.png";
+	public static final String GRAPH_WEEK_TEMP = "weektempdew.png";
+
 	/** Assumed maximum temperature the thermometer will show. */
 	public static final int MAX_TEMP_RANGE = 40;
 	/** Assumed minimum temperature the thermometer will show. */
@@ -50,8 +53,11 @@ public class TemperatureFragment extends ARefreshableFragment
 
 		View rootView = inflater.inflate(R.layout.fragment_temperature, container, false);
 		tvOutTemp = (TextView) rootView.findViewById(R.id.tvRainRate);
+
 		ivDayTempDew = (ImageView) rootView.findViewById(R.id.ivDayRain);
+		zoomIfApi14(ivDayTempDew, rootView, GRAPH_DAY_TEMP);
 		ivWeekTempDew = (ImageView) rootView.findViewById(R.id.ivMonthRain);
+		zoomIfApi14(ivWeekTempDew, rootView, GRAPH_WEEK_TEMP);
 
 		ivThermometer = (ImageView) rootView.findViewById(R.id.ivRainMeter);
 		vThermometerRed = rootView.findViewById(R.id.vRainBlue);
@@ -95,8 +101,8 @@ public class TemperatureFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayTempDew, "daytempdew.png");
-		updateImage(ivWeekTempDew, "weektempdew.png");
+		updateImage(ivDayTempDew, GRAPH_DAY_TEMP, true);
+		updateImage(ivWeekTempDew, GRAPH_WEEK_TEMP, true);
 	}
 
 	void setThermometerHeight(boolean animate)
@@ -188,11 +194,11 @@ public class TemperatureFragment extends ARefreshableFragment
 			String imageName = bundle.getString(Extras.IMG_NAME);
 			if ("daytempdew.png".equals(imageName))
 			{
-				updateImage(ivDayTempDew, "daytempdew.png");
+				updateImage(ivDayTempDew, "daytempdew.png", true);
 			}
 			else if ("weektempdew.png".equals(imageName))
 			{
-				updateImage(ivWeekTempDew, "weektempdew.png");
+				updateImage(ivWeekTempDew, "weektempdew.png", true);
 			}
 
 			Dbug.log("Updating image [", imageName, "]");

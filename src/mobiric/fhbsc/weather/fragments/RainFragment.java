@@ -24,6 +24,9 @@ import android.widget.TextView;
  */
 public class RainFragment extends ARefreshableFragment
 {
+	public static final String GRAPH_DAY_RAIN = "dayrain.png";
+	public static final String GRAPH_MONTH_RAIN = "monthrain.png";
+
 	/** Assumed maximum rain rate the meter will show. */
 	public static final int MAX_RAIN_RANGE = 15;
 	/** Assumed minimum rain rate the meter will show. */
@@ -54,8 +57,11 @@ public class RainFragment extends ARefreshableFragment
 		tvNoRainTitle = (TextView) rootView.findViewById(R.id.tvNoRainTitle);
 		tvRainTitle = (TextView) rootView.findViewById(R.id.tvRainTitle);
 		tvRainRate = (TextView) rootView.findViewById(R.id.tvRainRate);
+
 		ivDayRain = (ImageView) rootView.findViewById(R.id.ivDayRain);
+		zoomIfApi14(ivDayRain, rootView, GRAPH_DAY_RAIN);
 		ivMonthRain = (ImageView) rootView.findViewById(R.id.ivMonthRain);
+		zoomIfApi14(ivMonthRain, rootView, GRAPH_MONTH_RAIN);
 
 		ivRainMeter = (ImageView) rootView.findViewById(R.id.ivRainMeter);
 		vRainBlue = rootView.findViewById(R.id.vRainBlue);
@@ -98,8 +104,8 @@ public class RainFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayRain, "dayrain.png");
-		updateImage(ivMonthRain, "monthrain.png");
+		updateImage(ivDayRain, GRAPH_DAY_RAIN, true);
+		updateImage(ivMonthRain, GRAPH_MONTH_RAIN, true);
 	}
 
 	void setRainHeight(boolean animate)
@@ -201,11 +207,11 @@ public class RainFragment extends ARefreshableFragment
 			String imageName = bundle.getString(Extras.IMG_NAME);
 			if ("dayrain.png".equals(imageName))
 			{
-				updateImage(ivDayRain, "dayrain.png");
+				updateImage(ivDayRain, "dayrain.png", true);
 			}
 			else if ("monthrain.png".equals(imageName))
 			{
-				updateImage(ivMonthRain, "monthrain.png");
+				updateImage(ivMonthRain, "monthrain.png", true);
 			}
 
 			Dbug.log("Updating image [", imageName, "]");

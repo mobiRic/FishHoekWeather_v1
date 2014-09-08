@@ -74,5 +74,4 @@ public class ScreenSwipeAdapter extends FragmentPagerAdapter
 		}
 		return null;
 	}
-
 }

@@ -18,6 +18,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
@@ -127,7 +129,6 @@ public class MainActivity extends AutoRefreshActivity
 		}
 	}
 
-
 	/**
 	 * Allow back button to handle navigation.
 	 */
@@ -135,8 +136,8 @@ public class MainActivity extends AutoRefreshActivity
 	public void onBackPressed()
 	{
 		ARefreshableFragment fragment =
-				(ARefreshableFragment) screenSwipeAdapter.getItem(viewPager.getCurrentItem());
-		if (!fragment.onBackPressed())
+				(ARefreshableFragment) findExistingFragmentByPosition(viewPager.getCurrentItem());
+		if ((fragment != null) && (!fragment.onBackPressed()))
 		{
 			super.onBackPressed();
 		}
@@ -186,6 +187,13 @@ public class MainActivity extends AutoRefreshActivity
 	{
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		return prefs.getInt("LAST_VIEWED_PAGE", 0);
+	}
+
+	public Fragment findExistingFragmentByPosition(int position)
+	{
+		return getSupportFragmentManager().findFragmentByTag(
+				"android:switcher:" + viewPager.getId() + ":"
+						+ screenSwipeAdapter.getItemId(position));
 	}
 
 }
