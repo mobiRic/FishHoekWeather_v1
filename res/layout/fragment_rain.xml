@@ -20,14 +20,23 @@
             android:layout_gravity="center_horizontal" >
 
             <TextView
+                android:id="@+id/tvNoRainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="No rain"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <TextView
                 android:id="@+id/tvRainTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:text="Rain rate is "
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                android:text="Raining at "
+                android:textAppearance="?android:attr/textAppearanceMedium" android:visibility="gone" />
+            
             <TextView
                 android:id="@+id/tvRainRate"
                 android:layout_width="wrap_content"
@@ -36,7 +45,7 @@
                 android:layout_alignBottom="@+id/tvRainTitle"
                 android:layout_toRightOf="@+id/tvRainTitle"
                 android:text="35mm/hr"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium" android:visibility="gone"/>
         </RelativeLayout>
 
         <RelativeLayout

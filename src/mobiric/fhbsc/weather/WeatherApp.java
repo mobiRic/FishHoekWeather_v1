@@ -203,9 +203,9 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 		refreshWeather.putExtra(Extras.OUT_TEMP_MAX, result.outTempMax);
 
 		// rain
-		refreshWeather.putExtra(Extras.RAIN_RATE, result.rainRate);
-		refreshWeather.putExtra(Extras.RAIN_RATE_MIN, result.rainRateMin);
-		refreshWeather.putExtra(Extras.RAIN_RATE_MAX, result.rainRateMax);
+		refreshWeather.putExtra(Extras.RAIN_RATE, result.rainRateNow);
+		refreshWeather.putExtra(Extras.RAIN_RATE_MIN, result.rainMinRate);
+		refreshWeather.putExtra(Extras.RAIN_RATE_MAX, result.rainMaxRate);
 
 		// barometer
 		refreshWeather.putExtra(Extras.BAROMETER, result.barometer);

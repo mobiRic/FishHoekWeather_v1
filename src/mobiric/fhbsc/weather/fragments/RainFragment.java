@@ -29,6 +29,8 @@ public class RainFragment extends ARefreshableFragment
 	/** Assumed minimum rain rate the meter will show. */
 	public static final int MIN_RAIN_RANGE = 0;
 
+	TextView tvNoRainTitle;
+	TextView tvRainTitle;
 	TextView tvRainRate;
 	ImageView ivDayRain;
 	ImageView ivMonthRain;
@@ -49,6 +51,8 @@ public class RainFragment extends ARefreshableFragment
 		super.onCreateView(inflater, container, savedInstanceState);
 
 		View rootView = inflater.inflate(R.layout.fragment_rain, container, false);
+		tvNoRainTitle = (TextView) rootView.findViewById(R.id.tvNoRainTitle);
+		tvRainTitle = (TextView) rootView.findViewById(R.id.tvRainTitle);
 		tvRainRate = (TextView) rootView.findViewById(R.id.tvRainRate);
 		ivDayRain = (ImageView) rootView.findViewById(R.id.ivDayRain);
 		ivMonthRain = (ImageView) rootView.findViewById(R.id.ivMonthRain);
@@ -75,9 +79,7 @@ public class RainFragment extends ARefreshableFragment
 		// get data from the application cache
 		WeatherReading reading = myApp.getCachedWeatherReading();
 
-		String rainRate = reading.rainRate;
-		tvRainRate.setText(rainRate);
-
+		final String rainRate = reading.rainRateNow;
 		if (rainRate != null)
 		{
 			setRainRateMillimetres(rainRate);
@@ -88,6 +90,7 @@ public class RainFragment extends ARefreshableFragment
 				public void run()
 				{
 					setRainHeight(animate);
+					setRainText(rainRate);
 				}
 			});
 		}
@@ -118,6 +121,16 @@ public class RainFragment extends ARefreshableFragment
 		vRainBlue.startAnimation(translate);
 	}
 
+	void setRainText(String rainRate)
+	{
+		boolean isDry = "0.0 mm/hr".equals(rainRate);
+		tvNoRainTitle.setVisibility((isDry ? View.VISIBLE : View.GONE));
+		tvRainTitle.setVisibility((isDry ? View.GONE : View.VISIBLE));
+		tvRainRate.setVisibility((isDry ? View.GONE : View.VISIBLE));
+
+		tvRainRate.setText(rainRate);
+	}
+
 	/**
 	 * Calculates the offset of the blue rain meter background view, based on a given rain rate.
 	 * 
@@ -134,12 +147,12 @@ public class RainFragment extends ARefreshableFragment
 		return topOffset;
 	}
 
-	public void setRainRateMillimetres(String temp)
+	public void setRainRateMillimetres(String rainRate)
 	{
 		float millis;
 		try
 		{
-			String strMillis = temp.substring(0, temp.length() - 2);
+			String strMillis = rainRate.substring(0, rainRate.length() - 6);
 			millis = Float.parseFloat(strMillis);
 		}
 		catch (NumberFormatException e)
