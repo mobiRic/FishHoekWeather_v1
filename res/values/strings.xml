@@ -7,10 +7,7 @@
 
     <!-- AUTO REFRESH SPINNER -->
     <string name="refresh_options">Refresh Options</string>
-    <string name="auto_refresh_off">Manual refresh</string>
-    <string name="auto_refresh_5min">Auto refresh - 5 min</string>
-    <string name="auto_refresh_15min">Auto refresh - 15 min</string>
-    <string name="auto_refresh_30min">Auto refresh - 30 min</string>
-    <string name="auto_refresh_1hour">Auto refresh - 1 hr</string>
+    <string name="auto_refresh_off">Manual</string>
+    <string name="auto_refresh_5min">Auto</string>
 
 </resources>
