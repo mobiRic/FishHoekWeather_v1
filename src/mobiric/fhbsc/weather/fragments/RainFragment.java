@@ -20,25 +20,25 @@ import android.widget.TextView;
 
 
 /**
- * Fragment that displays the temperature data.
+ * Fragment that displays the rain data.
  */
-public class TemperatureFragment extends ARefreshableFragment
+public class RainFragment extends ARefreshableFragment
 {
-	/** Assumed maximum temperature the thermometer will show. */
-	public static final int MAX_TEMP_RANGE = 40;
-	/** Assumed minimum temperature the thermometer will show. */
-	public static final int MIN_TEMP_RANGE = -15;
+	/** Assumed maximum rain rate the meter will show. */
+	public static final int MAX_RAIN_RANGE = 15;
+	/** Assumed minimum rain rate the meter will show. */
+	public static final int MIN_RAIN_RANGE = 0;
 
-	TextView tvOutTemp;
-	ImageView ivDayTempDew;
-	ImageView ivWeekTempDew;
-	ImageView ivThermometer;
-	View vThermometerRed;
+	TextView tvRainRate;
+	ImageView ivDayRain;
+	ImageView ivMonthRain;
+	ImageView ivRainMeter;
+	View vRainBlue;
 
-	float tempDegrees = MIN_TEMP_RANGE;
-	float oldTempDegrees = MIN_TEMP_RANGE;
+	float rainMillimetres = MIN_RAIN_RANGE;
+	float oldRainMillimetres = MIN_RAIN_RANGE;
 
-	public TemperatureFragment()
+	public RainFragment()
 	{
 		super();
 	}
@@ -48,13 +48,13 @@ public class TemperatureFragment extends ARefreshableFragment
 	{
 		super.onCreateView(inflater, container, savedInstanceState);
 
-		View rootView = inflater.inflate(R.layout.fragment_temperature, container, false);
-		tvOutTemp = (TextView) rootView.findViewById(R.id.tvRainRate);
-		ivDayTempDew = (ImageView) rootView.findViewById(R.id.ivDayRain);
-		ivWeekTempDew = (ImageView) rootView.findViewById(R.id.ivMonthRain);
+		View rootView = inflater.inflate(R.layout.fragment_rain, container, false);
+		tvRainRate = (TextView) rootView.findViewById(R.id.tvRainRate);
+		ivDayRain = (ImageView) rootView.findViewById(R.id.ivDayRain);
+		ivMonthRain = (ImageView) rootView.findViewById(R.id.ivMonthRain);
 
-		ivThermometer = (ImageView) rootView.findViewById(R.id.ivRainMeter);
-		vThermometerRed = rootView.findViewById(R.id.vRainBlue);
+		ivRainMeter = (ImageView) rootView.findViewById(R.id.ivRainMeter);
+		vRainBlue = rootView.findViewById(R.id.vRainBlue);
 
 		return rootView;
 	}
@@ -75,19 +75,19 @@ public class TemperatureFragment extends ARefreshableFragment
 		// get data from the application cache
 		WeatherReading reading = myApp.getCachedWeatherReading();
 
-		String outTemp = reading.outTemp;
-		tvOutTemp.setText(outTemp);
+		String rainRate = reading.rainRate;
+		tvRainRate.setText(rainRate);
 
-		if (outTemp != null)
+		if (rainRate != null)
 		{
-			setTempDegrees(outTemp);
+			setRainRateMillimetres(rainRate);
 
 			// post to UI thread since it requires the height of ivThermometer
-			ivThermometer.post(new Runnable()
+			ivRainMeter.post(new Runnable()
 			{
 				public void run()
 				{
-					setThermometerHeight(animate);
+					setRainHeight(animate);
 				}
 			});
 		}
@@ -95,17 +95,17 @@ public class TemperatureFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayTempDew, "daytempdew.png");
-		updateImage(ivWeekTempDew, "weektempdew.png");
+		updateImage(ivDayRain, "dayrain.png");
+		updateImage(ivMonthRain, "monthrain.png");
 	}
 
-	void setThermometerHeight(boolean animate)
+	void setRainHeight(boolean animate)
 	{
-		int to = calcOffsetForDegrees(tempDegrees);
+		int to = calcOffsetForMillis(rainMillimetres);
 		int from;
 		if (animate)
 		{
-			from = calcOffsetForDegrees(oldTempDegrees);
+			from = calcOffsetForMillis(oldRainMillimetres);
 		}
 		else
 		{
@@ -115,56 +115,56 @@ public class TemperatureFragment extends ARefreshableFragment
 		TranslateAnimation translate = new TranslateAnimation(0, 0, from, to);
 		translate.setFillAfter(true);
 		translate.setDuration(700);
-		vThermometerRed.startAnimation(translate);
+		vRainBlue.startAnimation(translate);
 	}
 
 	/**
-	 * Calculates the offset of the red thermometer background view, based on a given temperature.
+	 * Calculates the offset of the blue rain meter background view, based on a given rain rate.
 	 * 
-	 * @param degrees
-	 *            temperature
+	 * @param millis
+	 *            rain rate mm/hr
 	 * @return offset for the view
 	 */
-	int calcOffsetForDegrees(float degrees)
+	int calcOffsetForMillis(float millis)
 	{
-		float heightRed =
-				(degrees - MIN_TEMP_RANGE) * ivThermometer.getHeight()
-						/ (MAX_TEMP_RANGE - MIN_TEMP_RANGE);
-		int topOffset = (int) (ivThermometer.getHeight() - heightRed);
+		float heightBlue =
+				(millis - MIN_RAIN_RANGE) * ivRainMeter.getHeight()
+						/ (MAX_RAIN_RANGE - MIN_RAIN_RANGE);
+		int topOffset = (int) (ivRainMeter.getHeight() - heightBlue);
 		return topOffset;
 	}
 
-	public void setTempDegrees(String temp)
+	public void setRainRateMillimetres(String temp)
 	{
-		float degrees;
+		float millis;
 		try
 		{
-			String strDegrees = temp.substring(0, temp.length() - 2);
-			degrees = Float.parseFloat(strDegrees);
+			String strMillis = temp.substring(0, temp.length() - 2);
+			millis = Float.parseFloat(strMillis);
 		}
 		catch (NumberFormatException e)
 		{
-			degrees = 20;
+			millis = 0;
 		}
 
 		// random data fluctuations for UI debugging
 		if (Dbug.RANDOM_DATA)
 		{
-			degrees += new Random().nextInt(20) - 10;
+			millis += new Random().nextInt(8) - 4;
 		}
 
 		// range check
-		if (degrees >= MAX_TEMP_RANGE)
+		if (millis >= MAX_RAIN_RANGE)
 		{
-			degrees = MAX_TEMP_RANGE;
+			millis = MAX_RAIN_RANGE;
 		}
-		else if (degrees < MIN_TEMP_RANGE)
+		else if (millis < MIN_RAIN_RANGE)
 		{
-			degrees = MIN_TEMP_RANGE;
+			millis = MIN_RAIN_RANGE;
 		}
 
-		oldTempDegrees = tempDegrees;
-		tempDegrees = degrees;
+		oldRainMillimetres = rainMillimetres;
+		rainMillimetres = millis;
 	}
 
 	@Override
@@ -186,13 +186,13 @@ public class TemperatureFragment extends ARefreshableFragment
 		else if (Actions.REFRESH_IMAGE.equals(intent.getAction()))
 		{
 			String imageName = bundle.getString(Extras.IMG_NAME);
-			if ("daytempdew.png".equals(imageName))
+			if ("dayrain.png".equals(imageName))
 			{
-				updateImage(ivDayTempDew, "daytempdew.png");
+				updateImage(ivDayRain, "dayrain.png");
 			}
-			else if ("weektempdew.png".equals(imageName))
+			else if ("monthrain.png".equals(imageName))
 			{
-				updateImage(ivWeekTempDew, "weektempdew.png");
+				updateImage(ivMonthRain, "monthrain.png");
 			}
 
 			Dbug.log("Updating image [", imageName, "]");

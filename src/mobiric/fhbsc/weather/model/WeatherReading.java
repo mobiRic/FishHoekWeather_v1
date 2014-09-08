@@ -25,7 +25,10 @@ public class WeatherReading
 	public String outTemp;
 	public String outTempMin;
 	public String outTempMax;
-	
+	public String rainRate = "0mm";
+	public String rainRateMin;
+	public String rainRateMax;
+
 	@Override
 	public String toString()
 	{
