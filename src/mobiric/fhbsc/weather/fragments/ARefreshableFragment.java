@@ -187,7 +187,7 @@ public abstract class ARefreshableFragment extends Fragment
 			Bitmap bitmap = IOUtils.getBitmap(appContext, imagePath);
 			drawable = new BitmapDrawable(getResources(), bitmap);
 		}
-		catch (IOException e)
+		catch (Exception e)
 		{
 			Dbug.log("Image not updated [", imagePath, "] ", e.getLocalizedMessage());
 		}

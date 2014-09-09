@@ -69,7 +69,7 @@ public class MainActivity extends AutoRefreshActivity
 
 		viewPager = (ViewPagerParallax) findViewById(R.id.pager);
 		viewPager.set_max_pages(screenSwipeAdapter.getCount());
-		viewPager.setBackgroundAsset(R.raw.false_bay);
+		viewPager.setBackgroundAsset(R.drawable.false_bay);
 		viewPager.setAdapter(screenSwipeAdapter);
 		viewPager.setCurrentItem(loadLastViewedPageSetting());
 	}
