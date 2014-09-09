@@ -53,7 +53,7 @@ public class MainActivity extends AutoRefreshActivity
 			 * Intents. Rather to use globals to share data between Activities.
 			 */
 			WeatherReading reading = myApp.getCachedWeatherReading();
-			setUpdateTime(reading.time);
+			setLastUpdateTime(reading.time);
 		}
 	};
 
@@ -106,11 +106,11 @@ public class MainActivity extends AutoRefreshActivity
 	void refreshOnResume()
 	{
 		WeatherReading reading = myApp.getCachedWeatherReading();
-		setUpdateTime(reading.time);
+		setLastUpdateTime(reading.time);
 	}
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	private void setUpdateTime(String time)
+	private void setLastUpdateTime(String time)
 	{
 		if (time != null)
 		{
