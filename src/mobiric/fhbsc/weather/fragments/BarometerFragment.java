@@ -91,8 +91,8 @@ public class BarometerFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayBarometer, GRAPH_DAY_BAROMETER, true);
-		updateImage(ivWeekBarometer, GRAPH_WEEK_BAROMETER, true);
+		updateImage(ivDayBarometer, GRAPH_DAY_BAROMETER);
+		updateImage(ivWeekBarometer, GRAPH_WEEK_BAROMETER);
 	}
 
 	void rotateArrow(boolean animate)
@@ -185,11 +185,11 @@ public class BarometerFragment extends ARefreshableFragment
 			String imageName = bundle.getString(Extras.IMG_NAME);
 			if (GRAPH_DAY_BAROMETER.equals(imageName))
 			{
-				updateImage(ivDayBarometer, GRAPH_DAY_BAROMETER, true);
+				updateImage(ivDayBarometer, GRAPH_DAY_BAROMETER);
 			}
 			else if (GRAPH_WEEK_BAROMETER.equals(imageName))
 			{
-				updateImage(ivWeekBarometer, GRAPH_WEEK_BAROMETER, true);
+				updateImage(ivWeekBarometer, GRAPH_WEEK_BAROMETER);
 			}
 
 			Dbug.log("Updating image [", imageName, "]");

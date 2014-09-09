@@ -104,8 +104,8 @@ public class RainFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayRain, GRAPH_DAY_RAIN, true);
-		updateImage(ivMonthRain, GRAPH_MONTH_RAIN, true);
+		updateImage(ivDayRain, GRAPH_DAY_RAIN);
+		updateImage(ivMonthRain, GRAPH_MONTH_RAIN);
 	}
 
 	void setRainHeight(boolean animate)
@@ -207,11 +207,11 @@ public class RainFragment extends ARefreshableFragment
 			String imageName = bundle.getString(Extras.IMG_NAME);
 			if ("dayrain.png".equals(imageName))
 			{
-				updateImage(ivDayRain, "dayrain.png", true);
+				updateImage(ivDayRain, "dayrain.png");
 			}
 			else if ("monthrain.png".equals(imageName))
 			{
-				updateImage(ivMonthRain, "monthrain.png", true);
+				updateImage(ivMonthRain, "monthrain.png");
 			}
 
 			Dbug.log("Updating image [", imageName, "]");

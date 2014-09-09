@@ -181,22 +181,6 @@ public abstract class ARefreshableFragment extends Fragment
 	 */
 	public void updateImage(final ImageView view, String imagePath)
 	{
-		updateImage(view, imagePath, true);
-	}
-
-	/**
-	 * Updates the given view with an image file. Also resizes the view to fit the width of the
-	 * screen.
-	 * 
-	 * @param view
-	 *            {@link ImageView} to update
-	 * @param imagePath
-	 *            path to the image
-	 * @param autoSize
-	 *            TODO
-	 */
-	public void updateImage(final ImageView view, String imagePath, boolean autoSize)
-	{
 		Drawable drawable = null;
 		try
 		{
@@ -209,25 +193,6 @@ public abstract class ARefreshableFragment extends Fragment
 		}
 
 		view.setImageDrawable(drawable);
-
-		// size view correctly
-		if (autoSize)
-		{
-			view.post(new Runnable()
-			{
-				public void run()
-				{
-
-					int width = view.getWidth();
-					// get new height based on image size plus 1 pixel for rounding error
-					int height = (width * 180 / 300) / 4 * 3 + 1;
-					LinearLayout.LayoutParams params =
-							(LinearLayout.LayoutParams) view.getLayoutParams();
-					params.height = height;
-					view.setLayoutParams(params);
-				}
-			});
-		}
 	}
 
 	/**
@@ -278,7 +243,7 @@ public abstract class ARefreshableFragment extends Fragment
 		// Load the high-resolution "zoomed-in" image.
 		final ImageView expandedImageView = (ImageView) rootView.findViewById(R.id.ivZoomedImage);
 		// expandedImageView.setImageResource(imageResId);
-		updateImage(expandedImageView, imageName, false);
+		updateImage(expandedImageView, imageName);
 		final View zoomBackground = rootView.findViewById(R.id.backgroundZoomedImage);
 
 

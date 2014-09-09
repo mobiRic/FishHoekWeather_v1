@@ -101,8 +101,8 @@ public class TemperatureFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayTempDew, GRAPH_DAY_TEMP, true);
-		updateImage(ivWeekTempDew, GRAPH_WEEK_TEMP, true);
+		updateImage(ivDayTempDew, GRAPH_DAY_TEMP);
+		updateImage(ivWeekTempDew, GRAPH_WEEK_TEMP);
 	}
 
 	void setThermometerHeight(boolean animate)
@@ -194,11 +194,11 @@ public class TemperatureFragment extends ARefreshableFragment
 			String imageName = bundle.getString(Extras.IMG_NAME);
 			if ("daytempdew.png".equals(imageName))
 			{
-				updateImage(ivDayTempDew, "daytempdew.png", true);
+				updateImage(ivDayTempDew, "daytempdew.png");
 			}
 			else if ("weektempdew.png".equals(imageName))
 			{
-				updateImage(ivWeekTempDew, "weektempdew.png", true);
+				updateImage(ivWeekTempDew, "weektempdew.png");
 			}
 
 			Dbug.log("Updating image [", imageName, "]");

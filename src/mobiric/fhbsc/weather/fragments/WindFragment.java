@@ -128,10 +128,10 @@ public class WindFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayWind, GRAPH_DAY_WIND, true);
-		updateImage(ivDayWindDir, GRAPH_DAY_WIND_DIR, true);
-		updateImage(ivWeekWind, GRAPH_WEEK_WIND, true);
-		updateImage(ivWeekWindDir, GRAPH_WEEK_WIND_DIR, true);
+		updateImage(ivDayWind, GRAPH_DAY_WIND);
+		updateImage(ivDayWindDir, GRAPH_DAY_WIND_DIR);
+		updateImage(ivWeekWind, GRAPH_WEEK_WIND);
+		updateImage(ivWeekWindDir, GRAPH_WEEK_WIND_DIR);
 	}
 
 	void rotateArrow(boolean animate)
@@ -209,19 +209,19 @@ public class WindFragment extends ARefreshableFragment
 			String imageName = bundle.getString(Extras.IMG_NAME);
 			if ("daywind.png".equals(imageName))
 			{
-				updateImage(ivDayWind, "daywind.png", true);
+				updateImage(ivDayWind, "daywind.png");
 			}
 			else if ("daywinddir.png".equals(imageName))
 			{
-				updateImage(ivDayWindDir, "daywinddir.png", true);
+				updateImage(ivDayWindDir, "daywinddir.png");
 			}
 			else if ("weekwind.png".equals(imageName))
 			{
-				updateImage(ivWeekWind, "weekwind.png", true);
+				updateImage(ivWeekWind, "weekwind.png");
 			}
 			else if ("weekwinddir.png".equals(imageName))
 			{
-				updateImage(ivWeekWindDir, "weekwinddir.png", true);
+				updateImage(ivWeekWindDir, "weekwinddir.png");
 			}
 
 			Dbug.log("Updating image [", imageName, "]");
