@@ -1432,6 +1432,383 @@ android.support.v4.widget.ViewDragHelper$Callback: int getViewVerticalDragRange(
 android.support.v4.widget.ViewDragHelper$Callback: boolean tryCaptureView(android.view.View,int)
 android.support.v4.widget.ViewDragHelper$Callback: int clampViewPositionHorizontal(android.view.View,int,int)
 android.support.v4.widget.ViewDragHelper$Callback: int clampViewPositionVertical(android.view.View,int,int)
+com.crashlytics.android.CrashTest
+com.crashlytics.android.CrashTest: CrashTest()
+com.crashlytics.android.CrashTest: void throwRuntimeException(java.lang.String)
+com.crashlytics.android.CrashTest: void stackOverflow()
+com.crashlytics.android.CrashTest: void indexOutOfBounds()
+com.crashlytics.android.CrashTest: void crashAsyncTask(long)
+com.crashlytics.android.CrashTest: void throwFiveChainedExceptions()
+com.crashlytics.android.Crashlytics
+com.crashlytics.android.Crashlytics: java.lang.String TAG
+com.crashlytics.android.Crashlytics: Crashlytics()
+com.crashlytics.android.Crashlytics: void start(android.content.Context)
+com.crashlytics.android.Crashlytics: void start(android.content.Context,float)
+com.crashlytics.android.Crashlytics: com.crashlytics.android.Crashlytics getInstance()
+com.crashlytics.android.Crashlytics: void logException(java.lang.Throwable)
+com.crashlytics.android.Crashlytics: void log(java.lang.String)
+com.crashlytics.android.Crashlytics: void log(int,java.lang.String,java.lang.String)
+com.crashlytics.android.Crashlytics: void setUserIdentifier(java.lang.String)
+com.crashlytics.android.Crashlytics: void setUserName(java.lang.String)
+com.crashlytics.android.Crashlytics: void setUserEmail(java.lang.String)
+com.crashlytics.android.Crashlytics: void setApplicationInstallationIdentifier(java.lang.String)
+com.crashlytics.android.Crashlytics: void setString(java.lang.String,java.lang.String)
+com.crashlytics.android.Crashlytics: void setBool(java.lang.String,boolean)
+com.crashlytics.android.Crashlytics: void setDouble(java.lang.String,double)
+com.crashlytics.android.Crashlytics: void setFloat(java.lang.String,float)
+com.crashlytics.android.Crashlytics: void setInt(java.lang.String,int)
+com.crashlytics.android.Crashlytics: void setLong(java.lang.String,long)
+com.crashlytics.android.Crashlytics: void setListener(com.crashlytics.android.CrashlyticsListener)
+com.crashlytics.android.Crashlytics: void setDebugMode(boolean)
+com.crashlytics.android.Crashlytics: boolean getDebugMode()
+com.crashlytics.android.Crashlytics: void setPinningInfoProvider(com.crashlytics.android.PinningInfoProvider)
+com.crashlytics.android.Crashlytics: com.crashlytics.android.PinningInfoProvider getPinningInfoProvider()
+com.crashlytics.android.Crashlytics: boolean verifyPinning(java.net.URL)
+com.crashlytics.android.Crashlytics: java.lang.String getCrashlyticsVersion()
+com.crashlytics.android.Crashlytics: void crash()
+com.crashlytics.android.Crashlytics: void c()
+com.crashlytics.android.Crashlytics: java.lang.String getVersion()
+com.crashlytics.android.CrashlyticsListener
+com.crashlytics.android.CrashlyticsListener: void crashlyticsDidDetectCrashDuringPreviousExecution()
+com.crashlytics.android.CrashlyticsMissingDependencyException
+com.crashlytics.android.CrashlyticsMissingDependencyException: long serialVersionUID
+com.crashlytics.android.PinningInfoProvider
+com.crashlytics.android.PinningInfoProvider: java.io.InputStream getKeyStoreStream()
+com.crashlytics.android.PinningInfoProvider: java.lang.String getKeyStorePassword()
+com.crashlytics.android.PinningInfoProvider: java.lang.String[] getPins()
+com.crashlytics.android.i: long serialVersionUID
+com.crashlytics.android.internal.A
+com.crashlytics.android.internal.A: A()
+com.crashlytics.android.internal.A: void a(java.lang.String,java.lang.String,java.lang.Throwable)
+com.crashlytics.android.internal.A: void a(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.A: void b(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.A: void c(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.A: void d(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.A: void a(int,java.lang.String,java.lang.String)
+com.crashlytics.android.internal.A: void a(int,java.lang.String,java.lang.String,boolean)
+com.crashlytics.android.internal.B
+com.crashlytics.android.internal.B: B(com.crashlytics.android.internal.m)
+com.crashlytics.android.internal.B: void c(java.lang.Object)
+com.crashlytics.android.internal.D
+com.crashlytics.android.internal.D: D()
+com.crashlytics.android.internal.D: com.crashlytics.android.internal.D a()
+com.crashlytics.android.internal.D: void c()
+com.crashlytics.android.internal.D: java.lang.String getVersion()
+com.crashlytics.android.internal.D: void a(com.crashlytics.android.internal.ag)
+com.crashlytics.android.internal.D: void a(com.crashlytics.android.internal.af)
+com.crashlytics.android.internal.W: com.crashlytics.android.internal.W[] values()
+com.crashlytics.android.internal.W: com.crashlytics.android.internal.W valueOf(java.lang.String)
+com.crashlytics.android.internal.Z
+com.crashlytics.android.internal.Z: Z(java.lang.String,java.lang.String,com.crashlytics.android.internal.av,com.crashlytics.android.internal.ax)
+com.crashlytics.android.internal.Z: java.lang.String a()
+com.crashlytics.android.internal.Z: com.crashlytics.android.internal.ay b()
+com.crashlytics.android.internal.Z: com.crashlytics.android.internal.ay a(java.util.Map)
+com.crashlytics.android.internal.aA
+com.crashlytics.android.internal.aA: aA(java.io.Closeable,boolean)
+com.crashlytics.android.internal.aA: void b()
+com.crashlytics.android.internal.aB
+com.crashlytics.android.internal.aB: com.crashlytics.android.internal.aB a
+com.crashlytics.android.internal.aB: java.net.HttpURLConnection a(java.net.URL)
+com.crashlytics.android.internal.aD
+com.crashlytics.android.internal.aD: long serialVersionUID
+com.crashlytics.android.internal.aD: aD(java.io.IOException)
+com.crashlytics.android.internal.aD: java.lang.Throwable getCause()
+com.crashlytics.android.internal.aE
+com.crashlytics.android.internal.aE: aE()
+com.crashlytics.android.internal.aE: java.lang.Object a()
+com.crashlytics.android.internal.aE: void b()
+com.crashlytics.android.internal.aE: java.lang.Object call()
+com.crashlytics.android.internal.aF
+com.crashlytics.android.internal.aF: aF(java.io.OutputStream,java.lang.String,int)
+com.crashlytics.android.internal.aF: com.crashlytics.android.internal.aF a(java.lang.String)
+com.crashlytics.android.internal.aG
+com.crashlytics.android.internal.aG: java.io.InputStream a()
+com.crashlytics.android.internal.aG: java.lang.String b()
+com.crashlytics.android.internal.aG: java.lang.String[] c()
+com.crashlytics.android.internal.aJ
+com.crashlytics.android.internal.aJ: android.content.SharedPreferences a()
+com.crashlytics.android.internal.aJ: android.content.SharedPreferences$Editor b()
+com.crashlytics.android.internal.aJ: boolean a(android.content.SharedPreferences$Editor)
+com.crashlytics.android.internal.aJ: aJ(com.crashlytics.android.internal.u)
+com.crashlytics.android.internal.aK
+com.crashlytics.android.internal.aK: java.lang.String a
+com.crashlytics.android.internal.aK: int b
+com.crashlytics.android.internal.aK: int c
+com.crashlytics.android.internal.aK: aK(java.lang.String,int,int,int,int)
+com.crashlytics.android.internal.aM
+com.crashlytics.android.internal.aM: java.lang.String a
+com.crashlytics.android.internal.aM: java.lang.String b
+com.crashlytics.android.internal.aM: java.lang.String c
+com.crashlytics.android.internal.aM: boolean d
+com.crashlytics.android.internal.aM: aM(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,com.crashlytics.android.internal.aL)
+com.crashlytics.android.internal.aN
+com.crashlytics.android.internal.aN: org.json.JSONObject a()
+com.crashlytics.android.internal.aN: void a(long,org.json.JSONObject)
+com.crashlytics.android.internal.aP
+com.crashlytics.android.internal.aP: boolean a
+com.crashlytics.android.internal.aP: boolean b
+com.crashlytics.android.internal.aP: boolean c
+com.crashlytics.android.internal.aP: aP(boolean,boolean,boolean,boolean)
+com.crashlytics.android.internal.aQ
+com.crashlytics.android.internal.aQ: java.lang.String a
+com.crashlytics.android.internal.aQ: java.lang.String b
+com.crashlytics.android.internal.aQ: java.lang.String c
+com.crashlytics.android.internal.aQ: boolean d
+com.crashlytics.android.internal.aQ: java.lang.String e
+com.crashlytics.android.internal.aQ: boolean f
+com.crashlytics.android.internal.aQ: java.lang.String g
+com.crashlytics.android.internal.aQ: aQ(java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,boolean,java.lang.String)
+com.crashlytics.android.internal.aR
+com.crashlytics.android.internal.aR: int a
+com.crashlytics.android.internal.aR: aR(int,int,int,int,int,boolean)
+com.crashlytics.android.internal.aS
+com.crashlytics.android.internal.aS: com.crashlytics.android.internal.aS a()
+com.crashlytics.android.internal.aS: com.crashlytics.android.internal.aS a(android.content.Context,com.crashlytics.android.internal.av,java.lang.String,java.lang.String,java.lang.String)
+com.crashlytics.android.internal.aS: com.crashlytics.android.internal.aX b()
+com.crashlytics.android.internal.aS: java.lang.Object a(com.crashlytics.android.internal.aU,java.lang.Object)
+com.crashlytics.android.internal.aS: boolean c()
+com.crashlytics.android.internal.aS: boolean d()
+com.crashlytics.android.internal.aU
+com.crashlytics.android.internal.aU: java.lang.Object a(com.crashlytics.android.internal.aX)
+com.crashlytics.android.internal.aV
+com.crashlytics.android.internal.aV: com.crashlytics.android.internal.aV a
+com.crashlytics.android.internal.aV: com.crashlytics.android.internal.aV b
+com.crashlytics.android.internal.aV: com.crashlytics.android.internal.aV c
+com.crashlytics.android.internal.aV: com.crashlytics.android.internal.aV[] values()
+com.crashlytics.android.internal.aV: com.crashlytics.android.internal.aV valueOf(java.lang.String)
+com.crashlytics.android.internal.aW
+com.crashlytics.android.internal.aW: com.crashlytics.android.internal.aX a()
+com.crashlytics.android.internal.aW: com.crashlytics.android.internal.aX a(com.crashlytics.android.internal.aV)
+com.crashlytics.android.internal.aW: aW(com.crashlytics.android.internal.aZ,com.crashlytics.android.internal.ah,com.crashlytics.android.internal.aY,com.crashlytics.android.internal.aN,com.crashlytics.android.internal.ba)
+com.crashlytics.android.internal.aX
+com.crashlytics.android.internal.aX: com.crashlytics.android.internal.aM a
+com.crashlytics.android.internal.aX: com.crashlytics.android.internal.aR b
+com.crashlytics.android.internal.aX: com.crashlytics.android.internal.aQ c
+com.crashlytics.android.internal.aX: com.crashlytics.android.internal.aP d
+com.crashlytics.android.internal.aX: com.crashlytics.android.internal.aK e
+com.crashlytics.android.internal.aX: long f
+com.crashlytics.android.internal.aX: aX(long,com.crashlytics.android.internal.aM,com.crashlytics.android.internal.aR,com.crashlytics.android.internal.aQ,com.crashlytics.android.internal.aP,com.crashlytics.android.internal.aK,int,int)
+com.crashlytics.android.internal.aY
+com.crashlytics.android.internal.aY: com.crashlytics.android.internal.aX a(com.crashlytics.android.internal.ah,org.json.JSONObject)
+com.crashlytics.android.internal.aY: org.json.JSONObject a(org.json.JSONObject)
+com.crashlytics.android.internal.aZ
+com.crashlytics.android.internal.aZ: java.lang.String a
+com.crashlytics.android.internal.aZ: java.lang.String b
+com.crashlytics.android.internal.aZ: java.lang.String c
+com.crashlytics.android.internal.aZ: java.lang.String d
+com.crashlytics.android.internal.aZ: java.lang.String e
+com.crashlytics.android.internal.aZ: int f
+com.crashlytics.android.internal.aZ: java.lang.String g
+com.crashlytics.android.internal.aZ: aZ(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)
+com.crashlytics.android.internal.aa
+com.crashlytics.android.internal.aa: aa()
+com.crashlytics.android.internal.aa: void run()
+com.crashlytics.android.internal.aa: void a()
+com.crashlytics.android.internal.ab
+com.crashlytics.android.internal.ab: java.util.Comparator a
+com.crashlytics.android.internal.ab: android.content.SharedPreferences a()
+com.crashlytics.android.internal.ab: int b()
+com.crashlytics.android.internal.ab: long c()
+com.crashlytics.android.internal.ab: android.app.ActivityManager$RunningAppProcessInfo a(java.lang.String,android.content.Context)
+com.crashlytics.android.internal.ab: java.lang.String a(java.io.InputStream)
+com.crashlytics.android.internal.ab: java.lang.String a(java.lang.String)
+com.crashlytics.android.internal.ab: java.lang.String a(java.lang.String[])
+com.crashlytics.android.internal.ab: long a(android.content.Context)
+com.crashlytics.android.internal.ab: long b(java.lang.String)
+com.crashlytics.android.internal.ab: float b(android.content.Context)
+com.crashlytics.android.internal.ab: boolean c(android.content.Context)
+com.crashlytics.android.internal.ab: void c(java.lang.String)
+com.crashlytics.android.internal.ab: void d(java.lang.String)
+com.crashlytics.android.internal.ab: void a(int,java.lang.String)
+com.crashlytics.android.internal.ab: boolean d(android.content.Context)
+com.crashlytics.android.internal.ab: boolean e(android.content.Context)
+com.crashlytics.android.internal.ab: boolean a(android.content.Context,java.lang.String,boolean)
+com.crashlytics.android.internal.ab: int a(android.content.Context,java.lang.String,java.lang.String)
+com.crashlytics.android.internal.ab: boolean d()
+com.crashlytics.android.internal.ab: boolean e()
+com.crashlytics.android.internal.ab: int f()
+com.crashlytics.android.internal.ab: int a(boolean)
+com.crashlytics.android.internal.ab: javax.crypto.Cipher b(int,java.lang.String)
+com.crashlytics.android.internal.ab: java.lang.String a(byte[])
+com.crashlytics.android.internal.ab: boolean f(android.content.Context)
+com.crashlytics.android.internal.ab: java.lang.String a(android.content.Context,java.lang.String)
+com.crashlytics.android.internal.ab: void a(java.io.Closeable,java.lang.String)
+com.crashlytics.android.internal.ab: void a(java.io.Flushable,java.lang.String)
+com.crashlytics.android.internal.ab: boolean e(java.lang.String)
+com.crashlytics.android.internal.ab: java.lang.String a(int)
+com.crashlytics.android.internal.ab: void a(java.io.InputStream,java.io.OutputStream,byte[])
+com.crashlytics.android.internal.ab: java.lang.String b(int)
+com.crashlytics.android.internal.ab: java.lang.String g(android.content.Context)
+com.crashlytics.android.internal.ab: int h(android.content.Context)
+com.crashlytics.android.internal.ab: java.lang.String i(android.content.Context)
+com.crashlytics.android.internal.ad: com.crashlytics.android.internal.ad[] values()
+com.crashlytics.android.internal.ad: com.crashlytics.android.internal.ad valueOf(java.lang.String)
+com.crashlytics.android.internal.ae
+com.crashlytics.android.internal.ae: ae(java.lang.String)
+com.crashlytics.android.internal.ae: java.lang.String a()
+com.crashlytics.android.internal.af
+com.crashlytics.android.internal.af: af(java.lang.String)
+com.crashlytics.android.internal.ag
+com.crashlytics.android.internal.ag: ag(java.lang.String)
+com.crashlytics.android.internal.ah
+com.crashlytics.android.internal.ah: long a()
+com.crashlytics.android.internal.ah: ah()
+com.crashlytics.android.internal.ah: java.util.concurrent.ExecutorService a(java.lang.String)
+com.crashlytics.android.internal.ah: java.util.concurrent.ScheduledExecutorService b(java.lang.String)
+com.crashlytics.android.internal.ah: java.util.concurrent.ThreadFactory c(java.lang.String)
+com.crashlytics.android.internal.ai
+com.crashlytics.android.internal.ai: com.crashlytics.android.internal.ai[] values()
+com.crashlytics.android.internal.ai: com.crashlytics.android.internal.ai valueOf(java.lang.String)
+com.crashlytics.android.internal.ai: int a()
+com.crashlytics.android.internal.ai: java.lang.String toString()
+com.crashlytics.android.internal.ai: com.crashlytics.android.internal.ai a(java.lang.String)
+com.crashlytics.android.internal.aj
+com.crashlytics.android.internal.aj: void a(byte[])
+com.crashlytics.android.internal.aj: int a()
+com.crashlytics.android.internal.aj: boolean b()
+com.crashlytics.android.internal.aj: void a(java.lang.String)
+com.crashlytics.android.internal.aj: java.util.List a(int)
+com.crashlytics.android.internal.aj: java.util.List c()
+com.crashlytics.android.internal.aj: void a(java.util.List)
+com.crashlytics.android.internal.aj: void d()
+com.crashlytics.android.internal.aj: boolean a(int,int)
+com.crashlytics.android.internal.aj: aj(java.io.File,java.lang.String,java.lang.String)
+com.crashlytics.android.internal.ak
+com.crashlytics.android.internal.ak: void c()
+com.crashlytics.android.internal.ao
+com.crashlytics.android.internal.ao: ao(android.content.Context)
+com.crashlytics.android.internal.ao: boolean a()
+com.crashlytics.android.internal.ao: java.lang.String b()
+com.crashlytics.android.internal.ao: java.lang.String c()
+com.crashlytics.android.internal.ao: java.lang.String d()
+com.crashlytics.android.internal.ao: java.lang.String e()
+com.crashlytics.android.internal.ao: java.util.Map f()
+com.crashlytics.android.internal.ao: java.lang.String g()
+com.crashlytics.android.internal.ao: java.lang.String h()
+com.crashlytics.android.internal.ap
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap a
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap b
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap c
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap d
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap e
+com.crashlytics.android.internal.ap: int f
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap[] values()
+com.crashlytics.android.internal.ap: com.crashlytics.android.internal.ap valueOf(java.lang.String)
+com.crashlytics.android.internal.aq
+com.crashlytics.android.internal.aq: aq(java.io.File)
+com.crashlytics.android.internal.aq: void a(byte[])
+com.crashlytics.android.internal.aq: int a()
+com.crashlytics.android.internal.aq: boolean b()
+com.crashlytics.android.internal.aq: void a(com.crashlytics.android.internal.au)
+com.crashlytics.android.internal.aq: void c()
+com.crashlytics.android.internal.aq: void close()
+com.crashlytics.android.internal.aq: boolean a(int,int)
+com.crashlytics.android.internal.aq: java.lang.String toString()
+com.crashlytics.android.internal.au
+com.crashlytics.android.internal.au: void a(java.io.InputStream,int)
+com.crashlytics.android.internal.av
+com.crashlytics.android.internal.av: java.security.cert.X509Certificate[] a(java.security.cert.X509Certificate[],com.crashlytics.android.internal.aI)
+com.crashlytics.android.internal.av: void a(com.crashlytics.android.internal.aG)
+com.crashlytics.android.internal.av: com.crashlytics.android.internal.ay a(com.crashlytics.android.internal.ax,java.lang.String)
+com.crashlytics.android.internal.av: com.crashlytics.android.internal.ay a(com.crashlytics.android.internal.ax,java.lang.String,java.util.Map)
+com.crashlytics.android.internal.av: av()
+com.crashlytics.android.internal.av: av(com.crashlytics.android.internal.q)
+com.crashlytics.android.internal.ax
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax a
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax b
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax c
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax d
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax[] values()
+com.crashlytics.android.internal.ax: com.crashlytics.android.internal.ax valueOf(java.lang.String)
+com.crashlytics.android.internal.ay
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(java.lang.CharSequence,java.util.Map,boolean)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay b(java.lang.CharSequence,java.util.Map,boolean)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(java.lang.CharSequence)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay b(java.lang.CharSequence)
+com.crashlytics.android.internal.ay: java.lang.String toString()
+com.crashlytics.android.internal.ay: java.net.HttpURLConnection a()
+com.crashlytics.android.internal.ay: int b()
+com.crashlytics.android.internal.ay: java.lang.String c()
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(int)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(java.util.Map$Entry)
+com.crashlytics.android.internal.ay: java.lang.String a(java.lang.String)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(boolean)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay b(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(java.lang.String,java.lang.Number)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String,java.lang.String,java.io.File)
+com.crashlytics.android.internal.ay: com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String,java.lang.String,java.io.InputStream)
+com.crashlytics.android.internal.ay: java.lang.String d()
+com.crashlytics.android.internal.b
+com.crashlytics.android.internal.b: java.lang.String a
+com.crashlytics.android.internal.b: b()
+com.crashlytics.android.internal.b: b(java.lang.String)
+com.crashlytics.android.internal.b: b(com.crashlytics.android.internal.m)
+com.crashlytics.android.internal.b: b(com.crashlytics.android.internal.m,java.lang.String)
+com.crashlytics.android.internal.b: java.lang.String toString()
+com.crashlytics.android.internal.b: void a(java.lang.Object)
+com.crashlytics.android.internal.b: void b(java.lang.Object)
+com.crashlytics.android.internal.b: void c(java.lang.Object)
+com.crashlytics.android.internal.ba
+com.crashlytics.android.internal.ba: org.json.JSONObject a(com.crashlytics.android.internal.aZ)
+com.crashlytics.android.internal.f
+com.crashlytics.android.internal.f: java.lang.Object a
+com.crashlytics.android.internal.f: java.lang.Object b
+com.crashlytics.android.internal.f: f(java.lang.Object,java.lang.Object)
+com.crashlytics.android.internal.k
+com.crashlytics.android.internal.l
+com.crashlytics.android.internal.m
+com.crashlytics.android.internal.m: com.crashlytics.android.internal.m a
+com.crashlytics.android.internal.m: com.crashlytics.android.internal.m b
+com.crashlytics.android.internal.m: void a(com.crashlytics.android.internal.b)
+com.crashlytics.android.internal.p
+com.crashlytics.android.internal.p: p()
+com.crashlytics.android.internal.p: void c()
+com.crashlytics.android.internal.p: java.lang.String getVersion()
+com.crashlytics.android.internal.p: void a(android.content.Context)
+com.crashlytics.android.internal.p: android.content.Context getContext()
+com.crashlytics.android.internal.p: boolean isInitialized()
+com.crashlytics.android.internal.p: java.lang.String getName()
+com.crashlytics.android.internal.p: java.lang.String getComponentPath()
+com.crashlytics.android.internal.q
+com.crashlytics.android.internal.q: void a(java.lang.String,java.lang.String,java.lang.Throwable)
+com.crashlytics.android.internal.q: void a(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.q: void b(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.q: void c(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.q: void d(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.q: void a(int,java.lang.String,java.lang.String)
+com.crashlytics.android.internal.q: void a(int,java.lang.String,java.lang.String,boolean)
+com.crashlytics.android.internal.r
+com.crashlytics.android.internal.r: r()
+com.crashlytics.android.internal.r: void a(java.lang.String,java.lang.String,java.lang.Throwable)
+com.crashlytics.android.internal.r: void a(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.r: void b(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.r: void c(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.r: void d(java.lang.String,java.lang.String)
+com.crashlytics.android.internal.r: void a(int,java.lang.String,java.lang.String)
+com.crashlytics.android.internal.r: void a(int,java.lang.String,java.lang.String,boolean)
+com.crashlytics.android.internal.r: java.lang.String a(android.content.Context,boolean)
+com.crashlytics.android.internal.r: int a(int)
+com.crashlytics.android.internal.s
+com.crashlytics.android.internal.t
+com.crashlytics.android.internal.u
+com.crashlytics.android.internal.u: u()
+com.crashlytics.android.internal.v
+com.crashlytics.android.internal.v: com.crashlytics.android.internal.v a()
+com.crashlytics.android.internal.v: void a(android.content.Context,com.crashlytics.android.internal.u[])
+com.crashlytics.android.internal.v: com.crashlytics.android.internal.q b()
+com.crashlytics.android.internal.v: void a(com.crashlytics.android.internal.q)
+com.crashlytics.android.internal.v: android.app.Application d()
+com.crashlytics.android.internal.v: android.app.Activity e()
+com.crashlytics.android.internal.v: void c()
+com.crashlytics.android.internal.v: java.lang.String getVersion()
+com.crashlytics.android.internal.v: com.crashlytics.android.internal.u a(java.lang.Class)
+com.crashlytics.android.internal.v: void a(boolean)
+com.crashlytics.android.internal.v: boolean f()
+com.crashlytics.android.internal.v: int g()
+com.crashlytics.android.internal.v: java.io.File h()
+com.crashlytics.android.internal.v: void a(java.lang.String)
+com.crashlytics.android.internal.v: java.lang.String i()
 com.google.gson.ExclusionStrategy
 com.google.gson.ExclusionStrategy: boolean shouldSkipField(com.google.gson.FieldAttributes)
 com.google.gson.ExclusionStrategy: boolean shouldSkipClass(java.lang.Class)
@@ -1936,9 +2313,12 @@ com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.
 lib.debug.Dbug
 lib.debug.Dbug: java.lang.String TAG
 lib.debug.Dbug: boolean DEBUG_ON
+lib.debug.Dbug: boolean FLURRY_ON
+lib.debug.Dbug: boolean CRASHLYTICS_ON
 lib.debug.Dbug: boolean RANDOM_DATA
 lib.debug.Dbug: Dbug()
 lib.debug.Dbug: void log(java.lang.Object[])
+lib.debug.Dbug: void logWithTag(java.lang.String,java.lang.Object[])
 lib.gson.MyGson
 lib.gson.MyGson: com.google.gson.Gson PARSER
 lib.gson.MyGson: MyGson()
@@ -1987,6 +2367,7 @@ mobiric.fhbsc.weather.MainActivity: void onResume()
 mobiric.fhbsc.weather.MainActivity: void onPause()
 mobiric.fhbsc.weather.MainActivity: void onBackPressed()
 mobiric.fhbsc.weather.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+mobiric.fhbsc.weather.MainActivity: android.support.v4.app.Fragment findExistingFragmentByPosition(int)
 mobiric.fhbsc.weather.R
 mobiric.fhbsc.weather.R: R()
 mobiric.fhbsc.weather.R$array
@@ -1998,23 +2379,31 @@ mobiric.fhbsc.weather.R$attr: R$attr()
 mobiric.fhbsc.weather.R$color
 mobiric.fhbsc.weather.R$color: int fenn_green
 mobiric.fhbsc.weather.R$color: int holo_blue_dark
-mobiric.fhbsc.weather.R$color: int thermometer_grey
+mobiric.fhbsc.weather.R$color: int meter_background_grey
+mobiric.fhbsc.weather.R$color: int rain_blue
 mobiric.fhbsc.weather.R$color: int thermometer_red
+mobiric.fhbsc.weather.R$color: int zoom_image_background_grey
 mobiric.fhbsc.weather.R$color: R$color()
 mobiric.fhbsc.weather.R$dimen
 mobiric.fhbsc.weather.R$dimen: int activity_horizontal_margin
 mobiric.fhbsc.weather.R$dimen: int activity_vertical_margin
 mobiric.fhbsc.weather.R$dimen: R$dimen()
 mobiric.fhbsc.weather.R$drawable
+mobiric.fhbsc.weather.R$drawable: int app_theme_background
 mobiric.fhbsc.weather.R$drawable: int arrow_barometer
 mobiric.fhbsc.weather.R$drawable: int arrow_wind_direction
 mobiric.fhbsc.weather.R$drawable: int barometer
 mobiric.fhbsc.weather.R$drawable: int daybarometer
+mobiric.fhbsc.weather.R$drawable: int dayrain
 mobiric.fhbsc.weather.R$drawable: int daytempdew
 mobiric.fhbsc.weather.R$drawable: int daywind
 mobiric.fhbsc.weather.R$drawable: int daywinddir
+mobiric.fhbsc.weather.R$drawable: int false_bay
+mobiric.fhbsc.weather.R$drawable: int false_bay_port
 mobiric.fhbsc.weather.R$drawable: int ic_launcher
 mobiric.fhbsc.weather.R$drawable: int ic_menu_refresh
+mobiric.fhbsc.weather.R$drawable: int monthrain
+mobiric.fhbsc.weather.R$drawable: int raindrop
 mobiric.fhbsc.weather.R$drawable: int thermometer
 mobiric.fhbsc.weather.R$drawable: int weekbarometer
 mobiric.fhbsc.weather.R$drawable: int weektempdew
@@ -2025,40 +2414,50 @@ mobiric.fhbsc.weather.R$drawable: R$drawable()
 mobiric.fhbsc.weather.R$id
 mobiric.fhbsc.weather.R$id: int action_refresh
 mobiric.fhbsc.weather.R$id: int action_view_on_web
+mobiric.fhbsc.weather.R$id: int backgroundZoomedImage
 mobiric.fhbsc.weather.R$id: int ivArrowBarometer
 mobiric.fhbsc.weather.R$id: int ivArrowWindDir
 mobiric.fhbsc.weather.R$id: int ivDayBarometer
-mobiric.fhbsc.weather.R$id: int ivDayTempDew
+mobiric.fhbsc.weather.R$id: int ivDayRain
 mobiric.fhbsc.weather.R$id: int ivDayWind
 mobiric.fhbsc.weather.R$id: int ivDayWindDir
-mobiric.fhbsc.weather.R$id: int ivThermometer
+mobiric.fhbsc.weather.R$id: int ivMonthRain
+mobiric.fhbsc.weather.R$id: int ivRainMeter
 mobiric.fhbsc.weather.R$id: int ivWeekBarometer
-mobiric.fhbsc.weather.R$id: int ivWeekTempDew
 mobiric.fhbsc.weather.R$id: int ivWeekWind
 mobiric.fhbsc.weather.R$id: int ivWeekWindDir
+mobiric.fhbsc.weather.R$id: int ivZoomedImage
 mobiric.fhbsc.weather.R$id: int layoutArrowBarometer
 mobiric.fhbsc.weather.R$id: int layoutArrowWindDir
 mobiric.fhbsc.weather.R$id: int layoutBarometerText
-mobiric.fhbsc.weather.R$id: int layoutTemperatureText
-mobiric.fhbsc.weather.R$id: int layoutThermometer
+mobiric.fhbsc.weather.R$id: int layoutColumns
+mobiric.fhbsc.weather.R$id: int layoutContainer
+mobiric.fhbsc.weather.R$id: int layoutRainMeter
+mobiric.fhbsc.weather.R$id: int layoutRainText
 mobiric.fhbsc.weather.R$id: int layoutWindText
 mobiric.fhbsc.weather.R$id: int menu_spinner
 mobiric.fhbsc.weather.R$id: int pager
 mobiric.fhbsc.weather.R$id: int pager_title_strip
 mobiric.fhbsc.weather.R$id: int tvBarometerPressure
 mobiric.fhbsc.weather.R$id: int tvBarometerTitle
-mobiric.fhbsc.weather.R$id: int tvOutTemp
-mobiric.fhbsc.weather.R$id: int tvTempTitle
+mobiric.fhbsc.weather.R$id: int tvNoRainTitle
+mobiric.fhbsc.weather.R$id: int tvRainRate
+mobiric.fhbsc.weather.R$id: int tvRainTitle
 mobiric.fhbsc.weather.R$id: int tvWindDir
 mobiric.fhbsc.weather.R$id: int tvWindFrom
 mobiric.fhbsc.weather.R$id: int tvWindSpeed
 mobiric.fhbsc.weather.R$id: int tvWindTitle
-mobiric.fhbsc.weather.R$id: int vThermometerRed
+mobiric.fhbsc.weather.R$id: int vRainBlue
 mobiric.fhbsc.weather.R$id: int webView
 mobiric.fhbsc.weather.R$id: R$id()
+mobiric.fhbsc.weather.R$integer
+mobiric.fhbsc.weather.R$integer: int landscape_column_weight_left
+mobiric.fhbsc.weather.R$integer: int landscape_column_weight_right
+mobiric.fhbsc.weather.R$integer: R$integer()
 mobiric.fhbsc.weather.R$layout
 mobiric.fhbsc.weather.R$layout: int activity_main
 mobiric.fhbsc.weather.R$layout: int fragment_barometer
+mobiric.fhbsc.weather.R$layout: int fragment_rain
 mobiric.fhbsc.weather.R$layout: int fragment_temperature
 mobiric.fhbsc.weather.R$layout: int fragment_web_page
 mobiric.fhbsc.weather.R$layout: int fragment_wind
@@ -2066,18 +2465,13 @@ mobiric.fhbsc.weather.R$layout: R$layout()
 mobiric.fhbsc.weather.R$menu
 mobiric.fhbsc.weather.R$menu: int main
 mobiric.fhbsc.weather.R$menu: R$menu()
-mobiric.fhbsc.weather.R$raw
-mobiric.fhbsc.weather.R$raw: int false_bay
-mobiric.fhbsc.weather.R$raw: R$raw()
 mobiric.fhbsc.weather.R$string
 mobiric.fhbsc.weather.R$string: int action_refresh
 mobiric.fhbsc.weather.R$string: int action_view_on_web
 mobiric.fhbsc.weather.R$string: int app_name
-mobiric.fhbsc.weather.R$string: int auto_refresh_15min
-mobiric.fhbsc.weather.R$string: int auto_refresh_1hour
-mobiric.fhbsc.weather.R$string: int auto_refresh_30min
 mobiric.fhbsc.weather.R$string: int auto_refresh_5min
 mobiric.fhbsc.weather.R$string: int auto_refresh_off
+mobiric.fhbsc.weather.R$string: int com_crashlytics_android_build_id
 mobiric.fhbsc.weather.R$string: int refresh_options
 mobiric.fhbsc.weather.R$string: R$string()
 mobiric.fhbsc.weather.R$style
@@ -2111,12 +2505,24 @@ mobiric.fhbsc.weather.fragments.ARefreshableFragment: void onPause()
 mobiric.fhbsc.weather.fragments.ARefreshableFragment: void updateImage(android.widget.ImageView,java.lang.String)
 mobiric.fhbsc.weather.fragments.ARefreshableFragment: boolean onBackPressed()
 mobiric.fhbsc.weather.fragments.BarometerFragment
+mobiric.fhbsc.weather.fragments.BarometerFragment: java.lang.String GRAPH_DAY_BAROMETER
+mobiric.fhbsc.weather.fragments.BarometerFragment: java.lang.String GRAPH_WEEK_BAROMETER
 mobiric.fhbsc.weather.fragments.BarometerFragment: int MAX_PRESSURE_MBARS
 mobiric.fhbsc.weather.fragments.BarometerFragment: int MIN_PRESSURE_MBARS
 mobiric.fhbsc.weather.fragments.BarometerFragment: BarometerFragment()
 mobiric.fhbsc.weather.fragments.BarometerFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 mobiric.fhbsc.weather.fragments.BarometerFragment: void setPressureMBars(java.lang.String)
+mobiric.fhbsc.weather.fragments.RainFragment
+mobiric.fhbsc.weather.fragments.RainFragment: java.lang.String GRAPH_DAY_RAIN
+mobiric.fhbsc.weather.fragments.RainFragment: java.lang.String GRAPH_MONTH_RAIN
+mobiric.fhbsc.weather.fragments.RainFragment: int MAX_RAIN_RANGE
+mobiric.fhbsc.weather.fragments.RainFragment: int MIN_RAIN_RANGE
+mobiric.fhbsc.weather.fragments.RainFragment: RainFragment()
+mobiric.fhbsc.weather.fragments.RainFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+mobiric.fhbsc.weather.fragments.RainFragment: void setRainRateMillimetres(java.lang.String)
 mobiric.fhbsc.weather.fragments.TemperatureFragment
+mobiric.fhbsc.weather.fragments.TemperatureFragment: java.lang.String GRAPH_DAY_TEMP
+mobiric.fhbsc.weather.fragments.TemperatureFragment: java.lang.String GRAPH_WEEK_TEMP
 mobiric.fhbsc.weather.fragments.TemperatureFragment: int MAX_TEMP_RANGE
 mobiric.fhbsc.weather.fragments.TemperatureFragment: int MIN_TEMP_RANGE
 mobiric.fhbsc.weather.fragments.TemperatureFragment: TemperatureFragment()
@@ -2124,6 +2530,10 @@ mobiric.fhbsc.weather.fragments.TemperatureFragment: android.view.View onCreateV
 mobiric.fhbsc.weather.fragments.TemperatureFragment: void setTempDegrees(java.lang.String)
 mobiric.fhbsc.weather.fragments.WindFragment
 mobiric.fhbsc.weather.fragments.WindFragment: java.lang.String[] DIRECTIONS
+mobiric.fhbsc.weather.fragments.WindFragment: java.lang.String GRAPH_DAY_WIND
+mobiric.fhbsc.weather.fragments.WindFragment: java.lang.String GRAPH_DAY_WIND_DIR
+mobiric.fhbsc.weather.fragments.WindFragment: java.lang.String GRAPH_WEEK_WIND
+mobiric.fhbsc.weather.fragments.WindFragment: java.lang.String GRAPH_WEEK_WIND_DIR
 mobiric.fhbsc.weather.fragments.WindFragment: WindFragment()
 mobiric.fhbsc.weather.fragments.WindFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 mobiric.fhbsc.weather.fragments.WindFragment: void setWindDirDegrees(java.lang.String)
@@ -2146,6 +2556,9 @@ mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String WIND_GUST
 mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String OUT_TEMP
 mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String OUT_TEMP_MIN
 mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String OUT_TEMP_MAX
+mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String RAIN_RATE
+mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String RAIN_RATE_MIN
+mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String RAIN_RATE_MAX
 mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String BAROMETER
 mobiric.fhbsc.weather.intents.IntentConstants$Extras: java.lang.String IMG_NAME
 mobiric.fhbsc.weather.intents.IntentConstants$Extras: IntentConstants$Extras()
@@ -2159,6 +2572,10 @@ mobiric.fhbsc.weather.model.WeatherReading: java.lang.String barometer
 mobiric.fhbsc.weather.model.WeatherReading: java.lang.String outTemp
 mobiric.fhbsc.weather.model.WeatherReading: java.lang.String outTempMin
 mobiric.fhbsc.weather.model.WeatherReading: java.lang.String outTempMax
+mobiric.fhbsc.weather.model.WeatherReading: java.lang.String rainRateNow
+mobiric.fhbsc.weather.model.WeatherReading: java.lang.String rainDayTotal
+mobiric.fhbsc.weather.model.WeatherReading: java.lang.String rainMinRate
+mobiric.fhbsc.weather.model.WeatherReading: java.lang.String rainMaxRate
 mobiric.fhbsc.weather.model.WeatherReading: WeatherReading()
 mobiric.fhbsc.weather.model.WeatherReading: java.lang.String toString()
 mobiric.fhbsc.weather.tasks.BaseWebService

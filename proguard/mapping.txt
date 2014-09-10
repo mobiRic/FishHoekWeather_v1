@@ -3839,7 +3839,1212 @@ android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.V
     boolean tryCaptureView(android.view.View,int) -> tryCaptureView
     304:304:int clampViewPositionHorizontal(android.view.View,int,int) -> clampViewPositionHorizontal
     319:319:int clampViewPositionVertical(android.view.View,int,int) -> clampViewPositionVertical
-com.google.gson.DefaultDateTypeAdapter -> is:
+com.crashlytics.android.A -> is:
+    com.crashlytics.android.v a -> a
+    448:448:java.lang.Object call() -> call
+com.crashlytics.android.B -> it:
+    com.crashlytics.android.v a -> a
+    468:473:java.lang.Boolean a() -> a
+    464:464:java.lang.Object call() -> call
+com.crashlytics.android.C -> iu:
+    com.crashlytics.android.v a -> a
+    480:480:java.lang.Object call() -> call
+com.crashlytics.android.CrashTest -> com.crashlytics.android.CrashTest:
+    21:21:void throwRuntimeException(java.lang.String) -> throwRuntimeException
+    25:26:void stackOverflow() -> stackOverflow
+    29:35:void indexOutOfBounds() -> indexOutOfBounds
+    42:55:void crashAsyncTask(long) -> crashAsyncTask
+    62:73:void throwFiveChainedExceptions() -> throwFiveChainedExceptions
+com.crashlytics.android.Crashlytics -> com.crashlytics.android.Crashlytics:
+    java.lang.String TAG -> TAG
+    long a -> a
+    java.util.concurrent.ConcurrentHashMap b -> b
+    com.crashlytics.android.CrashlyticsListener c -> c
+    com.crashlytics.android.v d -> d
+    com.crashlytics.android.internal.ao e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    java.lang.String h -> h
+    java.lang.String i -> i
+    android.content.ContextWrapper j -> j
+    java.lang.String k -> k
+    java.lang.String l -> l
+    java.lang.String m -> m
+    java.lang.String n -> n
+    java.lang.String o -> o
+    java.lang.String p -> p
+    java.lang.String q -> q
+    boolean r -> r
+    com.crashlytics.android.PinningInfoProvider s -> s
+    com.crashlytics.android.internal.av t -> t
+    float u -> u
+    com.crashlytics.android.Crashlytics v -> v
+    124:125:void start(android.content.Context) -> start
+    135:144:void start(android.content.Context,float) -> start
+    153:164:com.crashlytics.android.Crashlytics getInstance() -> getInstance
+    176:189:void logException(java.lang.Throwable) -> logException
+    195:200:void a(java.lang.String) -> a
+    206:211:void b(java.lang.String) -> b
+    224:225:void log(java.lang.String) -> log
+    228:236:void a(int,java.lang.String,java.lang.String) -> a
+    252:256:void log(int,java.lang.String,java.lang.String) -> log
+    284:285:void setUserIdentifier(java.lang.String) -> setUserIdentifier
+    293:294:void setUserName(java.lang.String) -> setUserName
+    302:303:void setUserEmail(java.lang.String) -> setUserEmail
+    309:310:void setApplicationInstallationIdentifier(java.lang.String) -> setApplicationInstallationIdentifier
+    321:341:void setString(java.lang.String,java.lang.String) -> setString
+    349:350:void setBool(java.lang.String,boolean) -> setBool
+    358:359:void setDouble(java.lang.String,double) -> setDouble
+    367:368:void setFloat(java.lang.String,float) -> setFloat
+    376:377:void setInt(java.lang.String,int) -> setInt
+    385:386:void setLong(java.lang.String,long) -> setLong
+    390:390:java.util.Map a() -> a
+    399:400:void setListener(com.crashlytics.android.CrashlyticsListener) -> setListener
+    408:409:void setDebugMode(boolean) -> setDebugMode
+    417:417:boolean getDebugMode() -> getDebugMode
+    425:457:void setPinningInfoProvider(com.crashlytics.android.PinningInfoProvider) -> setPinningInfoProvider
+    460:460:com.crashlytics.android.PinningInfoProvider getPinningInfoProvider() -> getPinningInfoProvider
+    473:476:boolean verifyPinning(java.net.URL) -> verifyPinning
+    507:507:java.lang.String getCrashlyticsVersion() -> getCrashlyticsVersion
+    514:515:void crash() -> crash
+    518:518:com.crashlytics.android.internal.ao b() -> b
+    523:538:void c() -> c
+    542:542:java.lang.String getVersion() -> getVersion
+    546:546:java.lang.String d() -> d
+    556:556:java.lang.String e() -> e
+    560:560:java.lang.String f() -> f
+    564:564:java.lang.String g() -> g
+    568:568:java.lang.String h() -> h
+    572:572:java.lang.String i() -> i
+    580:580:boolean j() -> j
+    593:593:boolean k() -> k
+    597:598:void a(boolean) -> a
+    601:601:com.crashlytics.android.v l() -> l
+    605:605:java.lang.String m() -> m
+    609:609:java.lang.String n() -> n
+    613:613:java.lang.String o() -> o
+    617:617:boolean p() -> p
+    637:637:com.crashlytics.android.V q() -> q
+    650:650:com.crashlytics.android.internal.aR r() -> r
+    755:761:java.lang.String c(java.lang.String) -> c
+    765:867:void a(java.lang.String,android.content.Context,float) -> a
+    876:923:boolean a(android.content.Context,float) -> a
+    977:980:com.crashlytics.android.b a(com.crashlytics.android.Y) -> a
+    54:54:boolean a(com.crashlytics.android.Crashlytics,android.app.Activity,com.crashlytics.android.internal.aQ) -> a
+    54:54:com.crashlytics.android.internal.av s() -> s
+    54:54:int a(com.crashlytics.android.Crashlytics,float,int) -> a
+    54:54:boolean a(com.crashlytics.android.Crashlytics,android.content.Context,float) -> a
+    54:54:com.crashlytics.android.v a(com.crashlytics.android.Crashlytics) -> a
+com.crashlytics.android.CrashlyticsListener -> com.crashlytics.android.CrashlyticsListener:
+    void crashlyticsDidDetectCrashDuringPreviousExecution() -> crashlyticsDidDetectCrashDuringPreviousExecution
+com.crashlytics.android.CrashlyticsMissingDependencyException -> com.crashlytics.android.CrashlyticsMissingDependencyException:
+    long serialVersionUID -> serialVersionUID
+    22:31:java.lang.String a(java.lang.String,java.lang.String) -> a
+com.crashlytics.android.D -> iv:
+    java.io.File a -> a
+    1009:1016:void a() -> a
+com.crashlytics.android.E -> iw:
+    com.crashlytics.android.v a -> a
+    1864:1865:void run() -> run
+com.crashlytics.android.F -> ix:
+    java.lang.String a -> a
+    1886:1886:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.G -> iy:
+    java.lang.Runnable a -> a
+    1962:1966:void run() -> run
+com.crashlytics.android.H -> iz:
+    132:132:int compare(java.lang.Object,java.lang.Object) -> compare
+com.crashlytics.android.I -> ja:
+    java.util.concurrent.Callable a -> a
+    1990:1993:java.lang.Object call() -> call
+com.crashlytics.android.J -> jb:
+    139:139:int compare(java.lang.Object,java.lang.Object) -> compare
+com.crashlytics.android.K -> jc:
+    152:152:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.L -> jd:
+    com.crashlytics.android.v a -> a
+    267:268:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.crashlytics.android.M -> je:
+    com.crashlytics.android.v a -> a
+    276:277:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.crashlytics.android.N -> jf:
+    java.util.Date a -> a
+    java.lang.Thread b -> b
+    java.lang.Throwable c -> c
+    com.crashlytics.android.v d -> d
+    307:307:java.lang.Object call() -> call
+com.crashlytics.android.O -> jg:
+    com.crashlytics.android.v a -> a
+    338:338:java.lang.Object call() -> call
+com.crashlytics.android.P -> jh:
+    java.util.Date a -> a
+    java.lang.Thread b -> b
+    java.lang.Throwable c -> c
+    com.crashlytics.android.v d -> d
+    362:365:void run() -> run
+com.crashlytics.android.PinningInfoProvider -> com.crashlytics.android.PinningInfoProvider:
+    java.io.InputStream getKeyStoreStream() -> getKeyStoreStream
+    java.lang.String getKeyStorePassword() -> getKeyStorePassword
+    java.lang.String[] getPins() -> getPins
+com.crashlytics.android.Q -> ji:
+    117:117:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.R -> jj:
+    java.lang.String a -> a
+    81:81:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.S -> jk:
+    java.lang.String a -> a
+    100:103:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.T -> jl:
+com.crashlytics.android.U -> jm:
+    java.lang.String a -> a
+    com.crashlytics.android.Z b -> b
+com.crashlytics.android.V -> jn:
+    boolean a(com.crashlytics.android.U) -> a
+com.crashlytics.android.W -> jo:
+    53:64:boolean a(com.crashlytics.android.U) -> a
+com.crashlytics.android.X -> jp:
+    android.content.Context a -> a
+    com.crashlytics.android.internal.aQ b -> b
+    48:48:java.lang.String a() -> a
+    55:55:java.lang.String b() -> b
+    63:63:java.lang.String c() -> c
+    71:71:java.lang.String d() -> d
+    79:79:java.lang.String e() -> e
+    92:92:java.lang.String a(java.lang.String,java.lang.String) -> a
+com.crashlytics.android.Y -> jq:
+    java.lang.String a -> a
+    int b -> b
+    int c -> c
+    int d -> d
+    33:56:com.crashlytics.android.Y a(android.content.Context,java.lang.String) -> a
+com.crashlytics.android.Z -> jr:
+    java.io.File a -> a
+    java.util.Map b -> b
+    62:63:boolean a() -> a
+    46:46:java.lang.String b() -> b
+    51:52:java.lang.String c() -> c
+    41:41:java.io.File d() -> d
+    57:57:java.util.Map e() -> e
+com.crashlytics.android.a -> js:
+    48:67:boolean a(com.crashlytics.android.b) -> a
+    81:113:com.crashlytics.android.internal.ay a(com.crashlytics.android.internal.ay,com.crashlytics.android.b) -> a
+com.crashlytics.android.aa -> jt:
+    java.io.FilenameFilter b -> b
+    java.util.Map a -> a
+    short[] c -> c
+    java.lang.Object d -> d
+    com.crashlytics.android.V e -> e
+    java.lang.Thread f -> f
+    54:58:void a(float) -> a
+    74:96:boolean a(com.crashlytics.android.Z) -> a
+    100:117:java.util.List a() -> a
+    23:23:java.lang.Thread a(com.crashlytics.android.aa,java.lang.Thread) -> a
+    23:23:short[] b() -> b
+com.crashlytics.android.ab -> ju:
+    28:28:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.ac -> jv:
+    float a -> a
+    com.crashlytics.android.aa b -> b
+    130:135:void a() -> a
+com.crashlytics.android.ad -> jw:
+com.crashlytics.android.ae -> jx:
+    71:71:int a(int,int) -> a
+com.crashlytics.android.b -> jy:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    int g -> g
+    java.lang.String h -> h
+    java.lang.String i -> i
+    com.crashlytics.android.Y j -> j
+    18:32:void a(java.io.File,java.io.FilenameFilter,int,java.util.Comparator) -> a
+com.crashlytics.android.c -> jz:
+    java.lang.String a -> a
+    boolean b -> b
+    32:58:void a(java.lang.String,java.lang.String) -> a
+com.crashlytics.android.d -> ka:
+    byte[] a -> a
+    int b -> b
+    68:68:int a() -> a
+    91:93:com.crashlytics.android.d a(byte[],int,int) -> a
+    136:138:com.crashlytics.android.d a(java.lang.String) -> a
+    194:195:void a(byte[],int,int,int) -> a
+    253:275:boolean equals(java.lang.Object) -> equals
+    282:299:int hashCode() -> hashCode
+    309:309:java.io.InputStream b() -> b
+com.crashlytics.android.e -> kb:
+    java.util.concurrent.atomic.AtomicLong a -> a
+    java.lang.String b -> b
+    86:91:byte[] a(long) -> a
+    95:95:java.lang.String toString() -> toString
+com.crashlytics.android.f -> kc:
+    java.lang.String b -> b
+    java.io.File c -> c
+    boolean d -> d
+    java.io.FilenameFilter a -> a
+    47:66:void close() -> close
+    78:84:void a() -> a
+com.crashlytics.android.g -> kd:
+    102:102:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.h -> ke:
+    byte[] a -> a
+    int b -> b
+    int c -> c
+    java.io.OutputStream d -> d
+    98:98:com.crashlytics.android.h a(java.io.OutputStream) -> a
+    146:148:void a(int,float) -> a
+    153:155:void a(int,long) -> a
+    188:190:void a(int,boolean) -> a
+    195:197:void a(int,java.lang.String) -> a
+    202:204:void a(int,com.crashlytics.android.d) -> a
+    209:211:void a(int,int) -> a
+    219:221:void b(int,int) -> b
+    240:242:void c(int,int) -> c
+    376:376:int b(int,float) -> b
+    384:384:int b(int,long) -> b
+    427:427:int b(int,boolean) -> b
+    445:445:int b(int,com.crashlytics.android.d) -> b
+    453:453:int d(int,int) -> d
+    462:462:int e(int,int) -> e
+    488:488:int f(int,int) -> f
+    660:669:void a() -> a
+    676:679:void flush() -> flush
+    734:735:void d(int) -> d
+    744:745:void a(byte[]) -> a
+    828:829:void g(int,int) -> g
+    833:833:int a(int) -> a
+    842:847:void b(int) -> b
+    858:862:int c(int) -> c
+    868:873:void a(long) -> a
+    928:928:int e(int) -> e
+com.crashlytics.android.i -> kf:
+    long serialVersionUID -> serialVersionUID
+com.crashlytics.android.internal.A -> com.crashlytics.android.internal.A:
+    33:33:void a(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    38:38:void a(java.lang.String,java.lang.String) -> a
+    48:48:void b(java.lang.String,java.lang.String) -> b
+    53:53:void c(java.lang.String,java.lang.String) -> c
+    58:58:void d(java.lang.String,java.lang.String) -> d
+    63:63:void a(int,java.lang.String,java.lang.String) -> a
+    68:68:void a(int,java.lang.String,java.lang.String,boolean) -> a
+com.crashlytics.android.internal.B -> com.crashlytics.android.internal.B:
+    android.os.Handler b -> b
+    35:42:void c(java.lang.Object) -> c
+    13:13:void a(com.crashlytics.android.internal.B,java.lang.Object) -> a
+com.crashlytics.android.internal.C -> kg:
+    com.crashlytics.android.internal.t a -> a
+    com.crashlytics.android.internal.B b -> b
+    51:52:void run() -> run
+com.crashlytics.android.internal.D -> com.crashlytics.android.internal.D:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    com.crashlytics.android.internal.ao d -> d
+    com.crashlytics.android.internal.aJ e -> e
+    long f -> f
+    com.crashlytics.android.internal.av g -> g
+    com.crashlytics.android.internal.O h -> h
+    57:57:com.crashlytics.android.internal.D a() -> a
+    63:100:void c() -> c
+    104:104:java.lang.String getVersion() -> getVersion
+    180:180:java.lang.String b() -> b
+    184:187:void a(com.crashlytics.android.internal.ag) -> a
+    190:193:void a(com.crashlytics.android.internal.af) -> a
+    30:30:void a(com.crashlytics.android.internal.D) -> a
+com.crashlytics.android.internal.E -> kh:
+    com.crashlytics.android.internal.D a -> a
+    93:98:void a() -> a
+com.crashlytics.android.internal.F -> ki:
+    android.app.Application b -> b
+    android.app.Application$ActivityLifecycleCallbacks c -> c
+    82:86:void a() -> a
+com.crashlytics.android.internal.G -> kj:
+    com.crashlytics.android.internal.F a -> a
+    23:24:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
+    28:29:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+    33:34:void onActivityPaused(android.app.Activity) -> onActivityPaused
+    38:39:void onActivityResumed(android.app.Activity) -> onActivityResumed
+    43:44:void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
+    48:49:void onActivityStarted(android.app.Activity) -> onActivityStarted
+    53:54:void onActivityStopped(android.app.Activity) -> onActivityStopped
+com.crashlytics.android.internal.H -> kk:
+    42:50:boolean a(java.lang.String,java.util.List) -> a
+com.crashlytics.android.internal.I -> kl:
+    15:15:void a() -> a
+    20:20:void a(com.crashlytics.android.internal.aK,java.lang.String) -> a
+    25:25:void b() -> b
+    30:30:void a(com.crashlytics.android.internal.V) -> a
+    35:35:void c() -> c
+    45:45:void d() -> d
+com.crashlytics.android.internal.J -> km:
+    java.util.concurrent.ScheduledExecutorService a -> a
+    com.crashlytics.android.internal.K b -> b
+    com.crashlytics.android.internal.av c -> c
+    java.util.concurrent.ScheduledFuture d -> d
+    int e -> e
+    com.crashlytics.android.internal.N f -> f
+    96:102:void a() -> a
+    106:113:void a(int,int) -> a
+    117:122:void c() -> c
+    126:133:void a(com.crashlytics.android.internal.aK,java.lang.String) -> a
+    137:138:void b() -> b
+    142:149:void a(com.crashlytics.android.internal.V) -> a
+    154:158:void d() -> d
+com.crashlytics.android.internal.K -> kn:
+    com.crashlytics.android.internal.X a -> a
+    com.crashlytics.android.internal.ah b -> b
+    com.crashlytics.android.internal.aK c -> c
+    com.crashlytics.android.internal.aj d -> d
+    int e -> e
+    java.util.List f -> f
+    69:73:void a(com.crashlytics.android.internal.V) -> a
+    80:81:void a(com.crashlytics.android.internal.ak) -> a
+    88:105:boolean a() -> a
+    140:140:int e() -> e
+    145:146:void a(com.crashlytics.android.internal.aK) -> a
+    153:160:void a(java.lang.String) -> a
+    163:163:java.util.List b() -> b
+    167:168:void a(java.util.List) -> a
+    171:173:void c() -> c
+    176:206:void d() -> d
+    209:216:long b(java.lang.String) -> b
+com.crashlytics.android.internal.L -> ko:
+    186:186:int compare(java.lang.Object,java.lang.Object) -> compare
+com.crashlytics.android.internal.M -> kp:
+    java.io.File a -> a
+    long b -> b
+com.crashlytics.android.internal.N -> kq:
+    boolean a(java.lang.String,java.util.List) -> a
+com.crashlytics.android.internal.O -> kr:
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    java.lang.String h -> h
+    java.lang.String i -> i
+    java.util.concurrent.ScheduledExecutorService j -> j
+    com.crashlytics.android.internal.U a -> a
+    72:91:void a(java.lang.String) -> a
+    94:97:void b() -> b
+    100:101:void a(android.app.Activity) -> a
+    104:105:void b(android.app.Activity) -> b
+    108:112:void b(java.lang.String) -> b
+    115:116:void c(android.app.Activity) -> c
+    119:120:void d(android.app.Activity) -> d
+    123:124:void e(android.app.Activity) -> e
+    127:128:void f(android.app.Activity) -> f
+    131:132:void g(android.app.Activity) -> g
+    135:138:void a(com.crashlytics.android.internal.W,android.app.Activity,boolean) -> a
+    141:157:void a(com.crashlytics.android.internal.V,boolean) -> a
+    161:173:void a(com.crashlytics.android.internal.aK,java.lang.String) -> a
+    177:188:void c() -> c
+    191:203:void a() -> a
+    215:219:void a(java.lang.Runnable) -> a
+    17:17:java.lang.String a(com.crashlytics.android.internal.O) -> a
+    17:17:java.lang.String b(com.crashlytics.android.internal.O) -> b
+    17:17:java.lang.String c(com.crashlytics.android.internal.O) -> c
+    17:17:java.lang.String d(com.crashlytics.android.internal.O) -> d
+    17:17:java.lang.String e(com.crashlytics.android.internal.O) -> e
+    17:17:java.lang.String f(com.crashlytics.android.internal.O) -> f
+    17:17:java.lang.String g(com.crashlytics.android.internal.O) -> g
+    17:17:java.lang.String h(com.crashlytics.android.internal.O) -> h
+com.crashlytics.android.internal.P -> ks:
+    java.lang.String a -> a
+    com.crashlytics.android.internal.O b -> b
+    83:89:void run() -> run
+com.crashlytics.android.internal.Q -> kt:
+    com.crashlytics.android.internal.V a -> a
+    boolean b -> b
+    com.crashlytics.android.internal.O c -> c
+    145:155:void run() -> run
+com.crashlytics.android.internal.R -> ku:
+    com.crashlytics.android.internal.aK a -> a
+    java.lang.String b -> b
+    com.crashlytics.android.internal.O c -> c
+    165:171:void run() -> run
+com.crashlytics.android.internal.S -> kv:
+    com.crashlytics.android.internal.O a -> a
+    181:186:void run() -> run
+com.crashlytics.android.internal.T -> kw:
+    com.crashlytics.android.internal.O a -> a
+    195:201:void run() -> run
+com.crashlytics.android.internal.U -> kx:
+    void a() -> a
+    void a(com.crashlytics.android.internal.aK,java.lang.String) -> a
+    void b() -> b
+    void a(com.crashlytics.android.internal.V) -> a
+    void c() -> c
+    void d() -> d
+com.crashlytics.android.internal.V -> ky:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    java.lang.String h -> h
+    long i -> i
+    com.crashlytics.android.internal.W j -> j
+    java.util.Map k -> k
+    java.lang.String l -> l
+    67:67:com.crashlytics.android.internal.V a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.crashlytics.android.internal.W,java.util.Map) -> a
+    94:125:java.lang.String toString() -> toString
+com.crashlytics.android.internal.W -> kz:
+    com.crashlytics.android.internal.W a -> a
+    com.crashlytics.android.internal.W b -> b
+    com.crashlytics.android.internal.W c -> c
+    com.crashlytics.android.internal.W d -> d
+    com.crashlytics.android.internal.W e -> e
+    com.crashlytics.android.internal.W f -> f
+    com.crashlytics.android.internal.W g -> g
+    com.crashlytics.android.internal.W h -> h
+    com.crashlytics.android.internal.W i -> i
+    com.crashlytics.android.internal.W j -> j
+    com.crashlytics.android.internal.W[] k -> k
+    13:13:com.crashlytics.android.internal.W[] values() -> values
+    13:13:com.crashlytics.android.internal.W valueOf(java.lang.String) -> valueOf
+com.crashlytics.android.internal.X -> la:
+    27:42:byte[] a(com.crashlytics.android.internal.V) -> a
+    47:53:org.json.JSONObject a(java.util.Map) -> a
+com.crashlytics.android.internal.Y -> lb:
+    com.crashlytics.android.internal.K a -> a
+    com.crashlytics.android.internal.U b -> b
+    19:30:void run() -> run
+com.crashlytics.android.internal.Z -> com.crashlytics.android.internal.Z:
+    java.lang.String a -> a
+    java.util.regex.Pattern b -> b
+    java.lang.String c -> c
+    com.crashlytics.android.internal.av d -> d
+    com.crashlytics.android.internal.ax e -> e
+    java.lang.String f -> f
+    82:82:java.lang.String a() -> a
+    99:99:com.crashlytics.android.internal.ay b() -> b
+    119:120:com.crashlytics.android.internal.ay a(java.util.Map) -> a
+com.crashlytics.android.internal.a -> lc:
+    java.util.Map a -> a
+    java.util.Map b -> b
+    49:111:void a(java.lang.Class) -> a
+    115:129:java.util.Map a(java.lang.Object) -> a
+    134:151:java.util.Map b(java.lang.Object) -> b
+com.crashlytics.android.internal.aA -> com.crashlytics.android.internal.aA:
+    java.io.Closeable a -> a
+    boolean b -> b
+    668:678:void b() -> b
+com.crashlytics.android.internal.aB -> com.crashlytics.android.internal.aB:
+    com.crashlytics.android.internal.aB a -> a
+    java.net.HttpURLConnection a(java.net.URL) -> a
+com.crashlytics.android.internal.aC -> ld:
+    351:351:java.net.HttpURLConnection a(java.net.URL) -> a
+com.crashlytics.android.internal.aD -> com.crashlytics.android.internal.aD:
+    long serialVersionUID -> serialVersionUID
+    578:578:java.lang.Throwable getCause() -> getCause
+com.crashlytics.android.internal.aE -> com.crashlytics.android.internal.aE:
+    java.lang.Object a() -> a
+    void b() -> b
+    624:639:java.lang.Object call() -> call
+com.crashlytics.android.internal.aF -> com.crashlytics.android.internal.aF:
+    java.nio.charset.CharsetEncoder a -> a
+    733:737:com.crashlytics.android.internal.aF a(java.lang.String) -> a
+com.crashlytics.android.internal.aG -> com.crashlytics.android.internal.aG:
+    java.io.InputStream a() -> a
+    java.lang.String b() -> b
+    java.lang.String[] c() -> c
+com.crashlytics.android.internal.aH -> le:
+    javax.net.ssl.TrustManager[] a -> a
+    com.crashlytics.android.internal.aI b -> b
+    long c -> c
+    java.util.List d -> d
+    java.util.Set e -> e
+    85:92:javax.net.ssl.TrustManager[] a(com.crashlytics.android.internal.aI) -> a
+    98:110:boolean a(java.security.cert.X509Certificate) -> a
+    148:148:void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    153:163:void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+    166:166:java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    170:178:byte[] a(java.lang.String) -> a
+com.crashlytics.android.internal.aI -> lf:
+    java.security.KeyStore a -> a
+    java.util.HashMap b -> b
+    34:35:boolean a(java.security.cert.X509Certificate) -> a
+    39:55:java.security.cert.X509Certificate b(java.security.cert.X509Certificate) -> b
+    60:75:java.util.HashMap a(java.security.KeyStore) -> a
+    81:98:java.security.KeyStore a(java.io.InputStream,java.lang.String) -> a
+com.crashlytics.android.internal.aJ -> com.crashlytics.android.internal.aJ:
+    java.lang.String a -> a
+    android.content.Context b -> b
+    28:28:android.content.SharedPreferences a() -> a
+    36:36:android.content.SharedPreferences$Editor b() -> b
+    46:50:boolean a(android.content.SharedPreferences$Editor) -> a
+com.crashlytics.android.internal.aK -> com.crashlytics.android.internal.aK:
+    java.lang.String a -> a
+    int b -> b
+    int c -> c
+com.crashlytics.android.internal.aL -> lg:
+com.crashlytics.android.internal.aM -> com.crashlytics.android.internal.aM:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    boolean d -> d
+com.crashlytics.android.internal.aN -> com.crashlytics.android.internal.aN:
+    21:43:org.json.JSONObject a() -> a
+    48:65:void a(long,org.json.JSONObject) -> a
+com.crashlytics.android.internal.aO -> lh:
+    52:72:org.json.JSONObject a(com.crashlytics.android.internal.aZ) -> a
+com.crashlytics.android.internal.aP -> com.crashlytics.android.internal.aP:
+    boolean a -> a
+    boolean b -> b
+    boolean c -> c
+com.crashlytics.android.internal.aQ -> com.crashlytics.android.internal.aQ:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    boolean d -> d
+    java.lang.String e -> e
+    boolean f -> f
+    java.lang.String g -> g
+com.crashlytics.android.internal.aR -> com.crashlytics.android.internal.aR:
+    int a -> a
+com.crashlytics.android.internal.aS -> com.crashlytics.android.internal.aS:
+    java.util.concurrent.atomic.AtomicReference a -> a
+    com.crashlytics.android.internal.aW b -> b
+    boolean c -> c
+    42:42:com.crashlytics.android.internal.aS a() -> a
+    59:90:com.crashlytics.android.internal.aS a(android.content.Context,com.crashlytics.android.internal.av,java.lang.String,java.lang.String,java.lang.String) -> a
+    94:94:com.crashlytics.android.internal.aX b() -> b
+    116:117:java.lang.Object a(com.crashlytics.android.internal.aU,java.lang.Object) -> a
+    125:127:boolean c() -> c
+    135:142:boolean d() -> d
+    158:210:java.lang.String a(java.lang.String,java.lang.String,android.content.Context) -> a
+com.crashlytics.android.internal.aT -> li:
+    com.crashlytics.android.internal.aS a -> a
+    33:33:com.crashlytics.android.internal.aS a() -> a
+com.crashlytics.android.internal.aU -> com.crashlytics.android.internal.aU:
+    java.lang.Object a(com.crashlytics.android.internal.aX) -> a
+com.crashlytics.android.internal.aV -> com.crashlytics.android.internal.aV:
+    com.crashlytics.android.internal.aV a -> a
+    com.crashlytics.android.internal.aV b -> b
+    com.crashlytics.android.internal.aV c -> c
+    com.crashlytics.android.internal.aV[] d -> d
+    8:8:com.crashlytics.android.internal.aV[] values() -> values
+    8:8:com.crashlytics.android.internal.aV valueOf(java.lang.String) -> valueOf
+com.crashlytics.android.internal.aW -> com.crashlytics.android.internal.aW:
+    com.crashlytics.android.internal.aZ a -> a
+    com.crashlytics.android.internal.aY b -> b
+    com.crashlytics.android.internal.ah c -> c
+    com.crashlytics.android.internal.aN d -> d
+    com.crashlytics.android.internal.ba e -> e
+    36:36:com.crashlytics.android.internal.aX a() -> a
+    40:64:com.crashlytics.android.internal.aX a(com.crashlytics.android.internal.aV) -> a
+    68:99:com.crashlytics.android.internal.aX b(com.crashlytics.android.internal.aV) -> b
+    103:108:void a(org.json.JSONObject,java.lang.String) -> a
+com.crashlytics.android.internal.aX -> com.crashlytics.android.internal.aX:
+    com.crashlytics.android.internal.aM a -> a
+    com.crashlytics.android.internal.aR b -> b
+    com.crashlytics.android.internal.aQ c -> c
+    com.crashlytics.android.internal.aP d -> d
+    com.crashlytics.android.internal.aK e -> e
+    long f -> f
+com.crashlytics.android.internal.aY -> com.crashlytics.android.internal.aY:
+    18:29:com.crashlytics.android.internal.aX a(com.crashlytics.android.internal.ah,org.json.JSONObject) -> a
+    46:49:org.json.JSONObject a(org.json.JSONObject) -> a
+com.crashlytics.android.internal.aZ -> com.crashlytics.android.internal.aZ:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    int f -> f
+    java.lang.String g -> g
+com.crashlytics.android.internal.aa -> com.crashlytics.android.internal.aa:
+    12:14:void run() -> run
+    void a() -> a
+com.crashlytics.android.internal.ab -> com.crashlytics.android.internal.ab:
+    java.lang.Boolean b -> b
+    char[] c -> c
+    long d -> d
+    java.lang.Boolean e -> e
+    java.util.Comparator a -> a
+    101:101:android.content.SharedPreferences a() -> a
+    110:132:java.lang.String a(java.io.File,java.lang.String) -> a
+    140:140:int b() -> b
+    192:219:long c() -> c
+    227:227:long a(java.lang.String,java.lang.String,int) -> a
+    232:244:android.app.ActivityManager$RunningAppProcessInfo a(java.lang.String,android.content.Context) -> a
+    251:252:java.lang.String a(java.io.InputStream) -> a
+    270:270:java.lang.String a(java.lang.String) -> a
+    283:298:java.lang.String b(java.io.InputStream) -> b
+    302:316:java.lang.String a(byte[],java.lang.String) -> a
+    329:357:java.lang.String a(java.lang.String[]) -> a
+    367:369:long a(android.content.Context) -> a
+    380:384:long b(java.lang.String) -> b
+    389:395:float b(android.content.Context) -> b
+    399:406:boolean c(android.content.Context) -> c
+    415:418:void c(java.lang.String) -> c
+    425:428:void d(java.lang.String) -> d
+    435:438:void a(int,java.lang.String) -> a
+    453:458:boolean d(android.content.Context) -> d
+    465:469:boolean e(android.content.Context) -> e
+    492:510:boolean a(android.content.Context,java.lang.String,boolean) -> a
+    514:515:int a(android.content.Context,java.lang.String,java.lang.String) -> a
+    524:525:boolean d() -> d
+    534:554:boolean e() -> e
+    570:583:int f() -> f
+    594:608:int a(boolean) -> a
+    624:638:javax.crypto.Cipher b(int,java.lang.String) -> b
+    643:650:java.lang.String a(byte[]) -> a
+    675:675:boolean f(android.content.Context) -> f
+    700:706:java.lang.String a(android.content.Context,java.lang.String) -> a
+    716:723:void a(java.io.Closeable,java.lang.String) -> a
+    726:733:void a(java.io.Flushable,java.lang.String) -> a
+    737:737:boolean e(java.lang.String) -> e
+    748:753:java.lang.String a(int) -> a
+    795:798:void a(java.io.InputStream,java.io.OutputStream,byte[]) -> a
+    801:815:java.lang.String b(int) -> b
+    824:836:java.lang.String g(android.content.Context) -> g
+    840:840:int h(android.content.Context) -> h
+    847:856:java.lang.String i(android.content.Context) -> i
+com.crashlytics.android.internal.ac -> lj:
+    682:682:int compare(java.lang.Object,java.lang.Object) -> compare
+com.crashlytics.android.internal.ad -> lk:
+    com.crashlytics.android.internal.ad a -> a
+    com.crashlytics.android.internal.ad b -> b
+    com.crashlytics.android.internal.ad c -> c
+    com.crashlytics.android.internal.ad d -> d
+    com.crashlytics.android.internal.ad e -> e
+    com.crashlytics.android.internal.ad f -> f
+    com.crashlytics.android.internal.ad g -> g
+    com.crashlytics.android.internal.ad h -> h
+    com.crashlytics.android.internal.ad i -> i
+    com.crashlytics.android.internal.ad j -> j
+    java.util.Map k -> k
+    com.crashlytics.android.internal.ad[] l -> l
+    147:147:com.crashlytics.android.internal.ad[] values() -> values
+    147:147:com.crashlytics.android.internal.ad valueOf(java.lang.String) -> valueOf
+    171:183:com.crashlytics.android.internal.ad a() -> a
+com.crashlytics.android.internal.ae -> com.crashlytics.android.internal.ae:
+    java.lang.String a -> a
+    16:16:java.lang.String a() -> a
+com.crashlytics.android.internal.af -> com.crashlytics.android.internal.af:
+com.crashlytics.android.internal.ag -> com.crashlytics.android.internal.ag:
+com.crashlytics.android.internal.ah -> com.crashlytics.android.internal.ah:
+    12:12:long a() -> a
+    22:25:java.util.concurrent.ExecutorService a(java.lang.String) -> a
+    29:32:java.util.concurrent.ScheduledExecutorService b(java.lang.String) -> b
+    36:38:java.util.concurrent.ThreadFactory c(java.lang.String) -> c
+    54:55:void a(java.lang.String,java.util.concurrent.ExecutorService) -> a
+com.crashlytics.android.internal.ai -> com.crashlytics.android.internal.ai:
+    com.crashlytics.android.internal.ai a -> a
+    com.crashlytics.android.internal.ai b -> b
+    com.crashlytics.android.internal.ai c -> c
+    com.crashlytics.android.internal.ai d -> d
+    int e -> e
+    com.crashlytics.android.internal.ai[] f -> f
+    8:8:com.crashlytics.android.internal.ai[] values() -> values
+    8:8:com.crashlytics.android.internal.ai valueOf(java.lang.String) -> valueOf
+    18:18:int a() -> a
+    23:23:java.lang.String toString() -> toString
+    33:36:com.crashlytics.android.internal.ai a(java.lang.String) -> a
+com.crashlytics.android.internal.aj -> com.crashlytics.android.internal.aj:
+    java.io.File a -> a
+    java.lang.String b -> b
+    com.crashlytics.android.internal.aq c -> c
+    java.io.File d -> d
+    java.io.File e -> e
+    50:51:void a(byte[]) -> a
+    55:55:int a() -> a
+    139:139:boolean b() -> b
+    60:65:void a(java.lang.String) -> a
+    104:112:java.util.List a(int) -> a
+    125:125:java.util.List c() -> c
+    117:121:void a(java.util.List) -> a
+    131:135:void d() -> d
+    144:144:boolean a(int,int) -> a
+com.crashlytics.android.internal.ak -> com.crashlytics.android.internal.ak:
+    void c() -> c
+com.crashlytics.android.internal.al -> ll:
+    java.lang.String a -> a
+    java.util.concurrent.atomic.AtomicLong b -> b
+    41:48:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+com.crashlytics.android.internal.am -> lm:
+    java.lang.Runnable a -> a
+    44:45:void a() -> a
+com.crashlytics.android.internal.an -> ln:
+    java.lang.String a -> a
+    java.util.concurrent.ExecutorService b -> b
+    long c -> c
+    java.util.concurrent.TimeUnit d -> d
+    63:76:void a() -> a
+com.crashlytics.android.internal.ao -> com.crashlytics.android.internal.ao:
+    java.util.regex.Pattern a -> a
+    java.lang.String b -> b
+    java.util.concurrent.locks.ReentrantLock c -> c
+    boolean d -> d
+    boolean e -> e
+    android.content.Context f -> f
+    100:100:boolean a() -> a
+    105:108:boolean a(java.lang.String) -> a
+    116:116:java.lang.String b(java.lang.String) -> b
+    127:138:java.lang.String b() -> b
+    146:146:java.lang.String c() -> c
+    154:154:java.lang.String d() -> d
+    159:159:java.lang.String c(java.lang.String) -> c
+    169:184:java.lang.String e() -> e
+    193:204:java.lang.String a(android.content.SharedPreferences) -> a
+    215:223:java.util.Map f() -> f
+    227:230:void a(java.util.Map,com.crashlytics.android.internal.ap,java.lang.String) -> a
+    233:243:java.lang.String g() -> g
+    283:293:java.lang.String h() -> h
+    298:306:java.lang.String i() -> i
+com.crashlytics.android.internal.ap -> com.crashlytics.android.internal.ap:
+    com.crashlytics.android.internal.ap a -> a
+    com.crashlytics.android.internal.ap b -> b
+    com.crashlytics.android.internal.ap c -> c
+    com.crashlytics.android.internal.ap d -> d
+    com.crashlytics.android.internal.ap e -> e
+    int f -> f
+    com.crashlytics.android.internal.ap[] g -> g
+    60:60:com.crashlytics.android.internal.ap[] values() -> values
+    60:60:com.crashlytics.android.internal.ap valueOf(java.lang.String) -> valueOf
+com.crashlytics.android.internal.aq -> com.crashlytics.android.internal.aq:
+    java.util.logging.Logger a -> a
+    java.io.RandomAccessFile b -> b
+    int c -> c
+    int d -> d
+    com.crashlytics.android.internal.as e -> e
+    com.crashlytics.android.internal.as f -> f
+    byte[] g -> g
+    128:132:void a(byte[],int,int) -> a
+    139:144:void a(byte[],int[]) -> a
+    148:148:int a(byte[],int) -> a
+    175:178:void a(int,int,int,int) -> a
+    182:186:com.crashlytics.android.internal.as a(int) -> a
+    212:212:java.io.RandomAccessFile a(java.io.File) -> a
+    217:217:int b(int) -> b
+    229:242:void a(int,byte[],int,int) -> a
+    252:265:void b(int,byte[],int,int) -> b
+    273:274:void a(byte[]) -> a
+    286:313:void b(byte[],int,int) -> b
+    317:328:int a() -> a
+    341:341:boolean b() -> b
+    350:391:void c(int) -> c
+    396:398:void d(int) -> d
+    422:428:void a(com.crashlytics.android.internal.au) -> a
+    436:439:java.lang.Object b(java.lang.Object,java.lang.String) -> b
+    495:509:void c() -> c
+    513:520:void d() -> d
+    524:525:void close() -> close
+    532:532:boolean a(int,int) -> a
+    537:562:java.lang.String toString() -> toString
+    56:56:int a(com.crashlytics.android.internal.aq,int) -> a
+    56:56:java.lang.Object a(java.lang.Object,java.lang.String) -> a
+    56:56:void a(com.crashlytics.android.internal.aq,int,byte[],int,int) -> a
+    56:56:java.io.RandomAccessFile a(com.crashlytics.android.internal.aq) -> a
+com.crashlytics.android.internal.ar -> lo:
+    boolean a -> a
+    java.lang.StringBuilder b -> b
+    550:556:void a(java.io.InputStream,int) -> a
+com.crashlytics.android.internal.as -> lp:
+    com.crashlytics.android.internal.as a -> a
+    int b -> b
+    int c -> c
+    593:593:java.lang.String toString() -> toString
+com.crashlytics.android.internal.at -> lq:
+    int a -> a
+    int b -> b
+    com.crashlytics.android.internal.aq c -> c
+    454:467:int read(byte[],int,int) -> read
+    473:480:int read() -> read
+com.crashlytics.android.internal.au -> com.crashlytics.android.internal.au:
+    void a(java.io.InputStream,int) -> a
+com.crashlytics.android.internal.av -> com.crashlytics.android.internal.av:
+    com.crashlytics.android.internal.q a -> a
+    com.crashlytics.android.internal.aG b -> b
+    javax.net.ssl.SSLSocketFactory c -> c
+    boolean d -> d
+    23:55:java.security.cert.X509Certificate[] a(java.security.cert.X509Certificate[],com.crashlytics.android.internal.aI) -> a
+    60:70:boolean a(java.security.cert.X509Certificate,java.security.cert.X509Certificate) -> a
+    45:49:void a(com.crashlytics.android.internal.aG) -> a
+    58:58:com.crashlytics.android.internal.ay a(com.crashlytics.android.internal.ax,java.lang.String) -> a
+    65:96:com.crashlytics.android.internal.ay a(com.crashlytics.android.internal.ax,java.lang.String,java.util.Map) -> a
+    52:54:void a() -> a
+    104:107:javax.net.ssl.SSLSocketFactory b() -> b
+    111:120:javax.net.ssl.SSLSocketFactory c() -> c
+com.crashlytics.android.internal.aw -> lr:
+    int[] a -> a
+com.crashlytics.android.internal.ax -> com.crashlytics.android.internal.ax:
+    com.crashlytics.android.internal.ax a -> a
+    com.crashlytics.android.internal.ax b -> b
+    com.crashlytics.android.internal.ax c -> c
+    com.crashlytics.android.internal.ax d -> d
+    com.crashlytics.android.internal.ax[] e -> e
+    3:3:com.crashlytics.android.internal.ax[] values() -> values
+    3:3:com.crashlytics.android.internal.ax valueOf(java.lang.String) -> valueOf
+com.crashlytics.android.internal.ay -> com.crashlytics.android.internal.ay:
+    com.crashlytics.android.internal.aB a -> a
+    java.net.HttpURLConnection b -> b
+    java.net.URL c -> c
+    java.lang.String d -> d
+    com.crashlytics.android.internal.aF e -> e
+    boolean f -> f
+    boolean g -> g
+    boolean h -> h
+    int i -> i
+    259:262:java.lang.String c(java.lang.String) -> c
+    756:776:java.lang.String c(java.lang.CharSequence) -> c
+    791:820:java.lang.String a(java.lang.CharSequence,java.util.Map) -> a
+    900:901:com.crashlytics.android.internal.ay a(java.lang.CharSequence,java.util.Map,boolean) -> a
+    956:957:com.crashlytics.android.internal.ay b(java.lang.CharSequence,java.util.Map,boolean) -> b
+    985:985:com.crashlytics.android.internal.ay a(java.lang.CharSequence) -> a
+    1041:1041:com.crashlytics.android.internal.ay b(java.lang.CharSequence) -> b
+    1331:1338:java.net.HttpURLConnection e() -> e
+    1344:1344:java.lang.String toString() -> toString
+    1353:1355:java.net.HttpURLConnection a() -> a
+    1388:1391:int b() -> b
+    1574:1579:java.lang.String d(java.lang.String) -> d
+    1590:1590:java.lang.String c() -> c
+    1664:1680:java.io.InputStream f() -> f
+    1852:1853:com.crashlytics.android.internal.ay a(int) -> a
+    1864:1865:com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String) -> a
+    1900:1900:com.crashlytics.android.internal.ay a(java.util.Map$Entry) -> a
+    1911:1912:java.lang.String a(java.lang.String) -> a
+    2071:2101:java.lang.String c(java.lang.String,java.lang.String) -> c
+    2140:2141:com.crashlytics.android.internal.ay a(boolean) -> a
+    2401:2401:com.crashlytics.android.internal.ay a(java.io.InputStream,java.io.OutputStream) -> a
+    2444:2457:com.crashlytics.android.internal.ay g() -> g
+    2469:2471:com.crashlytics.android.internal.ay h() -> h
+    2482:2487:com.crashlytics.android.internal.ay i() -> i
+    2497:2503:com.crashlytics.android.internal.ay j() -> j
+    2529:2537:com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String,java.lang.String) -> a
+    2548:2548:com.crashlytics.android.internal.ay b(java.lang.String,java.lang.String) -> b
+    2562:2562:com.crashlytics.android.internal.ay b(java.lang.String,java.lang.String,java.lang.String) -> b
+    2578:2584:com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    2596:2596:com.crashlytics.android.internal.ay a(java.lang.String,java.lang.Number) -> a
+    2650:2661:com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String,java.lang.String,java.io.File) -> a
+    2691:2697:com.crashlytics.android.internal.ay a(java.lang.String,java.lang.String,java.lang.String,java.io.InputStream) -> a
+    2709:2709:com.crashlytics.android.internal.ay d(java.lang.String,java.lang.String) -> d
+    2796:2801:com.crashlytics.android.internal.ay d(java.lang.CharSequence) -> d
+    2970:2970:java.lang.String d() -> d
+    94:94:java.lang.String b(java.lang.String) -> b
+    94:94:int a(com.crashlytics.android.internal.ay) -> a
+com.crashlytics.android.internal.az -> ls:
+    java.io.InputStream a -> a
+    java.io.OutputStream b -> b
+    com.crashlytics.android.internal.ay c -> c
+    2401:2401:java.lang.Object a() -> a
+com.crashlytics.android.internal.b -> com.crashlytics.android.internal.b:
+    java.lang.String a -> a
+    java.util.concurrent.ConcurrentMap b -> b
+    java.util.concurrent.ConcurrentMap c -> c
+    java.lang.String d -> d
+    com.crashlytics.android.internal.m e -> e
+    com.crashlytics.android.internal.i f -> f
+    java.lang.ThreadLocal g -> g
+    java.lang.ThreadLocal h -> h
+    java.util.Map i -> i
+    170:170:java.lang.String toString() -> toString
+    185:236:void a(java.lang.Object) -> a
+    239:249:void a(com.crashlytics.android.internal.g,com.crashlytics.android.internal.h) -> a
+    258:292:void b(java.lang.Object) -> b
+    304:325:void c(java.lang.Object) -> c
+    342:359:void a() -> a
+    372:377:void a(java.lang.Object,com.crashlytics.android.internal.g) -> a
+    398:398:java.util.Set a(java.lang.Class) -> a
+    442:446:void a(java.lang.String,java.lang.reflect.InvocationTargetException) -> a
+com.crashlytics.android.internal.ba -> com.crashlytics.android.internal.ba:
+    org.json.JSONObject a(com.crashlytics.android.internal.aZ) -> a
+com.crashlytics.android.internal.c -> lt:
+    110:110:java.lang.Object initialValue() -> initialValue
+com.crashlytics.android.internal.d -> lu:
+    117:117:java.lang.Object initialValue() -> initialValue
+com.crashlytics.android.internal.e -> lv:
+    java.lang.Object a -> a
+    com.crashlytics.android.internal.g b -> b
+com.crashlytics.android.internal.f -> com.crashlytics.android.internal.f:
+    java.lang.Object a -> a
+    java.lang.Object b -> b
+com.crashlytics.android.internal.g -> lw:
+    java.lang.Object a -> a
+    java.lang.reflect.Method b -> b
+    int c -> c
+    boolean d -> d
+    64:64:boolean a() -> a
+    73:74:void b() -> b
+    85:96:void a(java.lang.Object) -> a
+    101:101:java.lang.String toString() -> toString
+    105:105:int hashCode() -> hashCode
+    109:123:boolean equals(java.lang.Object) -> equals
+com.crashlytics.android.internal.h -> lx:
+    java.lang.Object a -> a
+    java.lang.reflect.Method b -> b
+    int c -> c
+    boolean d -> d
+    60:60:boolean a() -> a
+    69:70:void b() -> b
+    80:91:java.lang.Object c() -> c
+    96:96:java.lang.String toString() -> toString
+    100:100:int hashCode() -> hashCode
+    104:118:boolean equals(java.lang.Object) -> equals
+com.crashlytics.android.internal.i -> ly:
+    com.crashlytics.android.internal.i a -> a
+    java.util.Map a(java.lang.Object) -> a
+    java.util.Map b(java.lang.Object) -> b
+com.crashlytics.android.internal.j -> lz:
+    33:33:java.util.Map a(java.lang.Object) -> a
+    38:38:java.util.Map b(java.lang.Object) -> b
+com.crashlytics.android.internal.k -> com.crashlytics.android.internal.k:
+com.crashlytics.android.internal.l -> com.crashlytics.android.internal.l:
+com.crashlytics.android.internal.m -> com.crashlytics.android.internal.m:
+    com.crashlytics.android.internal.m a -> a
+    com.crashlytics.android.internal.m b -> b
+    void a(com.crashlytics.android.internal.b) -> a
+com.crashlytics.android.internal.n -> ma:
+    40:40:void a(com.crashlytics.android.internal.b) -> a
+com.crashlytics.android.internal.o -> mb:
+    46:49:void a(com.crashlytics.android.internal.b) -> a
+com.crashlytics.android.internal.p -> com.crashlytics.android.internal.p:
+    android.content.Context a -> a
+    boolean b -> b
+    void c() -> c
+    java.lang.String getVersion() -> getVersion
+    56:73:void a(android.content.Context) -> a
+    80:80:android.content.Context getContext() -> getContext
+    87:87:boolean isInitialized() -> isInitialized
+    95:95:java.lang.String getName() -> getName
+    103:103:java.lang.String getComponentPath() -> getComponentPath
+com.crashlytics.android.internal.q -> com.crashlytics.android.internal.q:
+    void a(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    void a(java.lang.String,java.lang.String) -> a
+    void b(java.lang.String,java.lang.String) -> b
+    void c(java.lang.String,java.lang.String) -> c
+    void d(java.lang.String,java.lang.String) -> d
+    void a(int,java.lang.String,java.lang.String) -> a
+    void a(int,java.lang.String,java.lang.String,boolean) -> a
+com.crashlytics.android.internal.r -> com.crashlytics.android.internal.r:
+    9:9:boolean b(int) -> b
+    42:45:void a(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    49:50:void a(java.lang.String,java.lang.String) -> a
+    59:60:void b(java.lang.String,java.lang.String) -> b
+    64:65:void c(java.lang.String,java.lang.String) -> c
+    69:70:void d(java.lang.String,java.lang.String) -> d
+    74:75:void a(int,java.lang.String,java.lang.String) -> a
+    79:82:void a(int,java.lang.String,java.lang.String,boolean) -> a
+    276:276:android.app.Activity a(android.content.Context) -> a
+    276:276:android.app.Application b(android.content.Context) -> b
+    19:52:java.lang.String a(android.content.Context,boolean) -> a
+    26:36:int a(int) -> a
+com.crashlytics.android.internal.s -> com.crashlytics.android.internal.s:
+com.crashlytics.android.internal.t -> com.crashlytics.android.internal.t:
+com.crashlytics.android.internal.u -> com.crashlytics.android.internal.u:
+com.crashlytics.android.internal.v -> com.crashlytics.android.internal.v:
+    com.crashlytics.android.internal.b a -> a
+    java.util.concurrent.atomic.AtomicReference b -> b
+    boolean c -> c
+    java.io.File d -> d
+    android.app.Application e -> e
+    java.lang.ref.WeakReference f -> f
+    java.lang.String g -> g
+    int h -> h
+    java.util.concurrent.ConcurrentHashMap i -> i
+    62:62:com.crashlytics.android.internal.v a() -> a
+    89:98:void a(android.content.Context,com.crashlytics.android.internal.u[]) -> a
+    106:115:com.crashlytics.android.internal.q b() -> b
+    124:125:void a(com.crashlytics.android.internal.q) -> a
+    131:131:android.app.Application d() -> d
+    140:141:com.crashlytics.android.internal.v a(android.app.Activity) -> a
+    149:152:android.app.Activity e() -> e
+    157:185:void c() -> c
+    192:192:java.lang.String getVersion() -> getVersion
+    213:213:com.crashlytics.android.internal.u a(java.lang.Class) -> a
+    233:237:void a(boolean) -> a
+    245:245:boolean f() -> f
+    249:249:int g() -> g
+    261:261:java.io.File h() -> h
+    269:270:void a(java.lang.String) -> a
+    273:273:java.lang.String i() -> i
+    22:22:com.crashlytics.android.internal.v a(com.crashlytics.android.internal.v,android.app.Activity) -> a
+com.crashlytics.android.internal.w -> mc:
+    com.crashlytics.android.internal.v a -> a
+    299:299:void a(com.crashlytics.android.internal.w,android.app.Application) -> a
+com.crashlytics.android.internal.x -> md:
+    com.crashlytics.android.internal.w a -> a
+    309:310:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
+    314:315:void onActivityStarted(android.app.Activity) -> onActivityStarted
+    319:320:void onActivityResumed(android.app.Activity) -> onActivityResumed
+    323:323:void onActivityPaused(android.app.Activity) -> onActivityPaused
+    326:326:void onActivityStopped(android.app.Activity) -> onActivityStopped
+    329:329:void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
+    332:332:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+com.crashlytics.android.internal.y -> me:
+    com.crashlytics.android.internal.v a -> a
+    53:53:com.crashlytics.android.internal.v a() -> a
+com.crashlytics.android.internal.z -> mf:
+    java.lang.String a -> a
+    26:30:java.io.File getDatabasePath(java.lang.String) -> getDatabasePath
+    36:36:android.database.sqlite.SQLiteDatabase openOrCreateDatabase(java.lang.String,int,android.database.sqlite.SQLiteDatabase$CursorFactory) -> openOrCreateDatabase
+    44:44:android.database.sqlite.SQLiteDatabase openOrCreateDatabase(java.lang.String,int,android.database.sqlite.SQLiteDatabase$CursorFactory,android.database.DatabaseErrorHandler) -> openOrCreateDatabase
+    50:50:java.io.File getFilesDir() -> getFilesDir
+    55:55:java.io.File getExternalFilesDir(java.lang.String) -> getExternalFilesDir
+    60:60:java.io.File getCacheDir() -> getCacheDir
+    65:65:java.io.File getExternalCacheDir() -> getExternalCacheDir
+com.crashlytics.android.j -> mg:
+    long a -> a
+    com.crashlytics.android.CrashTest b -> b
+    46:51:java.lang.Void a() -> a
+    42:42:java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.crashlytics.android.k -> mh:
+    com.crashlytics.android.PinningInfoProvider a -> a
+    436:436:java.io.InputStream a() -> a
+    441:441:java.lang.String b() -> b
+    446:446:java.lang.String[] c() -> c
+com.crashlytics.android.l -> mi:
+    com.crashlytics.android.Crashlytics a -> a
+    580:580:java.lang.Object a(com.crashlytics.android.internal.aX) -> a
+com.crashlytics.android.m -> mj:
+    com.crashlytics.android.Crashlytics a -> a
+    617:617:java.lang.Object a(com.crashlytics.android.internal.aX) -> a
+com.crashlytics.android.n -> mk:
+    637:637:java.lang.Object a(com.crashlytics.android.internal.aX) -> a
+com.crashlytics.android.o -> ml:
+    650:650:java.lang.Object a(com.crashlytics.android.internal.aX) -> a
+com.crashlytics.android.p -> mm:
+    android.app.Activity c -> c
+    com.crashlytics.android.u a -> a
+    com.crashlytics.android.X d -> d
+    com.crashlytics.android.internal.aQ e -> e
+    com.crashlytics.android.Crashlytics b -> b
+    672:729:void run() -> run
+com.crashlytics.android.q -> mn:
+    com.crashlytics.android.p a -> a
+    677:679:void onClick(android.content.DialogInterface,int) -> onClick
+com.crashlytics.android.r -> mo:
+    com.crashlytics.android.p a -> a
+    709:711:void onClick(android.content.DialogInterface,int) -> onClick
+com.crashlytics.android.s -> mp:
+    com.crashlytics.android.p a -> a
+    720:723:void onClick(android.content.DialogInterface,int) -> onClick
+com.crashlytics.android.t -> mq:
+    android.content.Context a -> a
+    float b -> b
+    java.util.concurrent.CountDownLatch c -> c
+    com.crashlytics.android.Crashlytics d -> d
+    839:847:void a() -> a
+com.crashlytics.android.u -> mr:
+    boolean a -> a
+    java.util.concurrent.CountDownLatch b -> b
+    990:992:void a(boolean) -> a
+    995:995:boolean a() -> a
+    1000:1004:void b() -> b
+com.crashlytics.android.v -> ms:
+    java.io.FilenameFilter a -> a
+    java.util.Comparator b -> b
+    java.util.Comparator c -> c
+    java.util.regex.Pattern d -> d
+    java.util.Map e -> e
+    com.crashlytics.android.d f -> f
+    java.util.concurrent.atomic.AtomicInteger g -> g
+    java.util.concurrent.atomic.AtomicBoolean h -> h
+    int i -> i
+    java.lang.Thread$UncaughtExceptionHandler j -> j
+    java.io.File k -> k
+    java.io.File l -> l
+    java.util.concurrent.atomic.AtomicBoolean m -> m
+    java.lang.String n -> n
+    android.content.BroadcastReceiver o -> o
+    android.content.BroadcastReceiver p -> p
+    com.crashlytics.android.d q -> q
+    com.crashlytics.android.d r -> r
+    java.util.concurrent.ExecutorService s -> s
+    android.app.ActivityManager$RunningAppProcessInfo t -> t
+    com.crashlytics.android.internal.aq u -> u
+    boolean v -> v
+    java.lang.Thread[] w -> w
+    java.util.List x -> x
+    java.lang.StackTraceElement[] y -> y
+    288:288:boolean a() -> a
+    293:319:void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+    338:338:boolean b() -> b
+    357:367:void a(java.lang.Thread,java.lang.Throwable) -> a
+    373:385:void a(long,java.lang.String) -> a
+    402:429:com.crashlytics.android.d a(com.crashlytics.android.internal.aq) -> a
+    436:445:void c() -> c
+    448:458:void d() -> d
+    464:477:void e() -> e
+    480:480:boolean f() -> f
+    532:576:void a(com.crashlytics.android.internal.aq,int,long,java.lang.String) -> a
+    580:580:boolean g() -> g
+    603:634:boolean k() -> k
+    714:723:void l() -> l
+    729:759:void m() -> m
+    771:773:java.lang.String n() -> n
+    786:786:java.lang.String a(java.io.File) -> a
+    872:879:void a(com.crashlytics.android.f) -> a
+    882:892:void a(com.crashlytics.android.h,java.io.File[],java.lang.String) -> a
+    895:907:void a(com.crashlytics.android.h,java.lang.String) -> a
+    913:916:void a(java.lang.String) -> a
+    930:930:java.io.File[] o() -> o
+    941:941:java.io.File[] a(java.io.FilenameFilter) -> a
+    1003:1019:void p() -> p
+    1089:1092:void a(java.lang.Throwable,java.io.OutputStream) -> a
+    1122:1142:void a(java.lang.Throwable,java.io.Writer) -> a
+    1160:1165:int q() -> q
+    1210:1210:com.crashlytics.android.d b(java.lang.String) -> b
+    1218:1278:void c(java.lang.String) -> c
+    1283:1286:int a(com.crashlytics.android.internal.ap,java.lang.String) -> a
+    1292:1312:int a(int,com.crashlytics.android.d,com.crashlytics.android.d,int,long,long,boolean,java.util.Map,int,com.crashlytics.android.d,com.crashlytics.android.d) -> a
+    1319:1343:void a(com.crashlytics.android.h,java.io.File) -> a
+    1355:1357:void a(java.lang.String,int) -> a
+    1406:1467:void a(java.util.Date,com.crashlytics.android.h,java.lang.Thread,java.lang.Throwable,java.lang.String,boolean) -> a
+    1491:1520:void a(com.crashlytics.android.h,java.lang.Thread,java.lang.Throwable) -> a
+    1525:1533:void a(com.crashlytics.android.h,java.util.Map) -> a
+    1536:1545:int r() -> r
+    1550:1578:void a(com.crashlytics.android.h,java.lang.Throwable,int,int) -> a
+    1582:1591:int a(java.lang.Thread,java.lang.StackTraceElement[],int,boolean) -> a
+    1596:1605:void a(com.crashlytics.android.h,java.lang.Thread,java.lang.StackTraceElement[],int,boolean) -> a
+    1608:1633:int a(java.lang.StackTraceElement,boolean) -> a
+    1638:1667:void a(com.crashlytics.android.h,int,java.lang.StackTraceElement,boolean) -> a
+    1714:1736:int a(java.lang.Thread,java.lang.Throwable,java.util.Map) -> a
+    1740:1764:int b(java.lang.Thread,java.lang.Throwable) -> b
+    1768:1770:int a(java.lang.String,java.lang.String) -> a
+    1775:1784:int a(float,int,boolean,int,long,long) -> a
+    1793:1830:int a(java.lang.Throwable,int) -> a
+    1834:1840:int s() -> s
+    1861:1867:void h() -> h
+    1875:1896:void a(java.io.File[]) -> a
+    1936:1942:java.lang.Object a(java.util.concurrent.Callable) -> a
+    1958:1970:java.util.concurrent.Future a(java.lang.Runnable) -> a
+    1986:1999:java.util.concurrent.Future b(java.util.concurrent.Callable) -> b
+    66:66:java.util.regex.Pattern i() -> i
+    66:66:boolean a(com.crashlytics.android.v,boolean) -> a
+    66:66:void a(com.crashlytics.android.v,java.util.Date,java.lang.Thread,java.lang.Throwable) -> a
+    66:66:java.util.concurrent.atomic.AtomicBoolean a(com.crashlytics.android.v) -> a
+    66:66:void b(com.crashlytics.android.v) -> b
+    66:66:void c(com.crashlytics.android.v) -> c
+    66:66:void b(com.crashlytics.android.v,java.util.Date,java.lang.Thread,java.lang.Throwable) -> b
+    66:66:com.crashlytics.android.internal.aq d(com.crashlytics.android.v) -> d
+    66:66:boolean e(com.crashlytics.android.v) -> e
+    66:66:java.io.File f(com.crashlytics.android.v) -> f
+    66:66:java.util.Map j() -> j
+    66:66:java.io.File[] a(com.crashlytics.android.v,java.io.FilenameFilter) -> a
+com.crashlytics.android.w -> mt:
+    127:127:boolean accept(java.io.File,java.lang.String) -> accept
+com.crashlytics.android.x -> mu:
+    long a -> a
+    java.lang.String b -> b
+    com.crashlytics.android.v c -> c
+    373:373:java.lang.Object call() -> call
+com.crashlytics.android.y -> mv:
+    byte[] a -> a
+    int[] b -> b
+    418:421:void a(java.io.InputStream,int) -> a
+com.crashlytics.android.z -> mw:
+    com.crashlytics.android.v a -> a
+    436:436:java.lang.Object call() -> call
+com.google.gson.DefaultDateTypeAdapter -> mx:
     java.text.DateFormat enUsFormat -> a
     java.text.DateFormat localFormat -> b
     java.text.DateFormat iso8601Format -> c
@@ -3875,15 +5080,15 @@ com.google.gson.FieldNamingPolicy -> com.google.gson.FieldNamingPolicy:
     164:164:java.lang.String modifyString(char,java.lang.String,int) -> a
     30:30:java.lang.String access$100(java.lang.String) -> a
     30:30:java.lang.String access$200(java.lang.String,java.lang.String) -> a
-com.google.gson.FieldNamingPolicy$1 -> it:
+com.google.gson.FieldNamingPolicy$1 -> my:
     38:38:java.lang.String translateName(java.lang.reflect.Field) -> translateName
-com.google.gson.FieldNamingPolicy$2 -> iu:
+com.google.gson.FieldNamingPolicy$2 -> mz:
     54:54:java.lang.String translateName(java.lang.reflect.Field) -> translateName
-com.google.gson.FieldNamingPolicy$3 -> iv:
+com.google.gson.FieldNamingPolicy$3 -> na:
     73:73:java.lang.String translateName(java.lang.reflect.Field) -> translateName
-com.google.gson.FieldNamingPolicy$4 -> iw:
+com.google.gson.FieldNamingPolicy$4 -> nb:
     91:91:java.lang.String translateName(java.lang.reflect.Field) -> translateName
-com.google.gson.FieldNamingPolicy$5 -> ix:
+com.google.gson.FieldNamingPolicy$5 -> nc:
     114:114:java.lang.String translateName(java.lang.reflect.Field) -> translateName
 com.google.gson.FieldNamingStrategy -> com.google.gson.FieldNamingStrategy:
     java.lang.String translateName(java.lang.reflect.Field) -> translateName
@@ -3926,32 +5131,32 @@ com.google.gson.Gson -> com.google.gson.Gson:
     865:868:java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.reflect.Type) -> fromJson
     898:898:java.lang.String toString() -> toString
     97:97:void access$000(com.google.gson.Gson,double) -> a
-com.google.gson.Gson$1 -> iy:
+com.google.gson.Gson$1 -> nd:
     com.google.gson.Gson this$0 -> a
     126:126:java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type) -> deserialize
-com.google.gson.Gson$2 -> iz:
+com.google.gson.Gson$2 -> ne:
     com.google.gson.Gson this$0 -> a
     132:132:com.google.gson.JsonElement serialize(java.lang.Object) -> serialize
     135:135:com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type) -> serialize
-com.google.gson.Gson$3 -> ja:
+com.google.gson.Gson$3 -> nf:
     com.google.gson.Gson this$0 -> a
     252:256:java.lang.Double read(com.google.gson.stream.JsonReader) -> a
     259:266:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     250:250:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     250:250:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.Gson$4 -> jb:
+com.google.gson.Gson$4 -> ng:
     com.google.gson.Gson this$0 -> a
     276:280:java.lang.Float read(com.google.gson.stream.JsonReader) -> a
     283:290:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     274:274:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     274:274:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.Gson$5 -> jc:
+com.google.gson.Gson$5 -> nh:
     com.google.gson.Gson this$0 -> a
     308:312:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     315:320:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     306:306:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     306:306:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.Gson$FutureTypeAdapter -> jd:
+com.google.gson.Gson$FutureTypeAdapter -> ni:
     com.google.gson.TypeAdapter delegate -> a
     875:879:void setDelegate(com.google.gson.TypeAdapter) -> a
     882:885:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
@@ -4120,11 +5325,11 @@ com.google.gson.LongSerializationPolicy -> com.google.gson.LongSerializationPoli
     27:27:com.google.gson.LongSerializationPolicy[] values() -> values
     27:27:com.google.gson.LongSerializationPolicy valueOf(java.lang.String) -> valueOf
     com.google.gson.JsonElement serialize(java.lang.Long) -> serialize
-com.google.gson.LongSerializationPolicy$1 -> je:
+com.google.gson.LongSerializationPolicy$1 -> nj:
     36:36:com.google.gson.JsonElement serialize(java.lang.Long) -> serialize
-com.google.gson.LongSerializationPolicy$2 -> jf:
+com.google.gson.LongSerializationPolicy$2 -> nk:
     47:47:com.google.gson.JsonElement serialize(java.lang.Long) -> serialize
-com.google.gson.TreeTypeAdapter -> jg:
+com.google.gson.TreeTypeAdapter -> nl:
     com.google.gson.JsonSerializer serializer -> a
     com.google.gson.JsonDeserializer deserializer -> b
     com.google.gson.Gson gson -> c
@@ -4137,8 +5342,8 @@ com.google.gson.TreeTypeAdapter -> jg:
     85:85:com.google.gson.TypeAdapterFactory newFactory(com.google.gson.reflect.TypeToken,java.lang.Object) -> a
     95:96:com.google.gson.TypeAdapterFactory newFactoryWithMatchRawType(com.google.gson.reflect.TypeToken,java.lang.Object) -> b
     105:105:com.google.gson.TypeAdapterFactory newTypeHierarchyFactory(java.lang.Class,java.lang.Object) -> a
-com.google.gson.TreeTypeAdapter$1 -> jh:
-com.google.gson.TreeTypeAdapter$SingleTypeFactory -> ji:
+com.google.gson.TreeTypeAdapter$1 -> nm:
+com.google.gson.TreeTypeAdapter$SingleTypeFactory -> nn:
     com.google.gson.reflect.TypeToken exactType -> a
     boolean matchRawType -> b
     java.lang.Class hierarchyType -> c
@@ -4155,7 +5360,7 @@ com.google.gson.TypeAdapter -> com.google.gson.TypeAdapter:
     255:256:java.lang.Object fromJson(java.io.Reader) -> fromJson
     269:269:java.lang.Object fromJson(java.lang.String) -> fromJson
     280:283:java.lang.Object fromJsonTree(com.google.gson.JsonElement) -> fromJsonTree
-com.google.gson.TypeAdapter$1 -> jj:
+com.google.gson.TypeAdapter$1 -> no:
     com.google.gson.TypeAdapter this$0 -> a
     188:193:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
     195:199:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
@@ -4197,14 +5402,14 @@ com.google.gson.internal.$Gson$Types -> com.google.gson.internal.$Gson$Types:
     431:432:void checkNotPrimitive(java.lang.reflect.Type) -> b
     42:42:void access$000(java.lang.reflect.Type) -> a
     42:42:int access$100(java.lang.Object) -> a
-com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl -> jk:
+com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl -> np:
     java.lang.reflect.Type componentType -> a
     long serialVersionUID -> serialVersionUID
     506:506:java.lang.reflect.Type getGenericComponentType() -> getGenericComponentType
     510:510:boolean equals(java.lang.Object) -> equals
     515:515:int hashCode() -> hashCode
     519:519:java.lang.String toString() -> toString
-com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl -> jl:
+com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl -> nq:
     java.lang.reflect.Type ownerType -> a
     java.lang.reflect.Type rawType -> b
     java.lang.reflect.Type[] typeArguments -> c
@@ -4215,7 +5420,7 @@ com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl -> jl:
     470:470:boolean equals(java.lang.Object) -> equals
     475:475:int hashCode() -> hashCode
     481:492:java.lang.String toString() -> toString
-com.google.gson.internal.$Gson$Types$WildcardTypeImpl -> jm:
+com.google.gson.internal.$Gson$Types$WildcardTypeImpl -> nr:
     java.lang.reflect.Type upperBound -> a
     java.lang.reflect.Type lowerBound -> b
     long serialVersionUID -> serialVersionUID
@@ -4231,49 +5436,49 @@ com.google.gson.internal.ConstructorConstructor -> com.google.gson.internal.Cons
     130:197:com.google.gson.internal.ObjectConstructor newDefaultImplementationConstructor(java.lang.reflect.Type,java.lang.Class) -> a
     202:202:com.google.gson.internal.ObjectConstructor newUnsafeAllocator(java.lang.reflect.Type,java.lang.Class) -> b
     218:218:java.lang.String toString() -> toString
-com.google.gson.internal.ConstructorConstructor$1 -> jn:
+com.google.gson.internal.ConstructorConstructor$1 -> ns:
     com.google.gson.InstanceCreator val$typeCreator -> a
     java.lang.reflect.Type val$type -> b
     com.google.gson.internal.ConstructorConstructor this$0 -> c
     62:62:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$10 -> jo:
+com.google.gson.internal.ConstructorConstructor$10 -> nt:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     185:185:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$11 -> jp:
+com.google.gson.internal.ConstructorConstructor$11 -> nu:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     191:191:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$12 -> jq:
+com.google.gson.internal.ConstructorConstructor$12 -> nv:
     com.google.gson.internal.UnsafeAllocator unsafeAllocator -> d
     java.lang.Class val$rawType -> a
     java.lang.reflect.Type val$type -> b
     com.google.gson.internal.ConstructorConstructor this$0 -> c
     207:210:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$2 -> jr:
+com.google.gson.internal.ConstructorConstructor$2 -> nw:
     com.google.gson.InstanceCreator val$rawTypeCreator -> a
     java.lang.reflect.Type val$type -> b
     com.google.gson.internal.ConstructorConstructor this$0 -> c
     74:74:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$3 -> js:
+com.google.gson.internal.ConstructorConstructor$3 -> nx:
     java.lang.reflect.Constructor val$constructor -> a
     com.google.gson.internal.ConstructorConstructor this$0 -> b
     103:114:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$4 -> jt:
+com.google.gson.internal.ConstructorConstructor$4 -> ny:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     134:134:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$5 -> ju:
+com.google.gson.internal.ConstructorConstructor$5 -> nz:
     java.lang.reflect.Type val$type -> a
     com.google.gson.internal.ConstructorConstructor this$0 -> b
     141:149:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$6 -> jv:
+com.google.gson.internal.ConstructorConstructor$6 -> oa:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     156:156:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$7 -> jw:
+com.google.gson.internal.ConstructorConstructor$7 -> ob:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     162:162:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$8 -> jx:
+com.google.gson.internal.ConstructorConstructor$8 -> oc:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     168:168:java.lang.Object construct() -> construct
-com.google.gson.internal.ConstructorConstructor$9 -> jy:
+com.google.gson.internal.ConstructorConstructor$9 -> od:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     178:178:java.lang.Object construct() -> construct
 com.google.gson.internal.Excluder -> com.google.gson.internal.Excluder:
@@ -4300,7 +5505,7 @@ com.google.gson.internal.Excluder -> com.google.gson.internal.Excluder:
     233:239:boolean isValidSince(com.google.gson.annotations.Since) -> a
     243:249:boolean isValidUntil(com.google.gson.annotations.Until) -> a
     50:50:java.lang.Object clone() -> clone
-com.google.gson.internal.Excluder$1 -> jz:
+com.google.gson.internal.Excluder$1 -> oe:
     com.google.gson.TypeAdapter delegate -> f
     boolean val$skipDeserialize -> a
     boolean val$skipSerialize -> b
@@ -4350,31 +5555,31 @@ com.google.gson.internal.LinkedTreeMap -> com.google.gson.internal.LinkedTreeMap
     430:431:java.util.Set entrySet() -> entrySet
     435:436:java.util.Set keySet() -> keySet
     625:625:java.lang.Object writeReplace() -> writeReplace
-com.google.gson.internal.LinkedTreeMap$1 -> ka:
+com.google.gson.internal.LinkedTreeMap$1 -> of:
     42:42:int compare(java.lang.Comparable,java.lang.Comparable) -> a
     40:40:int compare(java.lang.Object,java.lang.Object) -> compare
-com.google.gson.internal.LinkedTreeMap$EntrySet -> kb:
+com.google.gson.internal.LinkedTreeMap$EntrySet -> og:
     com.google.gson.internal.LinkedTreeMap this$0 -> a
     559:559:int size() -> size
     563:563:java.util.Iterator iterator() -> iterator
     571:571:boolean contains(java.lang.Object) -> contains
     575:584:boolean remove(java.lang.Object) -> remove
     588:589:void clear() -> clear
-com.google.gson.internal.LinkedTreeMap$EntrySet$1 -> kc:
+com.google.gson.internal.LinkedTreeMap$EntrySet$1 -> oh:
     com.google.gson.internal.LinkedTreeMap$EntrySet this$1 -> a
     565:565:java.util.Map$Entry next() -> a
     563:563:java.lang.Object next() -> next
-com.google.gson.internal.LinkedTreeMap$KeySet -> kd:
+com.google.gson.internal.LinkedTreeMap$KeySet -> oi:
     com.google.gson.internal.LinkedTreeMap this$0 -> a
     594:594:int size() -> size
     598:598:java.util.Iterator iterator() -> iterator
     606:606:boolean contains(java.lang.Object) -> contains
     610:610:boolean remove(java.lang.Object) -> remove
     614:615:void clear() -> clear
-com.google.gson.internal.LinkedTreeMap$KeySet$1 -> ke:
+com.google.gson.internal.LinkedTreeMap$KeySet$1 -> oj:
     com.google.gson.internal.LinkedTreeMap$KeySet this$1 -> a
     600:600:java.lang.Object next() -> next
-com.google.gson.internal.LinkedTreeMap$LinkedTreeMapIterator -> kf:
+com.google.gson.internal.LinkedTreeMap$LinkedTreeMapIterator -> ok:
     com.google.gson.internal.LinkedTreeMap$Node next -> b
     com.google.gson.internal.LinkedTreeMap$Node lastReturned -> c
     int expectedModCount -> d
@@ -4382,7 +5587,7 @@ com.google.gson.internal.LinkedTreeMap$LinkedTreeMapIterator -> kf:
     532:532:boolean hasNext() -> hasNext
     536:544:com.google.gson.internal.LinkedTreeMap$Node nextNode() -> b
     548:554:void remove() -> remove
-com.google.gson.internal.LinkedTreeMap$Node -> kg:
+com.google.gson.internal.LinkedTreeMap$Node -> ol:
     com.google.gson.internal.LinkedTreeMap$Node parent -> a
     com.google.gson.internal.LinkedTreeMap$Node left -> b
     com.google.gson.internal.LinkedTreeMap$Node right -> c
@@ -4413,15 +5618,15 @@ com.google.gson.internal.Streams -> com.google.gson.internal.Streams:
     40:60:com.google.gson.JsonElement parse(com.google.gson.stream.JsonReader) -> parse
     68:69:void write(com.google.gson.JsonElement,com.google.gson.stream.JsonWriter) -> write
     72:72:java.io.Writer writerForAppendable(java.lang.Appendable) -> writerForAppendable
-com.google.gson.internal.Streams$1 -> kh:
-com.google.gson.internal.Streams$AppendableWriter -> ki:
+com.google.gson.internal.Streams$1 -> om:
+com.google.gson.internal.Streams$AppendableWriter -> on:
     java.lang.Appendable appendable -> a
     com.google.gson.internal.Streams$AppendableWriter$CurrentWrite currentWrite -> b
     88:90:void write(char[],int,int) -> write
     93:94:void write(int) -> write
     96:96:void flush() -> flush
     97:97:void close() -> close
-com.google.gson.internal.Streams$AppendableWriter$CurrentWrite -> kj:
+com.google.gson.internal.Streams$AppendableWriter$CurrentWrite -> oo:
     char[] chars -> a
     105:105:int length() -> length
     108:108:char charAt(int) -> charAt
@@ -4429,18 +5634,18 @@ com.google.gson.internal.Streams$AppendableWriter$CurrentWrite -> kj:
 com.google.gson.internal.UnsafeAllocator -> com.google.gson.internal.UnsafeAllocator:
     java.lang.Object newInstance(java.lang.Class) -> newInstance
     39:97:com.google.gson.internal.UnsafeAllocator create() -> create
-com.google.gson.internal.UnsafeAllocator$1 -> kk:
+com.google.gson.internal.UnsafeAllocator$1 -> op:
     java.lang.reflect.Method val$allocateInstance -> a
     java.lang.Object val$unsafe -> b
     48:48:java.lang.Object newInstance(java.lang.Class) -> newInstance
-com.google.gson.internal.UnsafeAllocator$2 -> kl:
+com.google.gson.internal.UnsafeAllocator$2 -> oq:
     java.lang.reflect.Method val$newInstance -> a
     67:67:java.lang.Object newInstance(java.lang.Class) -> newInstance
-com.google.gson.internal.UnsafeAllocator$3 -> km:
+com.google.gson.internal.UnsafeAllocator$3 -> or:
     java.lang.reflect.Method val$newInstance -> a
     int val$constructorId -> b
     90:90:java.lang.Object newInstance(java.lang.Class) -> newInstance
-com.google.gson.internal.UnsafeAllocator$4 -> kn:
+com.google.gson.internal.UnsafeAllocator$4 -> os:
     100:100:java.lang.Object newInstance(java.lang.Class) -> newInstance
 com.google.gson.internal.bind.ArrayTypeAdapter -> com.google.gson.internal.bind.ArrayTypeAdapter:
     com.google.gson.TypeAdapterFactory FACTORY -> FACTORY
@@ -4448,12 +5653,12 @@ com.google.gson.internal.bind.ArrayTypeAdapter -> com.google.gson.internal.bind.
     com.google.gson.TypeAdapter componentTypeAdapter -> b
     64:80:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     85:96:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.ArrayTypeAdapter$1 -> ko:
+com.google.gson.internal.bind.ArrayTypeAdapter$1 -> ot:
     42:49:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
 com.google.gson.internal.bind.CollectionTypeAdapterFactory -> com.google.gson.internal.bind.CollectionTypeAdapterFactory:
     com.google.gson.internal.ConstructorConstructor constructorConstructor -> a
     44:57:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
-com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter -> kp:
+com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter -> ou:
     com.google.gson.TypeAdapter elementTypeAdapter -> a
     com.google.gson.internal.ObjectConstructor constructor -> b
     73:85:java.util.Collection read(com.google.gson.stream.JsonReader) -> a
@@ -4471,7 +5676,7 @@ com.google.gson.internal.bind.DateTypeAdapter -> com.google.gson.internal.bind.D
     86:92:void write(com.google.gson.stream.JsonWriter,java.util.Date) -> write
     41:41:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     41:41:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.DateTypeAdapter$1 -> kq:
+com.google.gson.internal.bind.DateTypeAdapter$1 -> ov:
     45:45:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
 com.google.gson.internal.bind.JsonTreeReader -> com.google.gson.internal.bind.JsonTreeReader:
     java.io.Reader UNREADABLE_READER -> a
@@ -4497,7 +5702,7 @@ com.google.gson.internal.bind.JsonTreeReader -> com.google.gson.internal.bind.Js
     208:213:void skipValue() -> skipValue
     216:216:java.lang.String toString() -> toString
     220:225:void promoteNameToValue() -> promoteNameToValue
-com.google.gson.internal.bind.JsonTreeReader$1 -> kr:
+com.google.gson.internal.bind.JsonTreeReader$1 -> ow:
     42:42:int read(char[],int,int) -> read
     45:45:void close() -> close
 com.google.gson.internal.bind.JsonTreeWriter -> com.google.gson.internal.bind.JsonTreeWriter:
@@ -4522,7 +5727,7 @@ com.google.gson.internal.bind.JsonTreeWriter -> com.google.gson.internal.bind.Js
     176:188:com.google.gson.stream.JsonWriter value(java.lang.Number) -> value
     192:192:void flush() -> flush
     195:199:void close() -> close
-com.google.gson.internal.bind.JsonTreeWriter$1 -> ks:
+com.google.gson.internal.bind.JsonTreeWriter$1 -> ox:
     36:36:void write(char[],int,int) -> write
     39:39:void flush() -> flush
     42:42:void close() -> close
@@ -4532,7 +5737,7 @@ com.google.gson.internal.bind.MapTypeAdapterFactory -> com.google.gson.internal.
     116:133:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
     140:140:com.google.gson.TypeAdapter getKeyAdapter(com.google.gson.Gson,java.lang.reflect.Type) -> a
     105:105:boolean access$000(com.google.gson.internal.bind.MapTypeAdapterFactory) -> a
-com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter -> kt:
+com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter -> oy:
     com.google.gson.TypeAdapter keyTypeAdapter -> b
     com.google.gson.TypeAdapter valueTypeAdapter -> c
     com.google.gson.internal.ObjectConstructor constructor -> d
@@ -4547,9 +5752,9 @@ com.google.gson.internal.bind.ObjectTypeAdapter -> com.google.gson.internal.bind
     com.google.gson.Gson gson -> a
     55:89:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     95:108:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.ObjectTypeAdapter$1 -> ku:
+com.google.gson.internal.bind.ObjectTypeAdapter$1 -> oz:
     41:44:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
-com.google.gson.internal.bind.ObjectTypeAdapter$2 -> kv:
+com.google.gson.internal.bind.ObjectTypeAdapter$2 -> pa:
     int[] $SwitchMap$com$google$gson$stream$JsonToken -> a
 com.google.gson.internal.bind.ReflectiveTypeAdapterFactory -> com.google.gson.internal.bind.ReflectiveTypeAdapterFactory:
     com.google.gson.internal.ConstructorConstructor constructorConstructor -> a
@@ -4560,7 +5765,7 @@ com.google.gson.internal.bind.ReflectiveTypeAdapterFactory -> com.google.gson.in
     65:72:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
     78:81:com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField createBoundField(com.google.gson.Gson,java.lang.reflect.Field,java.lang.String,com.google.gson.reflect.TypeToken,boolean,boolean) -> a
     102:129:java.util.Map getBoundFields(com.google.gson.Gson,com.google.gson.reflect.TypeToken,java.lang.Class) -> a
-com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1 -> kw:
+com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1 -> pb:
     com.google.gson.TypeAdapter typeAdapter -> a
     com.google.gson.Gson val$context -> b
     com.google.gson.reflect.TypeToken val$fieldType -> c
@@ -4574,7 +5779,7 @@ com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter -> com.google
     java.util.Map boundFields -> b
     157:181:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     185:202:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField -> kx:
+com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField -> pc:
     java.lang.String name -> g
     boolean serialized -> h
     boolean deserialized -> i
@@ -4587,7 +5792,7 @@ com.google.gson.internal.bind.SqlDateTypeAdapter -> com.google.gson.internal.bin
     65:66:void write(com.google.gson.stream.JsonWriter,java.sql.Date) -> write
     38:38:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     38:38:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.SqlDateTypeAdapter$1 -> ky:
+com.google.gson.internal.bind.SqlDateTypeAdapter$1 -> pd:
     42:42:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
 com.google.gson.internal.bind.TimeTypeAdapter -> com.google.gson.internal.bind.TimeTypeAdapter:
     com.google.gson.TypeAdapterFactory FACTORY -> FACTORY
@@ -4596,9 +5801,9 @@ com.google.gson.internal.bind.TimeTypeAdapter -> com.google.gson.internal.bind.T
     64:65:void write(com.google.gson.stream.JsonWriter,java.sql.Time) -> write
     40:40:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     40:40:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TimeTypeAdapter$1 -> kz:
+com.google.gson.internal.bind.TimeTypeAdapter$1 -> pe:
     44:44:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
-com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper -> la:
+com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper -> pf:
     com.google.gson.Gson context -> a
     com.google.gson.TypeAdapter delegate -> b
     java.lang.reflect.Type type -> c
@@ -4656,166 +5861,166 @@ com.google.gson.internal.bind.TypeAdapters -> com.google.gson.internal.bind.Type
     792:792:com.google.gson.TypeAdapterFactory newFactory(java.lang.Class,java.lang.Class,com.google.gson.TypeAdapter) -> newFactory
     807:807:com.google.gson.TypeAdapterFactory newFactoryForMultipleTypes(java.lang.Class,java.lang.Class,com.google.gson.TypeAdapter) -> newFactoryForMultipleTypes
     822:822:com.google.gson.TypeAdapterFactory newTypeHierarchyFactory(java.lang.Class,com.google.gson.TypeAdapter) -> newTypeHierarchyFactory
-com.google.gson.internal.bind.TypeAdapters$1 -> lb:
+com.google.gson.internal.bind.TypeAdapters$1 -> pg:
     64:70:void write(com.google.gson.stream.JsonWriter,java.lang.Class) -> a
     73:77:java.lang.Class read(com.google.gson.stream.JsonReader) -> a
     61:61:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     61:61:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$10 -> lc:
+com.google.gson.internal.bind.TypeAdapters$10 -> ph:
     290:294:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     298:299:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     287:287:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     287:287:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$11 -> ld:
+com.google.gson.internal.bind.TypeAdapters$11 -> pi:
     305:313:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     318:319:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     302:302:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     302:302:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$12 -> le:
+com.google.gson.internal.bind.TypeAdapters$12 -> pj:
     327:335:java.lang.Character read(com.google.gson.stream.JsonReader) -> a
     339:340:void write(com.google.gson.stream.JsonWriter,java.lang.Character) -> a
     324:324:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     324:324:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$13 -> lf:
+com.google.gson.internal.bind.TypeAdapters$13 -> pk:
     349:358:java.lang.String read(com.google.gson.stream.JsonReader) -> a
     362:363:void write(com.google.gson.stream.JsonWriter,java.lang.String) -> a
     346:346:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     346:346:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$14 -> lg:
+com.google.gson.internal.bind.TypeAdapters$14 -> pl:
     368:375:java.math.BigDecimal read(com.google.gson.stream.JsonReader) -> a
     380:381:void write(com.google.gson.stream.JsonWriter,java.math.BigDecimal) -> a
     366:366:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     366:366:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$15 -> lh:
+com.google.gson.internal.bind.TypeAdapters$15 -> pm:
     386:393:java.math.BigInteger read(com.google.gson.stream.JsonReader) -> a
     398:399:void write(com.google.gson.stream.JsonWriter,java.math.BigInteger) -> a
     384:384:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     384:384:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$16 -> li:
+com.google.gson.internal.bind.TypeAdapters$16 -> pn:
     407:411:java.lang.StringBuilder read(com.google.gson.stream.JsonReader) -> a
     415:416:void write(com.google.gson.stream.JsonWriter,java.lang.StringBuilder) -> a
     404:404:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     404:404:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$17 -> lj:
+com.google.gson.internal.bind.TypeAdapters$17 -> po:
     425:429:java.lang.StringBuffer read(com.google.gson.stream.JsonReader) -> a
     433:434:void write(com.google.gson.stream.JsonWriter,java.lang.StringBuffer) -> a
     422:422:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     422:422:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$18 -> lk:
+com.google.gson.internal.bind.TypeAdapters$18 -> pp:
     443:448:java.net.URL read(com.google.gson.stream.JsonReader) -> a
     452:453:void write(com.google.gson.stream.JsonWriter,java.net.URL) -> a
     440:440:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     440:440:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$19 -> ll:
+com.google.gson.internal.bind.TypeAdapters$19 -> pq:
     461:469:java.net.URI read(com.google.gson.stream.JsonReader) -> a
     474:475:void write(com.google.gson.stream.JsonWriter,java.net.URI) -> a
     458:458:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     458:458:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$2 -> lm:
+com.google.gson.internal.bind.TypeAdapters$2 -> pr:
     86:123:java.util.BitSet read(com.google.gson.stream.JsonReader) -> a
     127:138:void write(com.google.gson.stream.JsonWriter,java.util.BitSet) -> a
     84:84:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     84:84:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$20 -> ln:
+com.google.gson.internal.bind.TypeAdapters$20 -> ps:
     483:488:java.net.InetAddress read(com.google.gson.stream.JsonReader) -> a
     492:493:void write(com.google.gson.stream.JsonWriter,java.net.InetAddress) -> a
     480:480:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     480:480:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$21 -> lo:
+com.google.gson.internal.bind.TypeAdapters$21 -> pt:
     502:506:java.util.UUID read(com.google.gson.stream.JsonReader) -> a
     510:511:void write(com.google.gson.stream.JsonWriter,java.util.UUID) -> a
     499:499:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     499:499:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$22 -> lp:
+com.google.gson.internal.bind.TypeAdapters$22 -> pu:
     519:524:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
-com.google.gson.internal.bind.TypeAdapters$22$1 -> lq:
+com.google.gson.internal.bind.TypeAdapters$22$1 -> pv:
     com.google.gson.TypeAdapter val$dateTypeAdapter -> a
     com.google.gson.internal.bind.TypeAdapters$22 this$0 -> b
     526:527:java.sql.Timestamp read(com.google.gson.stream.JsonReader) -> a
     531:532:void write(com.google.gson.stream.JsonWriter,java.sql.Timestamp) -> a
     524:524:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     524:524:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$23 -> lr:
+com.google.gson.internal.bind.TypeAdapters$23 -> pw:
     547:576:java.util.Calendar read(com.google.gson.stream.JsonReader) -> a
     581:599:void write(com.google.gson.stream.JsonWriter,java.util.Calendar) -> a
     537:537:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     537:537:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$24 -> ls:
+com.google.gson.internal.bind.TypeAdapters$24 -> px:
     608:631:java.util.Locale read(com.google.gson.stream.JsonReader) -> a
     636:637:void write(com.google.gson.stream.JsonWriter,java.util.Locale) -> a
     605:605:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     605:605:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$25 -> lt:
+com.google.gson.internal.bind.TypeAdapters$25 -> py:
     644:676:com.google.gson.JsonElement read(com.google.gson.stream.JsonReader) -> a
     681:711:void write(com.google.gson.stream.JsonWriter,com.google.gson.JsonElement) -> a
     642:642:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     642:642:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$26 -> lu:
+com.google.gson.internal.bind.TypeAdapters$26 -> pz:
     755:762:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
-com.google.gson.internal.bind.TypeAdapters$27 -> lv:
+com.google.gson.internal.bind.TypeAdapters$27 -> qa:
     com.google.gson.reflect.TypeToken val$type -> a
     com.google.gson.TypeAdapter val$typeAdapter -> b
     772:772:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
-com.google.gson.internal.bind.TypeAdapters$28 -> lw:
+com.google.gson.internal.bind.TypeAdapters$28 -> qb:
     java.lang.Class val$type -> a
     com.google.gson.TypeAdapter val$typeAdapter -> b
     782:782:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
     785:785:java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$29 -> lx:
+com.google.gson.internal.bind.TypeAdapters$29 -> qc:
     java.lang.Class val$unboxed -> a
     java.lang.Class val$boxed -> b
     com.google.gson.TypeAdapter val$typeAdapter -> c
     795:796:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
     799:799:java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$3 -> ly:
+com.google.gson.internal.bind.TypeAdapters$3 -> qd:
     146:153:java.lang.Boolean read(com.google.gson.stream.JsonReader) -> a
     157:162:void write(com.google.gson.stream.JsonWriter,java.lang.Boolean) -> a
     143:143:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     143:143:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$30 -> lz:
+com.google.gson.internal.bind.TypeAdapters$30 -> qe:
     java.lang.Class val$base -> a
     java.lang.Class val$sub -> b
     com.google.gson.TypeAdapter val$typeAdapter -> c
     810:811:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
     814:814:java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$31 -> ma:
+com.google.gson.internal.bind.TypeAdapters$31 -> qf:
     java.lang.Class val$clazz -> a
     com.google.gson.TypeAdapter val$typeAdapter -> b
     825:825:com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> create
     828:828:java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$32 -> mb:
+com.google.gson.internal.bind.TypeAdapters$32 -> qg:
     int[] $SwitchMap$com$google$gson$stream$JsonToken -> a
-com.google.gson.internal.bind.TypeAdapters$4 -> mc:
+com.google.gson.internal.bind.TypeAdapters$4 -> qh:
     171:175:java.lang.Boolean read(com.google.gson.stream.JsonReader) -> a
     179:180:void write(com.google.gson.stream.JsonWriter,java.lang.Boolean) -> a
     169:169:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     169:169:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$5 -> md:
+com.google.gson.internal.bind.TypeAdapters$5 -> qi:
     189:197:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     202:203:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     186:186:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     186:186:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$6 -> me:
+com.google.gson.internal.bind.TypeAdapters$6 -> qj:
     212:219:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     224:225:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     209:209:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     209:209:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$7 -> mf:
+com.google.gson.internal.bind.TypeAdapters$7 -> qk:
     234:241:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     246:247:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     231:231:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     231:231:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$8 -> mg:
+com.google.gson.internal.bind.TypeAdapters$8 -> ql:
     256:263:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     268:269:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     253:253:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     253:253:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$9 -> mh:
+com.google.gson.internal.bind.TypeAdapters$9 -> qm:
     275:279:java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     283:284:void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     272:272:java.lang.Object read(com.google.gson.stream.JsonReader) -> read
     272:272:void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> write
-com.google.gson.internal.bind.TypeAdapters$EnumTypeAdapter -> mi:
+com.google.gson.internal.bind.TypeAdapters$EnumTypeAdapter -> qn:
     java.util.Map nameToConstant -> a
     java.util.Map constantToName -> b
     737:741:java.lang.Enum read(com.google.gson.stream.JsonReader) -> a
@@ -4899,7 +6104,7 @@ com.google.gson.stream.JsonReader -> com.google.gson.stream.JsonReader:
     190:190:int access$002(com.google.gson.stream.JsonReader,int) -> a
     190:190:int access$200(com.google.gson.stream.JsonReader) -> c
     190:190:int access$300(com.google.gson.stream.JsonReader) -> d
-com.google.gson.stream.JsonReader$1 -> mj:
+com.google.gson.stream.JsonReader$1 -> qo:
     1534:1552:void promoteNameToValue(com.google.gson.stream.JsonReader) -> promoteNameToValue
 com.google.gson.stream.JsonToken -> com.google.gson.stream.JsonToken:
     com.google.gson.stream.JsonToken BEGIN_ARRAY -> BEGIN_ARRAY
@@ -4962,8 +6167,11 @@ com.google.gson.stream.MalformedJsonException -> com.google.gson.stream.Malforme
 lib.debug.Dbug -> lib.debug.Dbug:
     java.lang.String TAG -> TAG
     boolean DEBUG_ON -> DEBUG_ON
+    boolean FLURRY_ON -> FLURRY_ON
+    boolean CRASHLYTICS_ON -> CRASHLYTICS_ON
     boolean RANDOM_DATA -> RANDOM_DATA
-    38:48:void log(java.lang.Object[]) -> log
+    34:35:void log(java.lang.Object[]) -> log
+    54:75:void logWithTag(java.lang.String,java.lang.Object[]) -> logWithTag
 lib.gson.MyGson -> lib.gson.MyGson:
     com.google.gson.Gson PARSER -> PARSER
 lib.io.IOUtils -> lib.io.IOUtils:
@@ -5020,44 +6228,45 @@ mobiric.fhbsc.weather.AutoRefreshActivity -> mobiric.fhbsc.weather.AutoRefreshAc
     58:61:void onPause() -> onPause
     69:77:void onResume() -> onResume
     85:87:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    99:104:void setAutoRefreshPeriod(int) -> a
-    136:127:void setAutoRefreshTimer(int) -> b
-    141:152:void saveAutoRefreshSetting(int) -> c
-    156:157:int loadAutoRefreshSetting() -> c
-    163:185:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    193:204:void showAutoRefreshOptions() -> d
-    211:220:void doRefresh() -> b
+    99:105:void setAutoRefreshPeriod(int) -> a
+    137:128:void setAutoRefreshTimer(int) -> b
+    142:153:void saveAutoRefreshSetting(int) -> c
+    157:158:int loadAutoRefreshSetting() -> c
+    164:186:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    194:205:void showAutoRefreshOptions() -> d
+    212:221:void doRefresh() -> b
     96:96:void access$0(mobiric.fhbsc.weather.AutoRefreshActivity,int) -> a
-mobiric.fhbsc.weather.AutoRefreshActivity$1 -> mk:
+mobiric.fhbsc.weather.AutoRefreshActivity$1 -> qp:
     mobiric.fhbsc.weather.AutoRefreshActivity this$0 -> a
-    132:133:void run() -> run
-mobiric.fhbsc.weather.AutoRefreshActivity$2 -> ml:
+    133:134:void run() -> run
+mobiric.fhbsc.weather.AutoRefreshActivity$2 -> qq:
     mobiric.fhbsc.weather.AutoRefreshActivity this$0 -> a
-    200:201:void onClick(android.content.DialogInterface,int) -> onClick
-mobiric.fhbsc.weather.AutoRefreshActivity$3 -> mm:
+    201:202:void onClick(android.content.DialogInterface,int) -> onClick
+mobiric.fhbsc.weather.AutoRefreshActivity$3 -> qr:
     mobiric.fhbsc.weather.AutoRefreshActivity this$0 -> a
-    218:217:void run() -> run
+    219:218:void run() -> run
 mobiric.fhbsc.weather.BuildConfig -> mobiric.fhbsc.weather.BuildConfig:
     boolean DEBUG -> DEBUG
 mobiric.fhbsc.weather.MainActivity -> mobiric.fhbsc.weather.MainActivity:
     mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter screenSwipeAdapter -> r
     lib.view.ViewPagerParallax viewPager -> s
     android.content.BroadcastReceiver refreshReceiver -> t
-    62:73:void onCreate(android.os.Bundle) -> onCreate
-    78:81:void onResume() -> onResume
-    86:90:void onPause() -> onPause
-    94:96:void register() -> d
-    100:102:void unregister() -> e
-    106:108:void refreshOnResume() -> c
-    113:128:void setUpdateTime(java.lang.String) -> b
-    138:143:void onBackPressed() -> onBackPressed
-    148:166:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    172:183:void saveLastViewedPageSetting(int) -> a
-    187:188:int loadLastViewedPageSetting() -> f
-    111:111:void access$0(mobiric.fhbsc.weather.MainActivity,java.lang.String) -> a
-mobiric.fhbsc.weather.MainActivity$1 -> mn:
+    64:75:void onCreate(android.os.Bundle) -> onCreate
+    80:83:void onResume() -> onResume
+    88:92:void onPause() -> onPause
+    96:98:void register() -> d
+    102:104:void unregister() -> e
+    108:110:void refreshOnResume() -> c
+    115:130:void setLastUpdateTime(java.lang.String) -> b
+    139:144:void onBackPressed() -> onBackPressed
+    149:167:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    173:184:void saveLastViewedPageSetting(int) -> a
+    188:189:int loadLastViewedPageSetting() -> f
+    194:194:android.support.v4.app.Fragment findExistingFragmentByPosition(int) -> findExistingFragmentByPosition
+    113:113:void access$0(mobiric.fhbsc.weather.MainActivity,java.lang.String) -> a
+mobiric.fhbsc.weather.MainActivity$1 -> qs:
     mobiric.fhbsc.weather.MainActivity this$0 -> a
-    53:55:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    55:57:void onReceive(android.content.Context,android.content.Intent) -> onReceive
 mobiric.fhbsc.weather.R -> mobiric.fhbsc.weather.R:
 mobiric.fhbsc.weather.R$array -> mobiric.fhbsc.weather.R$array:
     int auto_refresh_entries -> auto_refresh_entries
@@ -5066,21 +6275,29 @@ mobiric.fhbsc.weather.R$attr -> mobiric.fhbsc.weather.R$attr:
 mobiric.fhbsc.weather.R$color -> mobiric.fhbsc.weather.R$color:
     int fenn_green -> fenn_green
     int holo_blue_dark -> holo_blue_dark
-    int thermometer_grey -> thermometer_grey
+    int meter_background_grey -> meter_background_grey
+    int rain_blue -> rain_blue
     int thermometer_red -> thermometer_red
+    int zoom_image_background_grey -> zoom_image_background_grey
 mobiric.fhbsc.weather.R$dimen -> mobiric.fhbsc.weather.R$dimen:
     int activity_horizontal_margin -> activity_horizontal_margin
     int activity_vertical_margin -> activity_vertical_margin
 mobiric.fhbsc.weather.R$drawable -> mobiric.fhbsc.weather.R$drawable:
+    int app_theme_background -> app_theme_background
     int arrow_barometer -> arrow_barometer
     int arrow_wind_direction -> arrow_wind_direction
     int barometer -> barometer
     int daybarometer -> daybarometer
+    int dayrain -> dayrain
     int daytempdew -> daytempdew
     int daywind -> daywind
     int daywinddir -> daywinddir
+    int false_bay -> false_bay
+    int false_bay_port -> false_bay_port
     int ic_launcher -> ic_launcher
     int ic_menu_refresh -> ic_menu_refresh
+    int monthrain -> monthrain
+    int raindrop -> raindrop
     int thermometer -> thermometer
     int weekbarometer -> weekbarometer
     int weektempdew -> weektempdew
@@ -5090,55 +6307,60 @@ mobiric.fhbsc.weather.R$drawable -> mobiric.fhbsc.weather.R$drawable:
 mobiric.fhbsc.weather.R$id -> mobiric.fhbsc.weather.R$id:
     int action_refresh -> action_refresh
     int action_view_on_web -> action_view_on_web
+    int backgroundZoomedImage -> backgroundZoomedImage
     int ivArrowBarometer -> ivArrowBarometer
     int ivArrowWindDir -> ivArrowWindDir
     int ivDayBarometer -> ivDayBarometer
-    int ivDayTempDew -> ivDayTempDew
+    int ivDayRain -> ivDayRain
     int ivDayWind -> ivDayWind
     int ivDayWindDir -> ivDayWindDir
-    int ivThermometer -> ivThermometer
+    int ivMonthRain -> ivMonthRain
+    int ivRainMeter -> ivRainMeter
     int ivWeekBarometer -> ivWeekBarometer
-    int ivWeekTempDew -> ivWeekTempDew
     int ivWeekWind -> ivWeekWind
     int ivWeekWindDir -> ivWeekWindDir
+    int ivZoomedImage -> ivZoomedImage
     int layoutArrowBarometer -> layoutArrowBarometer
     int layoutArrowWindDir -> layoutArrowWindDir
     int layoutBarometerText -> layoutBarometerText
-    int layoutTemperatureText -> layoutTemperatureText
-    int layoutThermometer -> layoutThermometer
+    int layoutColumns -> layoutColumns
+    int layoutContainer -> layoutContainer
+    int layoutRainMeter -> layoutRainMeter
+    int layoutRainText -> layoutRainText
     int layoutWindText -> layoutWindText
     int menu_spinner -> menu_spinner
     int pager -> pager
     int pager_title_strip -> pager_title_strip
     int tvBarometerPressure -> tvBarometerPressure
     int tvBarometerTitle -> tvBarometerTitle
-    int tvOutTemp -> tvOutTemp
-    int tvTempTitle -> tvTempTitle
+    int tvNoRainTitle -> tvNoRainTitle
+    int tvRainRate -> tvRainRate
+    int tvRainTitle -> tvRainTitle
     int tvWindDir -> tvWindDir
     int tvWindFrom -> tvWindFrom
     int tvWindSpeed -> tvWindSpeed
     int tvWindTitle -> tvWindTitle
-    int vThermometerRed -> vThermometerRed
+    int vRainBlue -> vRainBlue
     int webView -> webView
+mobiric.fhbsc.weather.R$integer -> mobiric.fhbsc.weather.R$integer:
+    int landscape_column_weight_left -> landscape_column_weight_left
+    int landscape_column_weight_right -> landscape_column_weight_right
 mobiric.fhbsc.weather.R$layout -> mobiric.fhbsc.weather.R$layout:
     int activity_main -> activity_main
     int fragment_barometer -> fragment_barometer
+    int fragment_rain -> fragment_rain
     int fragment_temperature -> fragment_temperature
     int fragment_web_page -> fragment_web_page
     int fragment_wind -> fragment_wind
 mobiric.fhbsc.weather.R$menu -> mobiric.fhbsc.weather.R$menu:
     int main -> main
-mobiric.fhbsc.weather.R$raw -> mobiric.fhbsc.weather.R$raw:
-    int false_bay -> false_bay
 mobiric.fhbsc.weather.R$string -> mobiric.fhbsc.weather.R$string:
     int action_refresh -> action_refresh
     int action_view_on_web -> action_view_on_web
     int app_name -> app_name
-    int auto_refresh_15min -> auto_refresh_15min
-    int auto_refresh_1hour -> auto_refresh_1hour
-    int auto_refresh_30min -> auto_refresh_30min
     int auto_refresh_5min -> auto_refresh_5min
     int auto_refresh_off -> auto_refresh_off
+    int com_crashlytics_android_build_id -> com_crashlytics_android_build_id
     int refresh_options -> refresh_options
 mobiric.fhbsc.weather.R$style -> mobiric.fhbsc.weather.R$style:
     int AppBaseTheme -> AppBaseTheme
@@ -5147,107 +6369,172 @@ mobiric.fhbsc.weather.WeatherApp -> mobiric.fhbsc.weather.WeatherApp:
     java.lang.String BASE_URL -> BASE_URL
     java.lang.String HOME_PAGE -> HOME_PAGE
     mobiric.fhbsc.weather.model.WeatherReading reading -> a
-    61:60:void onCreate() -> onCreate
-    70:70:mobiric.fhbsc.weather.model.WeatherReading getCachedWeatherReading() -> getCachedWeatherReading
-    78:81:void setCachedWeatherReading(mobiric.fhbsc.weather.model.WeatherReading) -> setCachedWeatherReading
-    87:93:void saveWeatherReading(mobiric.fhbsc.weather.model.WeatherReading) -> a
-    98:102:mobiric.fhbsc.weather.model.WeatherReading loadWeatherReading() -> b
-    110:135:void doRefresh() -> a
-    142:143:void onBaseWebServiceResult(java.lang.String) -> onBaseWebServiceResult
-    149:150:void onBaseWebServiceError(java.lang.String) -> onBaseWebServiceError
-    157:193:void onWeatherReadingParseResult(mobiric.fhbsc.weather.model.WeatherReading) -> onWeatherReadingParseResult
-    201:200:void onWeatherReadingParseError(java.lang.String) -> onWeatherReadingParseError
-    213:212:void onImageDownloadSuccess(java.lang.String) -> onImageDownloadSuccess
-    221:220:void onImageDownloadError(java.lang.String) -> onImageDownloadError
+    java.util.Date lastUpdateTime -> b
+    63:81:void onCreate() -> onCreate
+    90:90:mobiric.fhbsc.weather.model.WeatherReading getCachedWeatherReading() -> getCachedWeatherReading
+    98:101:void setCachedWeatherReading(mobiric.fhbsc.weather.model.WeatherReading) -> setCachedWeatherReading
+    107:113:void saveWeatherReading(mobiric.fhbsc.weather.model.WeatherReading) -> a
+    118:122:mobiric.fhbsc.weather.model.WeatherReading loadWeatherReading() -> b
+    131:172:void doRefresh() -> a
+    179:180:void onBaseWebServiceResult(java.lang.String) -> onBaseWebServiceResult
+    186:187:void onBaseWebServiceError(java.lang.String) -> onBaseWebServiceError
+    195:248:void onWeatherReadingParseResult(mobiric.fhbsc.weather.model.WeatherReading) -> onWeatherReadingParseResult
+    255:254:void onWeatherReadingParseError(java.lang.String) -> onWeatherReadingParseError
+    267:266:void onImageDownloadSuccess(java.lang.String) -> onImageDownloadSuccess
+    275:274:void onImageDownloadError(java.lang.String) -> onImageDownloadError
 mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter -> mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter:
     android.content.Context context -> a
-    29:45:android.support.v4.app.Fragment getItem(int) -> getItem
-    53:53:int getCount() -> getCount
-    59:68:java.lang.CharSequence getPageTitle(int) -> getPageTitle
+    30:50:android.support.v4.app.Fragment getItem(int) -> getItem
+    58:58:int getCount() -> getCount
+    64:75:java.lang.CharSequence getPageTitle(int) -> getPageTitle
 mobiric.fhbsc.weather.fragments.ARefreshableFragment -> mobiric.fhbsc.weather.fragments.ARefreshableFragment:
     android.content.Context appContext -> a
     mobiric.fhbsc.weather.WeatherApp myApp -> b
     android.os.Bundle bundle -> c
-    android.content.BroadcastReceiver refreshReceiver -> d
-    69:72:void onAttach(android.app.Activity) -> onAttach
-    80:89:void onCreate(android.os.Bundle) -> onCreate
-    94:97:void onResume() -> onResume
-    102:104:void onPause() -> onPause
+    android.animation.Animator mCurrentAnimator -> d
+    int mAnimationDuration -> e
+    android.view.View$OnClickListener unzoomListener -> f
+    android.content.BroadcastReceiver refreshReceiver -> g
+    93:96:void onAttach(android.app.Activity) -> onAttach
+    104:116:void onCreate(android.os.Bundle) -> onCreate
+    121:124:void onResume() -> onResume
+    129:131:void onPause() -> onPause
     android.content.IntentFilter getRefreshIntentFilter() -> l
     void onRefreshIntentReceived(android.content.Intent) -> a
     void refreshOnResume() -> m
-    137:139:void register() -> n
-    143:144:void unregister() -> o
-    157:185:void updateImage(android.widget.ImageView,java.lang.String) -> updateImage
-    195:195:boolean onBackPressed() -> onBackPressed
-mobiric.fhbsc.weather.fragments.ARefreshableFragment$1 -> mo:
+    164:166:void register() -> n
+    170:171:void unregister() -> o
+    184:196:void updateImage(android.widget.ImageView,java.lang.String) -> updateImage
+    206:212:boolean onBackPressed() -> onBackPressed
+    217:229:void zoomIfApi14(android.view.View,android.view.View,java.lang.String) -> a
+    238:387:void zoomImageFromThumb(android.view.View,android.view.View,java.lang.String) -> b
+mobiric.fhbsc.weather.fragments.ARefreshableFragment$1 -> qt:
     mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
-    50:55:void onReceive(android.content.Context,android.content.Intent) -> onReceive
-mobiric.fhbsc.weather.fragments.ARefreshableFragment$2 -> mp:
+    74:79:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+mobiric.fhbsc.weather.fragments.ARefreshableFragment$2 -> qu:
     mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
-    android.widget.ImageView val$view -> b
-    176:183:void run() -> run
+    android.view.View val$imageView -> b
+    android.view.View val$rootView -> c
+    java.lang.String val$imageName -> d
+    225:226:void onClick(android.view.View) -> onClick
+mobiric.fhbsc.weather.fragments.ARefreshableFragment$3 -> qv:
+    mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
+    322:323:void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+    328:329:void onAnimationCancel(android.animation.Animator) -> onAnimationCancel
+mobiric.fhbsc.weather.fragments.ARefreshableFragment$4 -> qw:
+    mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
+    android.widget.ImageView val$expandedImageView -> b
+    android.graphics.Rect val$startBounds -> c
+    float val$startScaleFinal -> d
+    android.view.View val$zoomBackground -> e
+    android.view.View val$thumbView -> f
+    343:384:void onClick(android.view.View) -> onClick
+    338:338:mobiric.fhbsc.weather.fragments.ARefreshableFragment access$0(mobiric.fhbsc.weather.fragments.ARefreshableFragment$4) -> a
+mobiric.fhbsc.weather.fragments.ARefreshableFragment$4$1 -> qx:
+    mobiric.fhbsc.weather.fragments.ARefreshableFragment$4 this$1 -> a
+    android.view.View val$thumbView -> b
+    android.widget.ImageView val$expandedImageView -> c
+    android.view.View val$zoomBackground -> d
+    365:369:void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+    374:378:void onAnimationCancel(android.animation.Animator) -> onAnimationCancel
 mobiric.fhbsc.weather.fragments.BarometerFragment -> mobiric.fhbsc.weather.fragments.BarometerFragment:
+    java.lang.String GRAPH_DAY_BAROMETER -> GRAPH_DAY_BAROMETER
+    java.lang.String GRAPH_WEEK_BAROMETER -> GRAPH_WEEK_BAROMETER
     int MAX_PRESSURE_MBARS -> MAX_PRESSURE_MBARS
     int MIN_PRESSURE_MBARS -> MIN_PRESSURE_MBARS
-    android.widget.TextView tvBarometerPressure -> d
-    android.widget.ImageView ivDayBarometer -> e
-    android.widget.ImageView ivWeekBarometer -> f
-    android.widget.ImageView ivArrowBarometer -> g
-    float pressureMBars -> h
-    float oldPressureMBars -> i
-    48:57:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    74:84:void updateData(boolean) -> a
-    88:90:void initImages() -> n
-    94:111:void rotateArrow(boolean) -> b
-    124:125:float calcDegreesForPressure(float) -> a
-    133:159:void setPressureMBars(java.lang.String) -> setPressureMBars
-    164:167:android.content.IntentFilter getRefreshIntentFilter() -> l
-    173:191:void onRefreshIntentReceived(android.content.Intent) -> a
-    196:198:void refreshOnResume() -> m
+    android.widget.TextView tvBarometerPressure -> g
+    android.widget.ImageView ivDayBarometer -> h
+    android.widget.ImageView ivWeekBarometer -> i
+    android.widget.ImageView ivArrowBarometer -> Y
+    float pressureMBars -> Z
+    float oldPressureMBars -> aa
+    51:63:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    80:90:void updateData(boolean) -> a
+    94:96:void initImages() -> n
+    100:117:void rotateArrow(boolean) -> b
+    130:131:float calcDegreesForPressure(float) -> a
+    139:165:void setPressureMBars(java.lang.String) -> setPressureMBars
+    170:173:android.content.IntentFilter getRefreshIntentFilter() -> l
+    179:197:void onRefreshIntentReceived(android.content.Intent) -> a
+    202:204:void refreshOnResume() -> m
+mobiric.fhbsc.weather.fragments.RainFragment -> mobiric.fhbsc.weather.fragments.RainFragment:
+    java.lang.String GRAPH_DAY_RAIN -> GRAPH_DAY_RAIN
+    java.lang.String GRAPH_MONTH_RAIN -> GRAPH_MONTH_RAIN
+    int MAX_RAIN_RANGE -> MAX_RAIN_RANGE
+    int MIN_RAIN_RANGE -> MIN_RAIN_RANGE
+    android.widget.TextView tvNoRainTitle -> g
+    android.widget.TextView tvRainTitle -> h
+    android.widget.TextView tvRainRate -> i
+    android.widget.ImageView ivDayRain -> Y
+    android.widget.ImageView ivMonthRain -> Z
+    android.widget.ImageView ivRainMeter -> aa
+    android.view.View vRainBlue -> ab
+    float rainMillimetres -> ac
+    float oldRainMillimetres -> ad
+    54:69:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    86:103:void updateData(boolean) -> a
+    107:109:void initImages() -> n
+    113:128:void setRainHeight(boolean) -> b
+    132:138:void setRainText(java.lang.String) -> a
+    150:153:int calcOffsetForMillis(float) -> a
+    161:187:void setRainRateMillimetres(java.lang.String) -> setRainRateMillimetres
+    192:195:android.content.IntentFilter getRefreshIntentFilter() -> l
+    201:219:void onRefreshIntentReceived(android.content.Intent) -> a
+    224:226:void refreshOnResume() -> m
+mobiric.fhbsc.weather.fragments.RainFragment$1 -> qy:
+    mobiric.fhbsc.weather.fragments.RainFragment this$0 -> a
+    boolean val$animate -> b
+    java.lang.String val$rainRate -> c
+    98:100:void run() -> run
 mobiric.fhbsc.weather.fragments.TemperatureFragment -> mobiric.fhbsc.weather.fragments.TemperatureFragment:
+    java.lang.String GRAPH_DAY_TEMP -> GRAPH_DAY_TEMP
+    java.lang.String GRAPH_WEEK_TEMP -> GRAPH_WEEK_TEMP
     int MAX_TEMP_RANGE -> MAX_TEMP_RANGE
     int MIN_TEMP_RANGE -> MIN_TEMP_RANGE
-    android.widget.TextView tvOutTemp -> d
-    android.widget.ImageView ivDayTempDew -> e
-    android.widget.ImageView ivWeekTempDew -> f
-    android.widget.ImageView ivThermometer -> g
-    android.view.View vThermometerRed -> h
-    float tempDegrees -> i
-    float oldTempDegrees -> Y
-    49:59:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    76:94:void updateData(boolean) -> a
-    98:100:void initImages() -> n
-    104:119:void setThermometerHeight(boolean) -> b
-    131:134:int calcOffsetForDegrees(float) -> a
-    142:168:void setTempDegrees(java.lang.String) -> setTempDegrees
-    173:176:android.content.IntentFilter getRefreshIntentFilter() -> l
-    182:200:void onRefreshIntentReceived(android.content.Intent) -> a
-    205:207:void refreshOnResume() -> m
-mobiric.fhbsc.weather.fragments.TemperatureFragment$1 -> mq:
+    android.widget.TextView tvOutTemp -> g
+    android.widget.ImageView ivDayTempDew -> h
+    android.widget.ImageView ivWeekTempDew -> i
+    android.widget.ImageView ivThermometer -> Y
+    android.view.View vThermometerRed -> Z
+    float tempDegrees -> aa
+    float oldTempDegrees -> ab
+    52:65:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    82:100:void updateData(boolean) -> a
+    104:106:void initImages() -> n
+    110:125:void setThermometerHeight(boolean) -> b
+    137:140:int calcOffsetForDegrees(float) -> a
+    148:174:void setTempDegrees(java.lang.String) -> setTempDegrees
+    179:182:android.content.IntentFilter getRefreshIntentFilter() -> l
+    188:206:void onRefreshIntentReceived(android.content.Intent) -> a
+    211:213:void refreshOnResume() -> m
+mobiric.fhbsc.weather.fragments.TemperatureFragment$1 -> qz:
     mobiric.fhbsc.weather.fragments.TemperatureFragment this$0 -> a
     boolean val$animate -> b
-    90:91:void run() -> run
+    96:97:void run() -> run
 mobiric.fhbsc.weather.fragments.WindFragment -> mobiric.fhbsc.weather.fragments.WindFragment:
     java.lang.String[] DIRECTIONS -> DIRECTIONS
-    android.widget.TextView tvWindSpeed -> d
-    android.widget.TextView tvWindDir -> e
-    android.widget.ImageView ivDayWind -> f
-    android.widget.ImageView ivDayWindDir -> g
-    android.widget.ImageView ivWeekWind -> h
-    android.widget.ImageView ivWeekWindDir -> i
-    android.widget.ImageView ivArrowWindDir -> Y
-    int windDirDegrees -> Z
-    int oldWindDirDegrees -> aa
-    52:66:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    83:102:void updateData(boolean) -> a
-    106:106:java.lang.String getCardinal(double) -> a
-    116:120:void initImages() -> n
-    124:141:void rotateArrow(boolean) -> b
-    148:174:void setWindDirDegrees(java.lang.String) -> setWindDirDegrees
-    179:182:android.content.IntentFilter getRefreshIntentFilter() -> l
-    188:214:void onRefreshIntentReceived(android.content.Intent) -> a
-    219:221:void refreshOnResume() -> m
+    java.lang.String GRAPH_DAY_WIND -> GRAPH_DAY_WIND
+    java.lang.String GRAPH_DAY_WIND_DIR -> GRAPH_DAY_WIND_DIR
+    java.lang.String GRAPH_WEEK_WIND -> GRAPH_WEEK_WIND
+    java.lang.String GRAPH_WEEK_WIND_DIR -> GRAPH_WEEK_WIND_DIR
+    android.widget.TextView tvWindSpeed -> g
+    android.widget.TextView tvWindDir -> h
+    android.widget.ImageView ivDayWind -> i
+    android.widget.ImageView ivDayWindDir -> Y
+    android.widget.ImageView ivWeekWind -> Z
+    android.widget.ImageView ivWeekWindDir -> aa
+    android.widget.ImageView ivArrowWindDir -> ab
+    int windDirDegrees -> ac
+    int oldWindDirDegrees -> ad
+    59:81:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    98:117:void updateData(boolean) -> a
+    121:121:java.lang.String getCardinal(double) -> a
+    131:135:void initImages() -> n
+    139:156:void rotateArrow(boolean) -> b
+    163:189:void setWindDirDegrees(java.lang.String) -> setWindDirDegrees
+    194:197:android.content.IntentFilter getRefreshIntentFilter() -> l
+    203:229:void onRefreshIntentReceived(android.content.Intent) -> a
+    234:236:void refreshOnResume() -> m
 mobiric.fhbsc.weather.intents.IntentConstants -> mobiric.fhbsc.weather.intents.IntentConstants:
 mobiric.fhbsc.weather.intents.IntentConstants$Actions -> mobiric.fhbsc.weather.intents.IntentConstants$Actions:
     java.lang.String REFRESH_UPDATE_TIME -> REFRESH_UPDATE_TIME
@@ -5265,6 +6552,9 @@ mobiric.fhbsc.weather.intents.IntentConstants$Extras -> mobiric.fhbsc.weather.in
     java.lang.String OUT_TEMP -> OUT_TEMP
     java.lang.String OUT_TEMP_MIN -> OUT_TEMP_MIN
     java.lang.String OUT_TEMP_MAX -> OUT_TEMP_MAX
+    java.lang.String RAIN_RATE -> RAIN_RATE
+    java.lang.String RAIN_RATE_MIN -> RAIN_RATE_MIN
+    java.lang.String RAIN_RATE_MAX -> RAIN_RATE_MAX
     java.lang.String BAROMETER -> BAROMETER
     java.lang.String IMG_NAME -> IMG_NAME
 mobiric.fhbsc.weather.model.WeatherReading -> mobiric.fhbsc.weather.model.WeatherReading:
@@ -5277,7 +6567,11 @@ mobiric.fhbsc.weather.model.WeatherReading -> mobiric.fhbsc.weather.model.Weathe
     java.lang.String outTemp -> outTemp
     java.lang.String outTempMin -> outTempMin
     java.lang.String outTempMax -> outTempMax
-    32:32:java.lang.String toString() -> toString
+    java.lang.String rainRateNow -> rainRateNow
+    java.lang.String rainDayTotal -> rainDayTotal
+    java.lang.String rainMinRate -> rainMinRate
+    java.lang.String rainMaxRate -> rainMaxRate
+    38:38:java.lang.String toString() -> toString
 mobiric.fhbsc.weather.tasks.BaseWebService -> mobiric.fhbsc.weather.tasks.BaseWebService:
     mobiric.fhbsc.weather.tasks.BaseWebService$OnBaseWebServiceResponseListener listener -> a
     56:64:java.lang.String doInBackground(java.lang.String[]) -> doInBackground
