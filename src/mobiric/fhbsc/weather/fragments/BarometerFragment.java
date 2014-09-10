@@ -24,6 +24,9 @@ import android.widget.TextView;
  */
 public class BarometerFragment extends ARefreshableFragment
 {
+	public static final String GRAPH_DAY_BAROMETER = "daybarometer.png";
+	public static final String GRAPH_WEEK_BAROMETER = "weekbarometer.png";
+
 	/** Assumed maximum pressure the barometer will show. */
 	public static final int MAX_PRESSURE_MBARS = 1050;
 	/** Assumed minimum pressure the barometer will show. */
@@ -49,8 +52,11 @@ public class BarometerFragment extends ARefreshableFragment
 
 		View rootView = inflater.inflate(R.layout.fragment_barometer, container, false);
 		tvBarometerPressure = (TextView) rootView.findViewById(R.id.tvBarometerPressure);
+
 		ivDayBarometer = (ImageView) rootView.findViewById(R.id.ivDayBarometer);
+		zoomIfApi14(ivDayBarometer, rootView, GRAPH_DAY_BAROMETER);
 		ivWeekBarometer = (ImageView) rootView.findViewById(R.id.ivWeekBarometer);
+		zoomIfApi14(ivWeekBarometer, rootView, GRAPH_WEEK_BAROMETER);
 
 		ivArrowBarometer = (ImageView) rootView.findViewById(R.id.ivArrowBarometer);
 
@@ -85,8 +91,8 @@ public class BarometerFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayBarometer, "daybarometer.png");
-		updateImage(ivWeekBarometer, "weekbarometer.png");
+		updateImage(ivDayBarometer, GRAPH_DAY_BAROMETER);
+		updateImage(ivWeekBarometer, GRAPH_WEEK_BAROMETER);
 	}
 
 	void rotateArrow(boolean animate)
@@ -177,13 +183,13 @@ public class BarometerFragment extends ARefreshableFragment
 		else if (Actions.REFRESH_IMAGE.equals(intent.getAction()))
 		{
 			String imageName = bundle.getString(Extras.IMG_NAME);
-			if ("daybarometer.png".equals(imageName))
+			if (GRAPH_DAY_BAROMETER.equals(imageName))
 			{
-				updateImage(ivDayBarometer, "daybarometer.png");
+				updateImage(ivDayBarometer, GRAPH_DAY_BAROMETER);
 			}
-			else if ("weekbarometer.png".equals(imageName))
+			else if (GRAPH_WEEK_BAROMETER.equals(imageName))
 			{
-				updateImage(ivWeekBarometer, "weekbarometer.png");
+				updateImage(ivWeekBarometer, GRAPH_WEEK_BAROMETER);
 			}
 
 			Dbug.log("Updating image [", imageName, "]");

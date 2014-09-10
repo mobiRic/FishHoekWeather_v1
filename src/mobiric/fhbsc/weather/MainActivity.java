@@ -1,7 +1,6 @@
 package mobiric.fhbsc.weather;
 
 
-import com.crashlytics.android.Crashlytics;
 import lib.view.ViewPagerParallax;
 import mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter;
 import mobiric.fhbsc.weather.fragments.ARefreshableFragment;
@@ -19,6 +18,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
@@ -52,7 +53,7 @@ public class MainActivity extends AutoRefreshActivity
 			 * Intents. Rather to use globals to share data between Activities.
 			 */
 			WeatherReading reading = myApp.getCachedWeatherReading();
-			setUpdateTime(reading.time);
+			setLastUpdateTime(reading.time);
 		}
 	};
 
@@ -67,8 +68,8 @@ public class MainActivity extends AutoRefreshActivity
 		setContentView(R.layout.activity_main);
 
 		viewPager = (ViewPagerParallax) findViewById(R.id.pager);
-		viewPager.set_max_pages(3);
-		viewPager.setBackgroundAsset(R.raw.false_bay);
+		viewPager.set_max_pages(screenSwipeAdapter.getCount());
+		viewPager.setBackgroundAsset(R.drawable.false_bay);
 		viewPager.setAdapter(screenSwipeAdapter);
 		viewPager.setCurrentItem(loadLastViewedPageSetting());
 	}
@@ -105,11 +106,11 @@ public class MainActivity extends AutoRefreshActivity
 	void refreshOnResume()
 	{
 		WeatherReading reading = myApp.getCachedWeatherReading();
-		setUpdateTime(reading.time);
+		setLastUpdateTime(reading.time);
 	}
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	private void setUpdateTime(String time)
+	private void setLastUpdateTime(String time)
 	{
 		if (time != null)
 		{
@@ -128,7 +129,6 @@ public class MainActivity extends AutoRefreshActivity
 		}
 	}
 
-
 	/**
 	 * Allow back button to handle navigation.
 	 */
@@ -136,8 +136,8 @@ public class MainActivity extends AutoRefreshActivity
 	public void onBackPressed()
 	{
 		ARefreshableFragment fragment =
-				(ARefreshableFragment) screenSwipeAdapter.getItem(viewPager.getCurrentItem());
-		if (!fragment.onBackPressed())
+				(ARefreshableFragment) findExistingFragmentByPosition(viewPager.getCurrentItem());
+		if ((fragment != null) && (!fragment.onBackPressed()))
 		{
 			super.onBackPressed();
 		}
@@ -187,6 +187,13 @@ public class MainActivity extends AutoRefreshActivity
 	{
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		return prefs.getInt("LAST_VIEWED_PAGE", 0);
+	}
+
+	public Fragment findExistingFragmentByPosition(int position)
+	{
+		return getSupportFragmentManager().findFragmentByTag(
+				"android:switcher:" + viewPager.getId() + ":"
+						+ screenSwipeAdapter.getItemId(position));
 	}
 
 }

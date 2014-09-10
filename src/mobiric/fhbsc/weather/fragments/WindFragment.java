@@ -10,9 +10,11 @@ import mobiric.fhbsc.weather.intents.IntentConstants.Extras;
 import mobiric.fhbsc.weather.model.WeatherReading;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -27,6 +29,11 @@ public class WindFragment extends ARefreshableFragment
 	public static final String[] DIRECTIONS =
 		{ "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW",
 				"NW", "NNW", "N", };
+
+	public static final String GRAPH_DAY_WIND = "daywind.png";
+	public static final String GRAPH_DAY_WIND_DIR = "daywinddir.png";
+	public static final String GRAPH_WEEK_WIND = "weekwind.png";
+	public static final String GRAPH_WEEK_WIND_DIR = "weekwinddir.png";
 
 	TextView tvWindSpeed;
 	TextView tvWindDir;
@@ -51,15 +58,23 @@ public class WindFragment extends ARefreshableFragment
 	{
 		super.onCreateView(inflater, container, savedInstanceState);
 
-		View rootView = inflater.inflate(R.layout.fragment_wind, container, false);
+		final View rootView = inflater.inflate(R.layout.fragment_wind, container, false);
 		tvWindSpeed = (TextView) rootView.findViewById(R.id.tvWindSpeed);
 		tvWindDir = (TextView) rootView.findViewById(R.id.tvWindDir);
 		// tvWindGustSpeed = (TextView) rootView.findViewById(R.id.tvWindGustSpeed);
 		// tvWindGustDir = (TextView) rootView.findViewById(R.id.tvWindGustDir);
+
 		ivDayWind = (ImageView) rootView.findViewById(R.id.ivDayWind);
+		zoomIfApi14(ivDayWind, rootView, GRAPH_DAY_WIND);
+
 		ivDayWindDir = (ImageView) rootView.findViewById(R.id.ivDayWindDir);
+		zoomIfApi14(ivDayWindDir, rootView, GRAPH_DAY_WIND_DIR);
+
 		ivWeekWind = (ImageView) rootView.findViewById(R.id.ivWeekWind);
+		zoomIfApi14(ivWeekWind, rootView, GRAPH_WEEK_WIND);
+
 		ivWeekWindDir = (ImageView) rootView.findViewById(R.id.ivWeekWindDir);
+		zoomIfApi14(ivWeekWindDir, rootView, GRAPH_WEEK_WIND_DIR);
 
 		ivArrowWindDir = (ImageView) rootView.findViewById(R.id.ivArrowWindDir);
 
@@ -113,10 +128,10 @@ public class WindFragment extends ARefreshableFragment
 
 	void initImages()
 	{
-		updateImage(ivDayWind, "daywind.png");
-		updateImage(ivDayWindDir, "daywinddir.png");
-		updateImage(ivWeekWind, "weekwind.png");
-		updateImage(ivWeekWindDir, "weekwinddir.png");
+		updateImage(ivDayWind, GRAPH_DAY_WIND);
+		updateImage(ivDayWindDir, GRAPH_DAY_WIND_DIR);
+		updateImage(ivWeekWind, GRAPH_WEEK_WIND);
+		updateImage(ivWeekWindDir, GRAPH_WEEK_WIND_DIR);
 	}
 
 	void rotateArrow(boolean animate)

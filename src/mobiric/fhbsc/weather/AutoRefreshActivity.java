@@ -101,6 +101,7 @@ public class AutoRefreshActivity extends FragmentActivity
 		// set timer
 		autoRefreshPeriod = autoRefreshValues[position];
 		setAutoRefreshTimer(autoRefreshPeriod);
+		doRefresh();
 	}
 
 	/**
@@ -154,7 +155,7 @@ public class AutoRefreshActivity extends FragmentActivity
 	private int loadAutoRefreshSetting()
 	{
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-		return prefs.getInt("AUTO_REFRESH", 0);
+		return prefs.getInt("AUTO_REFRESH", 1);
 	}
 
 	@Override

@@ -1,5 +1,8 @@
 package mobiric.fhbsc.weather;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import lib.debug.Dbug;
 import lib.gson.MyGson;
 import mobiric.fhbsc.weather.intents.IntentConstants.Actions;
@@ -42,6 +45,8 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 	public static final String BASE_URL = "http://www.fhbsc.co.za/fhbsc/weather/smartphone/";
 	public static final String HOME_PAGE = BASE_URL + "index.html";
 
+	private static final long REFRESH_PERIOD_MILLIS = 5 /* minutes */* 60 /* seconds */* 1000 /* millis */;
+
 	/** Default weather data to return if no reading has been cached or received from the server. */
 	private static final String DEFAULT_WEATHER_JSON =
 			"{\"Time\":\"not updated\", \"windSpeed\":\"0 knots\", \"windDir\":\"0°\", \"windGust\":\"0 knots\", \"windGustDir\":\"0°\", \"barometer\":\"1013.0 mbar\", \"outTemp\":\"0°C\", \"outTempMin\":\"-15°C\", \"outTempMax\":\"-15°C\"}";
@@ -50,6 +55,8 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 	 * Cached {@link WeatherReading} for quick loading.
 	 */
 	WeatherReading reading = null;
+
+	Date lastUpdateTime;
 
 	public void onCreate()
 	{
@@ -120,6 +127,17 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 	 */
 	void doRefresh()
 	{
+		// check refresh period
+		if (lastUpdateTime != null)
+		{
+			long timeSinceLastUpdate = new Date().getTime() - lastUpdateTime.getTime();
+			if (timeSinceLastUpdate < REFRESH_PERIOD_MILLIS)
+			{
+				Dbug.log("Not refreshing. Last refresh was at ", lastUpdateTime.toString());
+				return;
+			}
+		}
+
 		new BaseWebService(this).execute(HOME_PAGE);
 
 		// wind graphs
@@ -145,6 +163,12 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 				"http://www.fhbsc.co.za/fhbsc/weather/daybarometer.png", "daybarometer.png");
 		new ImageDownloader(this, this).execute(
 				"http://www.fhbsc.co.za/fhbsc/weather/weekbarometer.png", "weekbarometer.png");
+
+		// rain graphs
+		new ImageDownloader(this, this).execute("http://www.fhbsc.co.za/fhbsc/weather/dayrain.png",
+				"dayrain.png");
+		new ImageDownloader(this, this).execute(
+				"http://www.fhbsc.co.za/fhbsc/weather/monthrain.png", "monthrain.png");
 	}
 
 
@@ -163,7 +187,8 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 	}
 
 
-	@SuppressLint("NewApi")
+	@SuppressLint(
+		{ "NewApi", "SimpleDateFormat" })
 	@Override
 	public void onWeatherReadingParseResult(WeatherReading result)
 	{
@@ -196,6 +221,11 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 		refreshWeather.putExtra(Extras.OUT_TEMP_MIN, result.outTempMin);
 		refreshWeather.putExtra(Extras.OUT_TEMP_MAX, result.outTempMax);
 
+		// rain
+		refreshWeather.putExtra(Extras.RAIN_RATE, result.rainRateNow);
+		refreshWeather.putExtra(Extras.RAIN_RATE_MIN, result.rainMinRate);
+		refreshWeather.putExtra(Extras.RAIN_RATE_MAX, result.rainMaxRate);
+
 		// barometer
 		refreshWeather.putExtra(Extras.BAROMETER, result.barometer);
 
@@ -203,8 +233,19 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 
 		// cache reading
 		setCachedWeatherReading(reading);
-	}
 
+		// cache last time updated
+		try
+		{
+			SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy HH:mm");
+			lastUpdateTime = formatter.parse(reading.time);
+		}
+		catch (Exception e)
+		{
+			lastUpdateTime = null;
+		}
+		Dbug.log("Saving last updated time: ", lastUpdateTime.toString());
+	}
 
 	@Override
 	public void onWeatherReadingParseError(String error)
