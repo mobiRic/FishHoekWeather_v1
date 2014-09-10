@@ -333,6 +333,7 @@ lib.web.WebUtils:
 mobiric.fhbsc.weather.AutoRefreshActivity:
     private static final int MANUAL_REFRESH
 mobiric.fhbsc.weather.WeatherApp:
+    private static final long REFRESH_PERIOD_MILLIS
     private static final java.lang.String DEFAULT_WEATHER_JSON
 mobiric.fhbsc.weather.fragments.WindFragment:
-    111:111:boolean numberInRange(int,float,float)
+    126:126:boolean numberInRange(int,float,float)
