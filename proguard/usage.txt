@@ -322,6 +322,8 @@ com.google.gson.stream.JsonReader:
     private static final int NUMBER_CHAR_EXP_SIGN
     private static final int NUMBER_CHAR_EXP_DIGIT
 com.google.gson.stream.JsonScope
+lib.about.AboutActivity:
+    android.widget.TextView tvLicences
 lib.debug.Dbug:
     private static final boolean LOGGING_ON
 lib.io.IOUtils:
