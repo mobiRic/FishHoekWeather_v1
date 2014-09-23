@@ -2310,6 +2310,11 @@ com.google.gson.stream.MalformedJsonException: long serialVersionUID
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String,java.lang.Throwable)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.Throwable)
+lib.about.AboutActivity
+lib.about.AboutActivity: AboutActivity()
+lib.about.AboutActivity: void onCreate(android.os.Bundle)
+lib.about.AboutActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+lib.about.AboutActivity: void onClickLogoGlowworm(android.view.View)
 lib.debug.Dbug
 lib.debug.Dbug: java.lang.String TAG
 lib.debug.Dbug: boolean DEBUG_ON
@@ -2377,11 +2382,16 @@ mobiric.fhbsc.weather.R$array: R$array()
 mobiric.fhbsc.weather.R$attr
 mobiric.fhbsc.weather.R$attr: R$attr()
 mobiric.fhbsc.weather.R$color
-mobiric.fhbsc.weather.R$color: int fenn_green
+mobiric.fhbsc.weather.R$color: int about_background_overlay
+mobiric.fhbsc.weather.R$color: int about_divider
+mobiric.fhbsc.weather.R$color: int about_feature_graphic_frame
+mobiric.fhbsc.weather.R$color: int gold
 mobiric.fhbsc.weather.R$color: int holo_blue_dark
 mobiric.fhbsc.weather.R$color: int meter_background_grey
 mobiric.fhbsc.weather.R$color: int rain_blue
 mobiric.fhbsc.weather.R$color: int thermometer_red
+mobiric.fhbsc.weather.R$color: int translucent_gold_divider
+mobiric.fhbsc.weather.R$color: int white_alpha_aa
 mobiric.fhbsc.weather.R$color: int zoom_image_background_grey
 mobiric.fhbsc.weather.R$color: R$color()
 mobiric.fhbsc.weather.R$dimen
@@ -2400,7 +2410,9 @@ mobiric.fhbsc.weather.R$drawable: int daywind
 mobiric.fhbsc.weather.R$drawable: int daywinddir
 mobiric.fhbsc.weather.R$drawable: int false_bay
 mobiric.fhbsc.weather.R$drawable: int false_bay_port
+mobiric.fhbsc.weather.R$drawable: int ic_about_feature
 mobiric.fhbsc.weather.R$drawable: int ic_launcher
+mobiric.fhbsc.weather.R$drawable: int ic_logo_glowworm
 mobiric.fhbsc.weather.R$drawable: int ic_menu_refresh
 mobiric.fhbsc.weather.R$drawable: int monthrain
 mobiric.fhbsc.weather.R$drawable: int raindrop
@@ -2412,6 +2424,7 @@ mobiric.fhbsc.weather.R$drawable: int weekwinddir
 mobiric.fhbsc.weather.R$drawable: int windrose
 mobiric.fhbsc.weather.R$drawable: R$drawable()
 mobiric.fhbsc.weather.R$id
+mobiric.fhbsc.weather.R$id: int action_about
 mobiric.fhbsc.weather.R$id: int action_refresh
 mobiric.fhbsc.weather.R$id: int action_view_on_web
 mobiric.fhbsc.weather.R$id: int backgroundZoomedImage
@@ -2438,6 +2451,7 @@ mobiric.fhbsc.weather.R$id: int layoutWindText
 mobiric.fhbsc.weather.R$id: int menu_spinner
 mobiric.fhbsc.weather.R$id: int pager
 mobiric.fhbsc.weather.R$id: int pager_title_strip
+mobiric.fhbsc.weather.R$id: int tvAboutVersion
 mobiric.fhbsc.weather.R$id: int tvBarometerPressure
 mobiric.fhbsc.weather.R$id: int tvBarometerTitle
 mobiric.fhbsc.weather.R$id: int tvNoRainTitle
@@ -2455,6 +2469,7 @@ mobiric.fhbsc.weather.R$integer: int landscape_column_weight_left
 mobiric.fhbsc.weather.R$integer: int landscape_column_weight_right
 mobiric.fhbsc.weather.R$integer: R$integer()
 mobiric.fhbsc.weather.R$layout
+mobiric.fhbsc.weather.R$layout: int activity_about
 mobiric.fhbsc.weather.R$layout: int activity_main
 mobiric.fhbsc.weather.R$layout: int fragment_barometer
 mobiric.fhbsc.weather.R$layout: int fragment_rain
@@ -2466,6 +2481,11 @@ mobiric.fhbsc.weather.R$menu
 mobiric.fhbsc.weather.R$menu: int main
 mobiric.fhbsc.weather.R$menu: R$menu()
 mobiric.fhbsc.weather.R$string
+mobiric.fhbsc.weather.R$string: int about_app
+mobiric.fhbsc.weather.R$string: int about_developers
+mobiric.fhbsc.weather.R$string: int about_glowworm_url
+mobiric.fhbsc.weather.R$string: int about_version_format
+mobiric.fhbsc.weather.R$string: int action_about
 mobiric.fhbsc.weather.R$string: int action_refresh
 mobiric.fhbsc.weather.R$string: int action_view_on_web
 mobiric.fhbsc.weather.R$string: int app_name

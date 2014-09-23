@@ -6164,6 +6164,11 @@ com.google.gson.stream.JsonWriter -> com.google.gson.stream.JsonWriter:
     600:633:void beforeValue(boolean) -> a
 com.google.gson.stream.MalformedJsonException -> com.google.gson.stream.MalformedJsonException:
     long serialVersionUID -> serialVersionUID
+lib.about.AboutActivity -> lib.about.AboutActivity:
+    25:51:void onCreate(android.os.Bundle) -> onCreate
+    56:65:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    77:78:void onClickLogoGlowworm(android.view.View) -> onClickLogoGlowworm
+    102:104:void gotoWeb(int) -> a
 lib.debug.Dbug -> lib.debug.Dbug:
     java.lang.String TAG -> TAG
     boolean DEBUG_ON -> DEBUG_ON
@@ -6259,10 +6264,11 @@ mobiric.fhbsc.weather.MainActivity -> mobiric.fhbsc.weather.MainActivity:
     108:110:void refreshOnResume() -> c
     115:130:void setLastUpdateTime(java.lang.String) -> b
     139:144:void onBackPressed() -> onBackPressed
-    149:167:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    173:184:void saveLastViewedPageSetting(int) -> a
-    188:189:int loadLastViewedPageSetting() -> f
-    194:194:android.support.v4.app.Fragment findExistingFragmentByPosition(int) -> findExistingFragmentByPosition
+    149:173:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    178:180:void startAboutActivity() -> f
+    185:196:void saveLastViewedPageSetting(int) -> a
+    200:201:int loadLastViewedPageSetting() -> g
+    206:206:android.support.v4.app.Fragment findExistingFragmentByPosition(int) -> findExistingFragmentByPosition
     113:113:void access$0(mobiric.fhbsc.weather.MainActivity,java.lang.String) -> a
 mobiric.fhbsc.weather.MainActivity$1 -> qs:
     mobiric.fhbsc.weather.MainActivity this$0 -> a
@@ -6273,11 +6279,16 @@ mobiric.fhbsc.weather.R$array -> mobiric.fhbsc.weather.R$array:
     int auto_refresh_values -> auto_refresh_values
 mobiric.fhbsc.weather.R$attr -> mobiric.fhbsc.weather.R$attr:
 mobiric.fhbsc.weather.R$color -> mobiric.fhbsc.weather.R$color:
-    int fenn_green -> fenn_green
+    int about_background_overlay -> about_background_overlay
+    int about_divider -> about_divider
+    int about_feature_graphic_frame -> about_feature_graphic_frame
+    int gold -> gold
     int holo_blue_dark -> holo_blue_dark
     int meter_background_grey -> meter_background_grey
     int rain_blue -> rain_blue
     int thermometer_red -> thermometer_red
+    int translucent_gold_divider -> translucent_gold_divider
+    int white_alpha_aa -> white_alpha_aa
     int zoom_image_background_grey -> zoom_image_background_grey
 mobiric.fhbsc.weather.R$dimen -> mobiric.fhbsc.weather.R$dimen:
     int activity_horizontal_margin -> activity_horizontal_margin
@@ -6294,7 +6305,9 @@ mobiric.fhbsc.weather.R$drawable -> mobiric.fhbsc.weather.R$drawable:
     int daywinddir -> daywinddir
     int false_bay -> false_bay
     int false_bay_port -> false_bay_port
+    int ic_about_feature -> ic_about_feature
     int ic_launcher -> ic_launcher
+    int ic_logo_glowworm -> ic_logo_glowworm
     int ic_menu_refresh -> ic_menu_refresh
     int monthrain -> monthrain
     int raindrop -> raindrop
@@ -6305,6 +6318,7 @@ mobiric.fhbsc.weather.R$drawable -> mobiric.fhbsc.weather.R$drawable:
     int weekwinddir -> weekwinddir
     int windrose -> windrose
 mobiric.fhbsc.weather.R$id -> mobiric.fhbsc.weather.R$id:
+    int action_about -> action_about
     int action_refresh -> action_refresh
     int action_view_on_web -> action_view_on_web
     int backgroundZoomedImage -> backgroundZoomedImage
@@ -6331,6 +6345,7 @@ mobiric.fhbsc.weather.R$id -> mobiric.fhbsc.weather.R$id:
     int menu_spinner -> menu_spinner
     int pager -> pager
     int pager_title_strip -> pager_title_strip
+    int tvAboutVersion -> tvAboutVersion
     int tvBarometerPressure -> tvBarometerPressure
     int tvBarometerTitle -> tvBarometerTitle
     int tvNoRainTitle -> tvNoRainTitle
@@ -6346,6 +6361,7 @@ mobiric.fhbsc.weather.R$integer -> mobiric.fhbsc.weather.R$integer:
     int landscape_column_weight_left -> landscape_column_weight_left
     int landscape_column_weight_right -> landscape_column_weight_right
 mobiric.fhbsc.weather.R$layout -> mobiric.fhbsc.weather.R$layout:
+    int activity_about -> activity_about
     int activity_main -> activity_main
     int fragment_barometer -> fragment_barometer
     int fragment_rain -> fragment_rain
@@ -6355,6 +6371,11 @@ mobiric.fhbsc.weather.R$layout -> mobiric.fhbsc.weather.R$layout:
 mobiric.fhbsc.weather.R$menu -> mobiric.fhbsc.weather.R$menu:
     int main -> main
 mobiric.fhbsc.weather.R$string -> mobiric.fhbsc.weather.R$string:
+    int about_app -> about_app
+    int about_developers -> about_developers
+    int about_glowworm_url -> about_glowworm_url
+    int about_version_format -> about_version_format
+    int action_about -> action_about
     int action_refresh -> action_refresh
     int action_view_on_web -> action_view_on_web
     int app_name -> app_name
