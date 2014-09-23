@@ -1,6 +1,7 @@
 package mobiric.fhbsc.weather;
 
 
+import lib.about.AboutActivity;
 import lib.view.ViewPagerParallax;
 import mobiric.fhbsc.weather.adapters.ScreenSwipeAdapter;
 import mobiric.fhbsc.weather.fragments.ARefreshableFragment;
@@ -19,7 +20,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
@@ -157,6 +157,12 @@ public class MainActivity extends AutoRefreshActivity
 
 				break;
 			}
+			case R.id.action_about:
+			{
+				startAboutActivity();
+
+				break;
+			}
 			default:
 			{
 				return super.onOptionsItemSelected(item);
@@ -165,6 +171,12 @@ public class MainActivity extends AutoRefreshActivity
 
 		// handled by us
 		return true;
+	}
+
+	private void startAboutActivity()
+	{
+		Intent aboutActivity = new Intent(this, AboutActivity.class);
+		startActivity(aboutActivity);
 	}
 
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
