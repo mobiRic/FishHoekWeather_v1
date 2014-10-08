@@ -6229,27 +6229,27 @@ mobiric.fhbsc.weather.AutoRefreshActivity -> mobiric.fhbsc.weather.AutoRefreshAc
     int[] autoRefreshValues -> o
     int autoRefreshPeriod -> p
     java.util.Timer autoRefreshTimer -> q
-    44:49:void onCreate(android.os.Bundle) -> onCreate
-    58:61:void onPause() -> onPause
-    69:77:void onResume() -> onResume
-    85:87:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    99:105:void setAutoRefreshPeriod(int) -> a
-    137:128:void setAutoRefreshTimer(int) -> b
-    142:153:void saveAutoRefreshSetting(int) -> c
-    157:158:int loadAutoRefreshSetting() -> c
-    164:186:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    194:205:void showAutoRefreshOptions() -> d
-    212:221:void doRefresh() -> b
-    96:96:void access$0(mobiric.fhbsc.weather.AutoRefreshActivity,int) -> a
+    44:55:void onCreate(android.os.Bundle) -> onCreate
+    63:66:void onPause() -> onPause
+    74:82:void onResume() -> onResume
+    90:92:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    104:110:void setAutoRefreshPeriod(int) -> a
+    142:133:void setAutoRefreshTimer(int) -> b
+    147:158:void saveAutoRefreshSetting(int) -> c
+    162:163:int loadAutoRefreshSetting() -> c
+    169:191:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    199:210:void showAutoRefreshOptions() -> d
+    217:226:void doRefresh() -> b
+    101:101:void access$0(mobiric.fhbsc.weather.AutoRefreshActivity,int) -> a
 mobiric.fhbsc.weather.AutoRefreshActivity$1 -> qp:
     mobiric.fhbsc.weather.AutoRefreshActivity this$0 -> a
-    133:134:void run() -> run
+    138:139:void run() -> run
 mobiric.fhbsc.weather.AutoRefreshActivity$2 -> qq:
     mobiric.fhbsc.weather.AutoRefreshActivity this$0 -> a
-    201:202:void onClick(android.content.DialogInterface,int) -> onClick
+    206:207:void onClick(android.content.DialogInterface,int) -> onClick
 mobiric.fhbsc.weather.AutoRefreshActivity$3 -> qr:
     mobiric.fhbsc.weather.AutoRefreshActivity this$0 -> a
-    219:218:void run() -> run
+    224:223:void run() -> run
 mobiric.fhbsc.weather.BuildConfig -> mobiric.fhbsc.weather.BuildConfig:
     boolean DEBUG -> DEBUG
 mobiric.fhbsc.weather.MainActivity -> mobiric.fhbsc.weather.MainActivity:
