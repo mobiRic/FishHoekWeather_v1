@@ -9,7 +9,7 @@ public class Dbug
 	public static final String TAG = "FH_WEATHER";
 
 	/** Global static to define that debug code must be turned on. */
-	public static final boolean DEBUG_ON = false;
+	public static final boolean DEBUG_ON = true;
 
 	public static final boolean FLURRY_ON = !DEBUG_ON;
 	public static final boolean CRASHLYTICS_ON = !DEBUG_ON;
