@@ -45,9 +45,14 @@ public class AutoRefreshActivity extends FragmentActivity
 
 		myApp = (WeatherApp) getApplication();
 		autoRefreshValues = getResources().getIntArray(R.array.auto_refresh_values);
-		autoRefreshPeriod = autoRefreshValues[loadAutoRefreshSetting()];
+		int autoRefresh = loadAutoRefreshSetting();
+		if ((autoRefresh < 0) || (autoRefresh >= autoRefreshValues.length))
+		{
+			autoRefresh = autoRefreshValues.length - 1;
+			saveAutoRefreshSetting(autoRefresh);
+		}
+		autoRefreshPeriod = autoRefreshValues[autoRefresh];
 	}
-
 
 	/**
 	 * Cancel auto refresh when paused.

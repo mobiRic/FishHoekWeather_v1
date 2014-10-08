@@ -51,5 +51,5 @@ WHAT'S NEW:
 
 LIVE weather updates from Fish Hoek beach.
 
-v 1.0.0
-  - minor UI updates
+v 1.0.1
+  - fix crash when starting up
