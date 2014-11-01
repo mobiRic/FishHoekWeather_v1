@@ -53,7 +53,6 @@
                 android:id="@+id/layoutRainMeter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/layoutRainText"
                 android:layout_gravity="center_horizontal" >
 
                 <View
@@ -80,7 +79,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/thermometer" />
+                    android:src="@drawable/thermometer"
+                    tools:ignore="ContentDescription" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -116,7 +116,8 @@
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/daytempdew" />
+                    android:src="@drawable/daytempdew"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,7 +135,8 @@
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/weektempdew" />
+                    android:src="@drawable/weektempdew"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -154,7 +156,7 @@
         android:visibility="gone" >
     </FrameLayout>
 
-    <ImageView
+    <lib.view.TouchImageView
         android:id="@+id/ivZoomedImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

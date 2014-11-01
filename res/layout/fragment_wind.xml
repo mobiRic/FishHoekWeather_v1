@@ -83,7 +83,9 @@
                     android:id="@+id/ivArrowWindDir"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/arrow_wind_direction" />
+                    android:src="@drawable/arrow_wind_direction"
+                    tools:ignore="ContentDescription" />
+
             </FrameLayout>
 
             <TextView
@@ -102,7 +104,8 @@
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/daywind" />
+                android:src="@drawable/daywind"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -116,12 +119,12 @@
                 android:id="@+id/ivDayWindDir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/daywinddir" />
+                android:src="@drawable/daywinddir"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -139,7 +142,8 @@
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/weekwind" />
+                android:src="@drawable/weekwind"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -153,12 +157,13 @@
                 android:id="@+id/ivWeekWindDir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/weekwinddir" />
+                android:src="@drawable/weekwinddir"
+                tools:ignore="ContentDescription" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -177,7 +182,7 @@
         android:visibility="gone" >
     </FrameLayout>
 
-    <ImageView
+    <lib.view.TouchImageView
         android:id="@+id/ivZoomedImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

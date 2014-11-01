@@ -93,7 +93,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/raindrop" />
+                    android:src="@drawable/raindrop"
+                    tools:ignore="ContentDescription" />
             </RelativeLayout>
 
             <TextView
@@ -112,7 +113,8 @@
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/dayrain" />
+                android:src="@drawable/dayrain"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -130,7 +132,8 @@
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/monthrain" />
+                android:src="@drawable/monthrain"
+                tools:ignore="ContentDescription" />
         </LinearLayout>
     </ScrollView>
 
@@ -149,7 +152,7 @@
         android:visibility="gone" >
     </FrameLayout>
 
-    <ImageView
+    <lib.view.TouchImageView
         android:id="@+id/ivZoomedImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

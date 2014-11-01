@@ -60,7 +60,8 @@
                     android:id="@+id/ivArrowBarometer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/arrow_barometer" />
+                    android:src="@drawable/arrow_barometer"
+                    tools:ignore="ContentDescription" />
             </FrameLayout>
         </LinearLayout>
 
@@ -96,7 +97,8 @@
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/daybarometer" />
+                    android:src="@drawable/daybarometer"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -114,7 +116,8 @@
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/weekbarometer" />
+                    android:src="@drawable/weekbarometer"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -134,7 +137,7 @@
         android:visibility="gone" >
     </FrameLayout>
 
-    <ImageView
+    <lib.view.TouchImageView
         android:id="@+id/ivZoomedImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
