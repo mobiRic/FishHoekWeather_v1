@@ -2397,6 +2397,8 @@ mobiric.fhbsc.weather.R$color: R$color()
 mobiric.fhbsc.weather.R$dimen
 mobiric.fhbsc.weather.R$dimen: int activity_horizontal_margin
 mobiric.fhbsc.weather.R$dimen: int activity_vertical_margin
+mobiric.fhbsc.weather.R$dimen: int scrollview_content_pad
+mobiric.fhbsc.weather.R$dimen: int scrollview_fade_pad
 mobiric.fhbsc.weather.R$dimen: R$dimen()
 mobiric.fhbsc.weather.R$drawable
 mobiric.fhbsc.weather.R$drawable: int app_theme_background
