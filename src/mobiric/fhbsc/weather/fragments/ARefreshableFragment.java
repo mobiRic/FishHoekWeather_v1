@@ -1,8 +1,6 @@
 package mobiric.fhbsc.weather.fragments;
 
 
-import java.io.IOException;
-
 import lib.debug.Dbug;
 import lib.io.IOUtils;
 import mobiric.fhbsc.weather.R;
@@ -30,7 +28,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 /**
  * Base fragment class that registers for intent updates to receive refreshed information. Only

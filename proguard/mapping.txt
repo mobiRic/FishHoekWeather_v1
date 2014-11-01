@@ -6293,6 +6293,8 @@ mobiric.fhbsc.weather.R$color -> mobiric.fhbsc.weather.R$color:
 mobiric.fhbsc.weather.R$dimen -> mobiric.fhbsc.weather.R$dimen:
     int activity_horizontal_margin -> activity_horizontal_margin
     int activity_vertical_margin -> activity_vertical_margin
+    int scrollview_content_pad -> scrollview_content_pad
+    int scrollview_fade_pad -> scrollview_fade_pad
 mobiric.fhbsc.weather.R$drawable -> mobiric.fhbsc.weather.R$drawable:
     int app_theme_background -> app_theme_background
     int arrow_barometer -> arrow_barometer
@@ -6416,32 +6418,32 @@ mobiric.fhbsc.weather.fragments.ARefreshableFragment -> mobiric.fhbsc.weather.fr
     int mAnimationDuration -> e
     android.view.View$OnClickListener unzoomListener -> f
     android.content.BroadcastReceiver refreshReceiver -> g
-    93:96:void onAttach(android.app.Activity) -> onAttach
-    104:116:void onCreate(android.os.Bundle) -> onCreate
-    121:124:void onResume() -> onResume
-    129:131:void onPause() -> onPause
+    90:93:void onAttach(android.app.Activity) -> onAttach
+    101:113:void onCreate(android.os.Bundle) -> onCreate
+    118:121:void onResume() -> onResume
+    126:128:void onPause() -> onPause
     android.content.IntentFilter getRefreshIntentFilter() -> l
     void onRefreshIntentReceived(android.content.Intent) -> a
     void refreshOnResume() -> m
-    164:166:void register() -> n
-    170:171:void unregister() -> o
-    184:196:void updateImage(android.widget.ImageView,java.lang.String) -> updateImage
-    206:212:boolean onBackPressed() -> onBackPressed
-    217:229:void zoomIfApi14(android.view.View,android.view.View,java.lang.String) -> a
-    238:387:void zoomImageFromThumb(android.view.View,android.view.View,java.lang.String) -> b
+    161:163:void register() -> n
+    167:168:void unregister() -> o
+    181:193:void updateImage(android.widget.ImageView,java.lang.String) -> updateImage
+    203:209:boolean onBackPressed() -> onBackPressed
+    214:226:void zoomIfApi14(android.view.View,android.view.View,java.lang.String) -> a
+    235:384:void zoomImageFromThumb(android.view.View,android.view.View,java.lang.String) -> b
 mobiric.fhbsc.weather.fragments.ARefreshableFragment$1 -> qt:
     mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
-    74:79:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    71:76:void onReceive(android.content.Context,android.content.Intent) -> onReceive
 mobiric.fhbsc.weather.fragments.ARefreshableFragment$2 -> qu:
     mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
     android.view.View val$imageView -> b
     android.view.View val$rootView -> c
     java.lang.String val$imageName -> d
-    225:226:void onClick(android.view.View) -> onClick
+    222:223:void onClick(android.view.View) -> onClick
 mobiric.fhbsc.weather.fragments.ARefreshableFragment$3 -> qv:
     mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
-    322:323:void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
-    328:329:void onAnimationCancel(android.animation.Animator) -> onAnimationCancel
+    319:320:void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+    325:326:void onAnimationCancel(android.animation.Animator) -> onAnimationCancel
 mobiric.fhbsc.weather.fragments.ARefreshableFragment$4 -> qw:
     mobiric.fhbsc.weather.fragments.ARefreshableFragment this$0 -> a
     android.widget.ImageView val$expandedImageView -> b
@@ -6449,15 +6451,15 @@ mobiric.fhbsc.weather.fragments.ARefreshableFragment$4 -> qw:
     float val$startScaleFinal -> d
     android.view.View val$zoomBackground -> e
     android.view.View val$thumbView -> f
-    343:384:void onClick(android.view.View) -> onClick
-    338:338:mobiric.fhbsc.weather.fragments.ARefreshableFragment access$0(mobiric.fhbsc.weather.fragments.ARefreshableFragment$4) -> a
+    340:381:void onClick(android.view.View) -> onClick
+    335:335:mobiric.fhbsc.weather.fragments.ARefreshableFragment access$0(mobiric.fhbsc.weather.fragments.ARefreshableFragment$4) -> a
 mobiric.fhbsc.weather.fragments.ARefreshableFragment$4$1 -> qx:
     mobiric.fhbsc.weather.fragments.ARefreshableFragment$4 this$1 -> a
     android.view.View val$thumbView -> b
     android.widget.ImageView val$expandedImageView -> c
     android.view.View val$zoomBackground -> d
-    365:369:void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
-    374:378:void onAnimationCancel(android.animation.Animator) -> onAnimationCancel
+    362:366:void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+    371:375:void onAnimationCancel(android.animation.Animator) -> onAnimationCancel
 mobiric.fhbsc.weather.fragments.BarometerFragment -> mobiric.fhbsc.weather.fragments.BarometerFragment:
     java.lang.String GRAPH_DAY_BAROMETER -> GRAPH_DAY_BAROMETER
     java.lang.String GRAPH_WEEK_BAROMETER -> GRAPH_WEEK_BAROMETER
@@ -6547,15 +6549,15 @@ mobiric.fhbsc.weather.fragments.WindFragment -> mobiric.fhbsc.weather.fragments.
     android.widget.ImageView ivArrowWindDir -> ab
     int windDirDegrees -> ac
     int oldWindDirDegrees -> ad
-    59:81:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    98:117:void updateData(boolean) -> a
-    121:121:java.lang.String getCardinal(double) -> a
-    131:135:void initImages() -> n
-    139:156:void rotateArrow(boolean) -> b
-    163:189:void setWindDirDegrees(java.lang.String) -> setWindDirDegrees
-    194:197:android.content.IntentFilter getRefreshIntentFilter() -> l
-    203:229:void onRefreshIntentReceived(android.content.Intent) -> a
-    234:236:void refreshOnResume() -> m
+    57:79:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    96:115:void updateData(boolean) -> a
+    119:119:java.lang.String getCardinal(double) -> a
+    129:133:void initImages() -> n
+    137:154:void rotateArrow(boolean) -> b
+    161:187:void setWindDirDegrees(java.lang.String) -> setWindDirDegrees
+    192:195:android.content.IntentFilter getRefreshIntentFilter() -> l
+    201:227:void onRefreshIntentReceived(android.content.Intent) -> a
+    232:234:void refreshOnResume() -> m
 mobiric.fhbsc.weather.intents.IntentConstants -> mobiric.fhbsc.weather.intents.IntentConstants:
 mobiric.fhbsc.weather.intents.IntentConstants$Actions -> mobiric.fhbsc.weather.intents.IntentConstants$Actions:
     java.lang.String REFRESH_UPDATE_TIME -> REFRESH_UPDATE_TIME

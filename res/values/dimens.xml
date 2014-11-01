@@ -4,4 +4,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- SCROLLVIEW VERTICAL FADE -->
+    <dimen name="scrollview_content_pad">14dp</dimen>
+    <dimen name="scrollview_fade_pad">2dp</dimen>
+
 </resources>

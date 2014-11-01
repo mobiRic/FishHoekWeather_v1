@@ -3,16 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
-    tools:context=".about.AboutActivity" >
+    android:fadingEdge="vertical"
+    android:fadingEdgeLength="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/scrollview_fade_pad"
+    android:paddingTop="@dimen/scrollview_fade_pad"
+    android:requiresFadingEdge="vertical"
+    tools:context=".about.AboutActivity"
+    tools:ignore="UnusedAttribute" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/scrollview_content_pad"
         android:paddingLeft="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_vertical_margin"
-        android:paddingTop="@dimen/activity_vertical_margin" >
+        android:paddingTop="@dimen/scrollview_content_pad" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,8 +34,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
                 android:background="@color/about_feature_graphic_frame"
-                android:padding="1dp" android:adjustViewBounds="true"
+                android:padding="1dp"
                 android:src="@drawable/ic_about_feature"
                 tools:ignore="ContentDescription" />
 
