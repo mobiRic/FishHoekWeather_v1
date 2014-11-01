@@ -122,10 +122,11 @@
         android:visibility="gone" >
     </FrameLayout>
 
-    <lib.view.TouchImageView
+    <ImageView
         android:id="@+id/ivZoomedImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
 
 </FrameLayout>

@@ -85,7 +85,6 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/arrow_wind_direction"
                     tools:ignore="ContentDescription" />
-
             </FrameLayout>
 
             <TextView
@@ -163,7 +162,6 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/weekwinddir"
                 tools:ignore="ContentDescription" />
-
         </LinearLayout>
     </ScrollView>
 
@@ -182,10 +180,11 @@
         android:visibility="gone" >
     </FrameLayout>
 
-    <lib.view.TouchImageView
+    <ImageView
         android:id="@+id/ivZoomedImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
 
 </FrameLayout>

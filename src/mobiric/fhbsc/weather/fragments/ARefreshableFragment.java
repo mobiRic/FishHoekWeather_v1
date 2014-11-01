@@ -3,7 +3,6 @@ package mobiric.fhbsc.weather.fragments;
 
 import lib.debug.Dbug;
 import lib.io.IOUtils;
-import lib.view.TouchImageView;
 import mobiric.fhbsc.weather.R;
 import mobiric.fhbsc.weather.WeatherApp;
 import android.animation.Animator;
@@ -239,8 +238,7 @@ public abstract class ARefreshableFragment extends Fragment
 		}
 
 		// Load the high-resolution "zoomed-in" image.
-		final TouchImageView expandedImageView =
-				(TouchImageView) rootView.findViewById(R.id.ivZoomedImage);
+		final ImageView expandedImageView = (ImageView) rootView.findViewById(R.id.ivZoomedImage);
 		// expandedImageView.setImageResource(imageResId);
 		updateImage(expandedImageView, imageName);
 		final View zoomBackground = rootView.findViewById(R.id.backgroundZoomedImage);
@@ -339,11 +337,6 @@ public abstract class ARefreshableFragment extends Fragment
 			@Override
 			public void onClick(View v)
 			{
-				if (v instanceof TouchImageView)
-				{
-					((TouchImageView) v).resetZoom();
-				}
-
 				if (mCurrentAnimator != null)
 				{
 					mCurrentAnimator.cancel();
