@@ -10,15 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".fragments.BarometerFragment" >
+        android:paddingBottom="@dimen/scrollview_fade_pad"
+        android:paddingTop="@dimen/scrollview_fade_pad"
+        android:requiresFadingEdge="vertical"
+        tools:context=".fragments.BarometerFragment"
+        tools:ignore="UnusedAttribute" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/scrollview_content_pad"
+            android:paddingTop="@dimen/scrollview_content_pad" >
 
             <RelativeLayout
                 android:id="@+id/layoutBarometerText"
