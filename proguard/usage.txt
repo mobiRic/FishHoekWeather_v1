@@ -338,4 +338,4 @@ mobiric.fhbsc.weather.WeatherApp:
     private static final long REFRESH_PERIOD_MILLIS
     private static final java.lang.String DEFAULT_WEATHER_JSON
 mobiric.fhbsc.weather.fragments.WindFragment:
-    126:126:boolean numberInRange(int,float,float)
+    124:124:boolean numberInRange(int,float,float)
