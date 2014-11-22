@@ -244,7 +244,7 @@ public class WeatherApp extends Application implements OnBaseWebServiceResponseL
 		{
 			lastUpdateTime = null;
 		}
-		Dbug.log("Saving last updated time: ", lastUpdateTime.toString());
+		Dbug.log("Saving last updated time: ", lastUpdateTime);
 	}
 
 	@Override
